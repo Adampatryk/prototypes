@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>KM Pamper Parties · Day Sheet</title>
+<meta name="description" content="Mobile massage, beauty and wellbeing across the East Midlands. Workplace wellbeing days and pamper parties delivered on site by a team of twenty-plus therapists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+<style>
+/* Day Sheet. One family (Archivo) at three widths, black ink, ruled fields, a highlighter, and coloured sheet stock per page. */
+:root{
+  --ink:#111111; --ink-2:#454545; --ink-3:#666666;
+  --paper:#FFFFFF; --stock:#FFFFFF;
+  --pink:#F8B9CD; --gold:#F2C64B; --marker:#FFE348;
+  --rule:#111111; --rule-soft:#D6D6D6; --err:#B3261E;
+  color-scheme:light;
+}
+body[data-stock="pink"]{--stock:#F8B9CD;--rule-soft:rgba(17,17,17,.28);--ink-2:#3A2A31;--ink-3:#5C3F4B}
+body[data-stock="gold"]{--stock:#F2C64B;--rule-soft:rgba(17,17,17,.3);--marker:#FFFFFF;--ink-2:#3B3115;--ink-3:#5A4A1E}
+*{box-sizing:border-box}
+html{background:var(--stock)}
+body{margin:0;background:var(--stock);color:var(--ink);font-family:Archivo,system-ui,sans-serif;font-variation-settings:"wdth" 100;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;transition:background-color .35s}
+::selection{background:var(--marker);color:var(--ink)}
+img{display:block;max-width:100%}
+a{color:inherit}
+p,dl,dt,dd{margin:0}
+[hidden]{display:none!important}
+h1,h2,h3{margin:0;font-weight:700;line-height:.98;letter-spacing:-.03em;font-variation-settings:"wdth" 118;text-wrap:balance}
+h1{font-size:clamp(2.7rem,6.4vw,6rem)}
+h2{font-size:clamp(2rem,4.4vw,3.6rem)}
+h3{font-size:clamp(1.2rem,1.8vw,1.5rem);letter-spacing:-.02em;line-height:1.1}
+.lbl{font-variation-settings:"wdth" 80;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:20px}
+.hl{background:linear-gradient(var(--marker),var(--marker)) no-repeat 0 100%/0% 88%;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em;margin:0 -.06em;transition:background-size .9s cubic-bezier(.2,.8,.2,1) .15s}
+.hl.on{background-size:100% 88%}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:100;text-decoration:none;font-weight:600}
+.skip:focus{left:20px;top:12px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.25rem;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);font:inherit;font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;line-height:1.2;transition:background-color .15s,color .15s,border-color .15s;white-space:nowrap}
+.btn:hover{background:var(--marker);color:var(--ink)}
+.btn.line{background:transparent;color:var(--ink)}
+.btn.line:hover{background:var(--marker)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn svg{flex:none}
+.acts{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:var(--stock);border-bottom:1px solid var(--rule);transition:background-color .35s}
+.nav{display:flex;align-items:center;gap:1.5rem;height:66px;position:relative}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
+.logo .km{width:40px;height:40px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-weight:800;font-variation-settings:"wdth" 125;font-size:1.05rem;letter-spacing:-.02em;flex:none}
+.logo .nm{display:grid;line-height:1.05}
+.logo .nm b{font-weight:700;font-size:1rem;letter-spacing:-.01em;white-space:nowrap}
+.logo .nm small{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-variation-settings:"wdth" 85;font-weight:600;white-space:nowrap}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:1.6rem;font-size:.95rem;font-weight:500;white-space:nowrap}
+.nav ul a{text-decoration:none;color:var(--ink-2);padding:.25rem 0;border-bottom:2px solid transparent}
+.nav ul a:hover{color:var(--ink);border-color:var(--ink)}
+.nav ul a[aria-current]{color:var(--ink);border-color:var(--ink);font-weight:600}
+.nav .btn{padding:.6rem 1rem;font-size:.9rem}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--ink);background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;margin-left:auto}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink)}
+@media(max-width:900px){
+  .menu-btn{display:flex}
+  .nav{gap:.75rem}
+  .nav ul{display:none}
+  .nav .btn{display:none}
+  .nav ul.open{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:var(--stock);border-bottom:1px solid var(--rule);padding:0 20px .5rem;white-space:normal}
+  .nav ul.open a{display:block;padding:.95rem 0;font-size:1.1rem;border-bottom:1px solid var(--rule-soft)}
+  .nav ul.open li:last-child a{border-bottom:0}
+}
+
+/* sheet fields */
+.fields{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.field{padding:.85rem 1.25rem .9rem 0;border-right:1px solid var(--rule-soft);margin-right:1.25rem;min-width:0}
+.field:last-child{border-right:0;margin-right:0;padding-right:0}
+.field .lbl{display:block;margin-bottom:.3rem}
+.field b{font-weight:600;font-size:.96rem;line-height:1.35;display:block;text-wrap:pretty}
+@media(max-width:860px){
+  .fields{grid-template-columns:1fr 1fr}
+  .field{padding-right:.9rem;margin-right:.9rem}
+  .field:nth-child(2n){border-right:0;margin-right:0;padding-right:0}
+  .field:nth-child(-n+2){border-bottom:1px solid var(--rule-soft)}
+  .field b{font-size:.9rem}
+}
+
+/* page heads */
+.head{padding-top:clamp(1.5rem,3vw,2.25rem)}
+.head h1{margin-top:clamp(2rem,5vw,3.5rem)}
+@media(max-width:960px){
+  /* phones: headline and routes first, the fact fields follow */
+  .head>.wrap{display:flex;flex-direction:column}
+  .head .fields{order:9;margin-top:2.75rem}
+  .head h1{margin-top:.75rem}
+}
+.lede{max-width:36rem;font-size:1.15rem;line-height:1.5;color:var(--ink-2);margin-top:1.5rem;text-wrap:pretty}
+.head .acts{margin-top:1.75rem}
+.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(2rem,5vw,5rem);align-items:end}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* routes */
+.routes{border-top:1px solid var(--rule)}
+.route{display:grid;grid-template-columns:96px 1fr auto;gap:1.25rem;align-items:center;padding:1.1rem .75rem;margin-inline:-.75rem;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;transition:background-color .15s}
+.route:hover{background:var(--marker)}
+.route img{width:96px;height:120px;object-fit:cover}
+.route h2{font-size:clamp(1.4rem,2vw,1.8rem)}
+.route p{margin-top:.35rem;color:var(--ink-2);font-size:.95rem;line-height:1.45;text-wrap:pretty}
+.route svg{flex:none;transition:transform .2s}
+.route:hover svg{transform:translateX(4px)}
+@media(max-width:480px){.route{grid-template-columns:72px 1fr auto;gap:.9rem}.route img{width:72px;height:92px}}
+
+/* full-bleed photo with caption */
+.bleed{margin:clamp(2.5rem,5vw,4rem) 0 0}
+.bleed img{width:100%;height:clamp(320px,52vw,700px);object-fit:cover;object-position:50% 42%}
+.caption{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-between;align-items:center;padding:.9rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-size:.95rem;color:var(--ink-2)}
+.caption b{color:var(--ink);font-weight:600}
+.gbadge{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--ink);font-weight:600;font-size:.9rem;white-space:nowrap}
+.gbadge:hover{text-decoration:underline;text-underline-offset:.2em}
+.gbadge svg{flex:none}
+
+section{padding-block:clamp(3rem,7vw,6rem)}
+.intro{max-width:40rem;color:var(--ink-2);margin:1rem 0 2.25rem;font-size:1.1rem;text-wrap:pretty}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem 3rem;margin-bottom:2rem}
+.sec-head p{max-width:34rem;color:var(--ink-2);text-wrap:pretty}
+
+/* stills */
+.stills{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.still{margin:0;padding:1.25rem 1.25rem 1.25rem 0;border-right:1px solid var(--rule-soft);margin-right:1.25rem;min-width:0}
+.still:last-child{border-right:0;margin-right:0;padding-right:0}
+.still img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.still figcaption{margin-top:.75rem;font-size:.9rem;color:var(--ink-2);line-height:1.4}
+.still figcaption b{display:block;color:var(--ink);font-weight:600}
+.clients .lbl{display:block;margin-bottom:.6rem}
+.clients ul{list-style:none;margin:0 0 1rem;padding:0;font-weight:600;line-height:1.5}
+.clients ul:last-child{margin-bottom:0}
+.clients span{display:block;font-size:.85rem;color:var(--ink-3);margin-bottom:.15rem}
+@media(max-width:900px){
+  .stills{grid-template-columns:1fr 1fr}
+  .still:nth-child(2){border-right:0;margin-right:0;padding-right:0}
+  .still:nth-child(-n+2){border-bottom:1px solid var(--rule-soft)}
+}
+@media(max-width:480px){
+  .stills{grid-template-columns:1fr}
+  .still{border-right:0;margin-right:0;padding-right:0;border-bottom:1px solid var(--rule-soft)}
+  .still:last-child{border-bottom:0}
+}
+
+/* reviews */
+.reviews{border-top:1px solid var(--rule)}
+.rev{display:grid;grid-template-columns:1fr 15rem;gap:1rem 3rem;padding:1.75rem 0;border-bottom:1px solid var(--rule-soft)}
+.rev blockquote{margin:0;font-size:clamp(1.15rem,1.8vw,1.5rem);line-height:1.38;font-weight:500;letter-spacing:-.012em;text-wrap:pretty}
+.rev .who{font-size:.92rem;color:var(--ink-2);padding-top:.3rem}
+.rev .who b{display:block;color:var(--ink);font-weight:600}
+.rev:last-child{border-bottom:1px solid var(--rule)}
+@media(max-width:720px){.rev{grid-template-columns:1fr;gap:.6rem}}
+.gline{margin-top:1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;color:var(--ink-2);font-size:.95rem}
+
+/* ink band */
+.band{background:var(--ink);color:var(--paper)}
+.band-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem 4rem;align-items:center}
+.band h2{color:var(--paper)}
+.band p{color:rgba(255,255,255,.8);margin-top:1rem;max-width:30rem;font-size:1.1rem;text-wrap:pretty}
+.band .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.band .btn:hover{background:var(--marker);border-color:var(--marker)}
+.band .btn.line{background:transparent;color:var(--paper)}
+.band .btn.line:hover{background:var(--marker);color:var(--ink);border-color:var(--marker)}
+.band .acts{justify-content:flex-start}
+.band a:focus-visible,.band .btn:focus-visible{outline-color:var(--marker)}
+@media(max-width:860px){.band-grid{grid-template-columns:1fr}}
+
+/* tables */
+table.sheet{width:100%;border-collapse:collapse;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.sheet th{text-align:left;padding:.65rem 1.25rem .65rem 0;border-bottom:1px solid var(--rule);font-variation-settings:"wdth" 80;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.sheet td{padding:1.1rem 1.25rem 1.1rem 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;font-size:.98rem}
+.sheet tr:last-child td{border-bottom:0}
+.sheet td:last-child,.sheet th:last-child{padding-right:0}
+.sheet td.t{font-variation-settings:"wdth" 118;font-weight:700;font-size:1.35rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1.1;width:7rem}
+.sheet td b{display:block;font-weight:600;color:var(--ink)}
+.sheet td span{color:var(--ink-2)}
+.tag{display:inline-block;border:1px solid var(--ink);padding:.12rem .45rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;font-variation-settings:"wdth" 85;margin:.12rem .3rem .12rem 0;white-space:nowrap;line-height:1.5}
+.tbl-scroll{overflow-x:auto}
+.tbl-scroll table{min-width:640px}
+
+/* two-col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+.photo{margin:0}
+.photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.photo.wide img{aspect-ratio:16/10}
+.photo figcaption{padding:.7rem 0;border-bottom:1px solid var(--rule);font-size:.9rem;color:var(--ink-2)}
+.photo figcaption b{color:var(--ink);font-weight:600}
+
+/* ruled list rows */
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.rows li{display:grid;grid-template-columns:11rem 1fr;gap:1rem 2rem;padding:1.2rem 0;border-bottom:1px solid var(--rule-soft)}
+.rows li:last-child{border-bottom:1px solid var(--rule)}
+.rows .k{font-variation-settings:"wdth" 118;font-weight:700;font-size:1.25rem;letter-spacing:-.02em;line-height:1.1}
+.rows p{color:var(--ink-2);text-wrap:pretty}
+.rows p b{color:var(--ink);font-weight:600}
+.rows em{font-style:normal;color:var(--ink-3);font-size:.9rem;display:block;margin-top:.25rem}
+@media(max-width:640px){.rows li{grid-template-columns:1fr;gap:.35rem}}
+
+.note{border:1px solid var(--ink);padding:1.2rem 1.4rem;margin-top:1.5rem;background:var(--paper);color:var(--ink)}
+.note .lbl{display:block;margin-bottom:.4rem}
+.note p{text-wrap:pretty}
+.note p+p{margin-top:.6rem}
+
+/* prices */
+.prices{width:100%;border-collapse:collapse;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.prices td{padding:1.1rem 0;border-bottom:1px solid var(--rule-soft);vertical-align:middle}
+.prices tr:last-child td{border-bottom:0}
+.prices td:first-child{font-variation-settings:"wdth" 118;font-weight:700;font-size:1.4rem;letter-spacing:-.02em;white-space:nowrap;width:9rem;line-height:1.1}
+.prices td:first-child small{display:block;font-variation-settings:"wdth" 100;font-weight:500;font-size:.85rem;letter-spacing:0;color:var(--ink-3);margin-top:.15rem}
+.prices td:nth-child(2){color:var(--ink-2);font-size:.95rem;padding-right:1.5rem;text-wrap:pretty}
+.prices td:last-child{text-align:right;font-variation-settings:"wdth" 118;font-weight:700;font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1}
+.fine{font-size:.9rem;color:var(--ink-2);margin-top:.9rem;text-wrap:pretty}
+.occasions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.occasions span{border:1px solid var(--ink);padding:.45rem .8rem;font-weight:600;font-size:.95rem}
+
+/* faq */
+.faq{border-top:1px solid var(--rule)}
+details{border-bottom:1px solid var(--rule-soft)}
+details:last-child{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1.5rem;align-items:center;padding:1.1rem 0;font-variation-settings:"wdth" 110;font-weight:600;font-size:1.15rem;letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:12px;height:12px;flex:none;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);margin-right:4px;transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:6px}
+details p{color:var(--ink-2);padding:0 0 1.2rem;max-width:44rem;text-wrap:pretty}
+
+/* enquiry */
+.enq-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+@media(max-width:900px){.enq-grid{grid-template-columns:1fr}}
+.contact{list-style:none;margin:1.75rem 0 0;padding:0;border-top:1px solid var(--rule)}
+.contact li{padding:.9rem 0;border-bottom:1px solid var(--rule-soft);display:grid;grid-template-columns:7rem 1fr;gap:1rem;align-items:baseline}
+.contact li:last-child{border-bottom:1px solid var(--rule)}
+.contact a{font-weight:600;text-decoration:none;font-size:1.05rem}
+.contact a:hover{text-decoration:underline;text-underline-offset:.2em}
+.contact .areas{font-size:.95rem;color:var(--ink-2);line-height:1.5}
+form{display:grid;gap:1.1rem;border:1px solid var(--ink);padding:clamp(1.25rem,3vw,2rem);background:var(--paper)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:560px){.f2{grid-template-columns:1fr}}
+label{display:grid;gap:.4rem;font-variation-settings:"wdth" 80;font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+input,select,textarea{font:inherit;font-variation-settings:"wdth" 100;letter-spacing:0;text-transform:none;font-size:1rem;padding:.75rem .85rem;border:1px solid var(--ink);border-radius:0;background:var(--paper);color:var(--ink);width:100%;caret-color:var(--ink)}
+select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .85rem center;padding-right:2.4rem}
+input::placeholder,textarea::placeholder{color:#6B6B6B}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 3px var(--marker),0 0 0 4.5px var(--ink)}
+body[data-stock="gold"] input:focus,body[data-stock="gold"] select:focus,body[data-stock="gold"] textarea:focus{box-shadow:0 0 0 3px #FFE348,0 0 0 4.5px var(--ink)}
+[aria-invalid="true"]{border-color:var(--err);box-shadow:inset 0 0 0 1px var(--err)}
+.ferr{color:var(--err);font-weight:600;font-size:.92rem}
+.done{border:1px solid var(--ink);padding:clamp(1.5rem,4vw,2.5rem);background:var(--paper);display:grid;gap:1rem;justify-items:start}
+.done h3{font-size:clamp(1.5rem,2.5vw,2rem)}
+.done p{color:var(--ink-2);max-width:32rem;text-wrap:pretty}
+.stamp{display:inline-block;padding:.45rem 1rem;border:3px double var(--ink);font-variation-settings:"wdth" 125;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:1.25rem;transform:rotate(-4deg);margin:.25rem 0 .5rem .3rem;animation:stamp .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes stamp{from{transform:rotate(-4deg) scale(1.6);opacity:0}to{transform:rotate(-4deg) scale(1);opacity:1}}
+
+/* partner line */
+.partner{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--rule-soft);color:var(--ink-2);font-size:.95rem;max-width:44rem;text-wrap:pretty}
+.partner a{color:var(--ink);font-weight:600;text-underline-offset:.2em}
+
+/* footer + mobile bar */
+footer{padding:2rem 0 2.5rem;border-top:1px solid var(--rule);font-size:.9rem;color:var(--ink-2)}
+.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem 3rem}
+.foot b{color:var(--ink);font-weight:600}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.3rem}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline;text-underline-offset:.2em}
+.foot .proto{grid-column:1/-1;padding-top:1rem;border-top:1px solid var(--rule-soft);font-size:.8rem;color:var(--ink-3)}
+@media(max-width:720px){.foot{grid-template-columns:1fr}}
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);background:var(--paper)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 0 calc(.95rem + env(safe-area-inset-bottom,0px));text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink)}
+.mbar a.solid{background:var(--ink);color:var(--paper)}
+@media(max-width:900px){.mbar{display:grid}body{padding-bottom:64px}}
+
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .hl{background-size:100% 88%}
+}
+</style>
+</head>
+<body data-stock="white">
+<!--
+DIRECTION CONTRACT · Day Sheet
+THESIS: KM is a working crew that turns up in uniform and runs a day, so the site is the crew's day sheet: ruled fields, typed facts, real location stills, a highlighter on the line that matters. It refuses the spa-page default of cream, serif and orchids, and the dark-luxe opposite.
+OWN-WORLD: black ink on white sheet, Archivo at three widths (wide display, normal body, condensed labels), 1px rules, marker-yellow highlighter, and coloured stock per sheet: pink for parties, goldenrod for treatments. Flat, no shadows, no rounded cards.
+STORY: a real, established team comes to my office or my house; here is the plan, the price, the proof; book them.
+FIRST VIEWPORT: sheet header of four fields, the tagline at 6rem with the highlighter drawing across it, lede and two actions left; the two route rows (workplaces, parties) with hard-cropped stills right.
+FORM: crew day sheet, candidate 6 of 7 on the grounded list, seed a61f5de0 (raised by: flat colour at page scale, a lockup that survives sticker size, one stamp as the confirmed mark, one straight axis, scale contrast, one grid with tabular figures).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap nav">
+  <a class="logo" href="#home" aria-label="KM Pamper Parties, home"><span class="km" aria-hidden="true">KM</span><span class="nm"><b>Pamper Parties</b><small>Holistic Therapy Team</small></span></a>
+  <ul id="navList"><li><a href="#home" data-nav="home">Home</a></li><li><a href="#corporate" data-nav="corporate">Workplaces</a></li><li><a href="#parties" data-nav="parties">Parties</a></li><li><a href="#treatments" data-nav="treatments">Treatments</a></li><li><a href="#contact" data-nav="contact">Contact</a></li></ul>
+  <a class="btn" href="#contact">Book the team</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ HOME ============ -->
+<div class="head" data-page="home"><div class="wrap">
+  <dl class="fields">
+    <div class="field"><dt class="lbl">Service</dt><dd><b>Mobile massage, beauty and wellbeing</b></dd></div>
+    <div class="field"><dt class="lbl">Team</dt><dd><b>Twenty-plus qualified, fully insured therapists</b></dd></div>
+    <div class="field"><dt class="lbl">Area</dt><dd><b>Nottingham, Derby, Leicester and the East Midlands</b></dd></div>
+    <div class="field"><dt class="lbl">Established</dt><dd><b>Over 22 years</b></dd></div>
+  </dl>
+  <div class="hero-grid">
+    <div>
+      <h1>Sit back, relax, and <span class="hl">let us take care of&nbsp;you.</span></h1>
+      <p class="lede">On-site massage and beauty for workplaces and celebrations. We bring the chairs, couches, towels and calm to your office, venue or living room, and leave everyone feeling better than we found them.</p>
+      <div class="acts"><a class="btn" href="#contact">Book the team <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="https://wa.me/447700900123"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp 07700 900123</a></div>
+    </div>
+    <nav class="routes" aria-label="Choose what you are booking">
+      <a class="route" href="#corporate"><img src="../img/spa-pair.jpg" srcset="../img/spa-pair-sm.jpg 540w, ../img/spa-pair.jpg 900w" sizes="96px" alt="" style="object-position:40% 18%"><div><h2>For workplaces</h2><p>Chair massage and wellbeing days for offices, universities and events. One day, or every month. Quoted per team.</p></div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="route" href="#parties"><img src="../img/spa-letters.jpg" srcset="../img/spa-letters-sm.jpg 720w, ../img/spa-letters.jpg 1236w" sizes="96px" alt="" style="object-position:38% 50%"><div><h2>For parties</h2><p>Hen dos, birthdays, baby showers and nights in, at your place. Pick and mix treatments from £24 per person.</p></div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </nav>
+  </div>
+</div>
+<figure class="bleed">
+  <img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="100vw" fetchpriority="high" alt="The full Holistic Therapy Team, more than twenty therapists in black aprons, seated on the steps of a conference hall">
+  <figcaption class="wrap caption"><span><b>The Holistic Therapy Team, on site at a conference.</b> The same team covers a night in for six and a conference for two thousand.</span><a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener" aria-label="Rated 5.0 on Google from 7 reviews, opens Google Business profile"><svg width="78" height="14" viewBox="0 0 98 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(20,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(40,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(60,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(80,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/></svg> 5.0 on Google, 7 reviews</a></figcaption>
+</figure>
+</div>
+
+<section data-page="home"><div class="wrap">
+  <div class="sec-head"><h2>Wherever your <span class="hl">people are.</span></h2><p>Office lobbies, conference halls, sports events, holiday cabins and kitchens. The team arrives in uniform with everything needed, sets up in a quiet corner, and works through the day.</p></div>
+  <div class="stills">
+    <figure class="still"><img src="../img/spa-pair.jpg" srcset="../img/spa-pair-sm.jpg 540w, ../img/spa-pair.jpg 900w" sizes="(max-width:480px) 100vw, (max-width:900px) 50vw, 25vw" loading="lazy" alt="Two KM therapists in black Holistic Therapy Team aprons beside a pink Massages sign at a client's offices" style="object-position:50% 15%"><figcaption><b>Wellbeing day</b>On site at a client's offices</figcaption></figure>
+    <figure class="still"><img src="../img/event-truck.jpg" srcset="../img/event-truck-sm.jpg 600w, ../img/event-truck.jpg 1000w" sizes="(max-width:480px) 100vw, (max-width:900px) 50vw, 25vw" loading="lazy" alt="Two KM therapists in black uniforms outside a hospitality truck at an outdoor golf event" style="object-position:50% 40%"><figcaption><b>Event day</b>On site at a golf event</figcaption></figure>
+    <figure class="still"><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:480px) 100vw, (max-width:900px) 50vw, 25vw" loading="lazy" alt="Six KM therapists giving a thumbs up in front of a Hakim Group branded backdrop" style="object-position:50% 40%"><figcaption><b>Conference</b>Hakim Group wellbeing day, six therapists</figcaption></figure>
+    <div class="still clients"><span class="lbl">Current and recent clients</span><ul><span>Businesses</span><li>Hakim Group</li><li>Miniclip</li><li>Mosca</li><li>SDL Surveying</li><li>Rank Interactive</li><li>Homes By Honey</li><li>PR Eden</li></ul><ul><span>Universities and colleges</span><li>Loughborough University</li><li>University of Leicester</li><li>Loughborough College</li></ul></div>
+  </div>
+</div></section>
+
+<section data-page="home" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>What people say.</h2><p>Every review names Kathleen, KM's co-founder, and every one is five stars. Quoted word for word from Google.</p></div>
+  <div class="reviews">
+    <div class="rev"><blockquote>“Kathleen is exceptional. Such a talented massage therapist and a genuinely wonderful lady. We use her for our corporate massages and I also personally had a pamper party. The massages are heavenly! She is totally reliable, very well priced and gives a high quality service. 100% recommend”</blockquote><div class="who"><b>Gaye Tytherley</b>Corporate client and pamper party host</div></div>
+    <div class="rev"><blockquote>“I have the pleasure of having Kathleen come to my workplace once a month to provide massages for myself and my colleagues, courtesy of the company. I can confidently say that she gives an exceptional massage, one of the best I've ever experienced!”</blockquote><div class="who"><b>Denise Barker</b>Monthly workplace programme</div></div>
+    <div class="rev"><blockquote>“Myself and my Partner booked for a 30 minute each deep tissue massage with Kathleen. Kathleen came to our cabin based at Sherwood Pines, which was booked by Forest Holiday. Kathleen was very polite, well organised and would definitely recommend.”</blockquote><div class="who"><b>Jodie Piggin</b>Couples booking, Sherwood Pines</div></div>
+  </div>
+  <div class="gline"><a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z"/><path fill="#EA4335" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6 12 6z"/></svg> Read all 7 reviews on Google</a></div>
+</div></section>
+
+<section class="band" data-page="home"><div class="wrap band-grid">
+  <div><h2>Book the team.</h2><p>Tell us the date, the place and how many people. We come back with options and a clear price, and we bring everything on the day.</p></div>
+  <div class="acts"><a class="btn" href="#contact" data-type="workplace">Workplace quote</a><a class="btn" href="#contact" data-type="party">Party booking</a><a class="btn line" href="https://wa.me/447700900123"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp</a></div>
+</div></section>
+
+<!-- ============ WORKPLACES ============ -->
+<div class="head" data-page="corporate"><div class="wrap">
+  <dl class="fields">
+    <div class="field"><dt class="lbl">Format</dt><dd><b>Desk massage or seated chair massage</b></dd></div>
+    <div class="field"><dt class="lbl">Where</dt><dd><b>Offices, universities, colleges, conferences and events</b></dd></div>
+    <div class="field"><dt class="lbl">Pricing</dt><dd><b>Quoted per team, per session</b></dd></div>
+    <div class="field"><dt class="lbl">Cover</dt><dd><b>Fully insured, qualified therapists</b></dd></div>
+  </dl>
+  <h1>Wellbeing at work, <span class="hl">delivered at the desk.</span></h1>
+  <p class="lede">On-site chair massage and wellbeing treatments for teams across the East Midlands. Booked as a one-off wellbeing day, a monthly programme or a full multi-therapist event.</p>
+  <div class="acts"><a class="btn" href="#contact" data-type="workplace">Request a quote <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="https://wa.me/447700900123">WhatsApp 07700 900123</a></div>
+</div></div>
+
+<section data-page="corporate"><div class="wrap two">
+  <figure class="photo"><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:900px) 100vw, 50vw" loading="lazy" alt="Six KM therapists in black aprons giving a thumbs up at a Hakim Group wellbeing day" style="object-position:50% 35%"><figcaption><b>Hakim Group wellbeing day.</b> Six therapists, one conference, everyone seen.</figcaption></figure>
+  <div>
+    <h2>How the <span class="hl">day runs.</span></h2>
+    <p class="intro">A typical single-therapist day. Bigger teams get more therapists, so everyone is seen on the same day.</p>
+    <table class="sheet">
+      <thead><tr><th scope="col">Time</th><th scope="col">What happens</th></tr></thead>
+      <tbody>
+        <tr><td class="t">08:45</td><td><b>Arrive and set up</b><span>Massage chair, music, towels and a sign-up sheet, in a meeting room or quiet corner. Roughly 2m by 2m and a plug socket per therapist.</span></td></tr>
+        <tr><td class="t">09:00</td><td><b>First slot</b><span>Fifteen to twenty minute seated massages, fully clothed, no oils. Straight back to the desk afterwards.</span></td></tr>
+        <tr><td class="t">All day</td><td><b>Around 18 to 24 people per therapist</b><span>Staff book their own slot on the sheet, so nobody waits around and managers don't have to organise it.</span></td></tr>
+        <tr><td class="t">16:30</td><td><b>Last slot and pack down</b><span>We leave the room as we found it.</span></td></tr>
+        <tr><td class="t">Next</td><td><b>Same again next month, if you like</b><span>Most workplaces move to a monthly or fortnightly programme with a single invoice.</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<section data-page="corporate" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Three ways to book.</h2><p>Every corporate booking is quoted per therapist, per session, on hours and headcount.</p></div>
+  <ul class="rows">
+    <li><span class="k">One-off day</span><p><b>Wellbeing days and events.</b> Staff appreciation, awareness weeks, conferences, Christmas. Any headcount, we scale the team.</p></li>
+    <li><span class="k">Recurring</span><p><b>Monthly or fortnightly programmes.</b> A familiar therapist on a set day, a sign-up sheet for staff, one simple invoice.</p></li>
+    <li><span class="k">Large scale</span><p><b>Multi-therapist events.</b> Big offices, universities and multi-site wellbeing weeks, covered by a team of twenty-plus. The Hakim Group annual conference at Telford had more than 2,000 people attending.</p></li>
+  </ul>
+  <div class="two" style="margin-top:3rem">
+    <div>
+      <h3>Desk or chair?</h3>
+      <ul class="rows" style="margin-top:1rem">
+        <li><span class="k" style="font-size:1.1rem">Desk massage</span><p>Short, at the employee's own desk. Nothing to set up, nobody leaves their seat.</p></li>
+        <li><span class="k" style="font-size:1.1rem">Chair massage</span><p>We bring the massage chair. Needs a small, ideally secluded space, roughly 2m by 2m, with a plug socket.</p></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Why teams book it</h3>
+      <ul class="rows" style="margin-top:1rem">
+        <li><span class="k" style="font-size:1.1rem">Morale</span><p>Boosts wellbeing and morale, and rewards and recognises the team.</p></li>
+        <li><span class="k" style="font-size:1.1rem">Health</span><p>Supports a healthier, more productive team. Reduces stress and absenteeism.</p></li>
+        <li><span class="k" style="font-size:1.1rem">Fit</span><p>Ideal for offices, events and ongoing projects. People go back to work lively and refreshed.</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="note"><span class="lbl">Please note</span><p>Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</p></div>
+</div></section>
+
+<section data-page="corporate" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Recent days <span class="hl">on site.</span></h2><p>Current and recent clients: Loughborough University, University of Leicester, Loughborough College, Hakim Group, Miniclip, Mosca, SDL Surveying, Rank Interactive, Homes By Honey and PR Eden.</p></div>
+  <ul class="rows">
+    <li><span class="k">RAF Lincolnshire</span><p>On-site chair massage at a training-day wellbeing session.<em>March 2025</em></p></li>
+    <li><span class="k">Hakim Group</span><p>Annual conference at Telford International Centre, with more than 2,000 optical professionals attending. “A professional, well organised service and run smoothly with great outcome from the weekend conference retreat.”<em>December 2024</em></p></li>
+    <li><span class="k">Microlise</span><p>Corporate wellbeing day with chair massage for the whole office, Eastwood, Nottingham.<em>February 2025</em></p></li>
+  </ul>
+</div></section>
+
+<section data-page="corporate" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Questions office managers ask.</h2></div>
+  <div class="faq">
+    <details open><summary>How many people can you see in a day?</summary><p>One therapist typically sees 18 to 24 people on fifteen to twenty minute slots. For bigger teams we add therapists so everyone is seen in one day.</p></details>
+    <details><summary>Do staff need to undress or use oils?</summary><p>No. Seated chair massage is done fully clothed with no oils, so people can go straight back to work.</p></details>
+    <details><summary>What do you need from us?</summary><p>A quiet space of roughly 2m by 2m per therapist and a plug socket. We bring the chairs, towels, music and sign-up sheet.</p></details>
+    <details><summary>Are you insured?</summary><p>Yes. All therapists are qualified and fully insured.</p></details>
+    <details><summary>Which areas do you cover?</summary><p>Leicester, Lincoln, Grantham, Boston, Nottingham, Mansfield, Kettering, Melton Mowbray, Derby, Chesterfield, Worksop, Hinckley, Northampton, Loughborough and Corby.</p></details>
+  </div>
+</div></section>
+
+<!-- ============ PARTIES ============ -->
+<div class="head" data-page="parties"><div class="wrap">
+  <dl class="fields">
+    <div class="field"><dt class="lbl">Occasions</dt><dd><b>Hen parties, birthdays, baby showers, Mother's Day, nights in</b></dd></div>
+    <div class="field"><dt class="lbl">Where</dt><dd><b>Your home, holiday let or venue</b></dd></div>
+    <div class="field"><dt class="lbl">From</dt><dd><b>£24 per person, per treatment</b></dd></div>
+    <div class="field"><dt class="lbl">Minimum</dt><dd><b>Two hours</b></dd></div>
+  </dl>
+  <h1>A pamper party, <span class="hl">at your place.</span></h1>
+  <p class="lede">Guests pick and mix treatments from the list. We arrive with therapists, couches, towels and music, and the host gets to relax too. Extra therapists for bigger groups, couples' Time Out for 2, and gift vouchers by enquiry.</p>
+  <div class="acts"><a class="btn" href="#contact" data-type="party">Plan my party <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="https://wa.me/447700900123">WhatsApp 07700 900123</a></div>
+</div></div>
+
+<section data-page="parties"><div class="wrap two">
+  <div>
+    <h2>Per person, <span class="hl">per treatment.</span></h2>
+    <table class="prices" style="margin-top:1.75rem">
+      <tr><td>20 min<small>per person</small></td><td>Shorter treatments, or an add-on to build a longer, tailored slot.</td><td>£24</td></tr>
+      <tr><td>30 min<small>per person</small></td><td>Back massage, Indian head massage or a facial.</td><td>£35</td></tr>
+      <tr><td>60 min<small>per person</small></td><td>Full body massage, the Hammam experience, or a combination such as massage plus facial.</td><td>£65</td></tr>
+    </table>
+    <p class="fine">Minimum booking time two hours. A deposit secures the date and the balance is due seven days before the party. Gift vouchers available by enquiry.</p>
+    <div class="note"><span class="lbl">Please note</span><p>Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</p></div>
+  </div>
+  <figure class="photo wide"><img src="../img/spa-letters.jpg" srcset="../img/spa-letters-sm.jpg 720w, ../img/spa-letters.jpg 1236w" sizes="(max-width:900px) 100vw, 50vw" loading="lazy" alt="A pamper party set up with balloons and light-up SPA marquee letters" style="object-position:45% 50%"><figcaption><b>A pamper party at a client's venue.</b> Balloons theirs, couches and calm ours.</figcaption></figure>
+</div></section>
+
+<section data-page="parties" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Every occasion, <span class="hl">pick and mix.</span></h2><p>Each guest chooses from the treatment list. Popular combinations: Hen Party Pick &amp; Mix, Girls' Night In, I Love You Mum, Mum to Be with pregnancy massage, and Time Out for 2, where two therapists treat two people at once.</p></div>
+  <div class="occasions"><span>Hen parties</span><span>Birthdays</span><span>Baby showers</span><span>Girls' night in</span><span>Mother's Day</span><span>Couples, Time Out for 2</span><span>Pregnancy massage</span><span>Gift vouchers</span></div>
+  <ul class="rows" style="margin-top:3rem">
+    <li><span class="k">Before</span><p>Tell us the date, the address and how many guests. We confirm the therapists and take a deposit.</p></li>
+    <li><span class="k">On the day</span><p>We arrive ahead of time with couches, towels and music, set up in a bedroom or quiet room, and work through the guest list. The host is on the list too.</p></li>
+    <li><span class="k">Bigger groups</span><p>Additional therapists for larger parties, so everyone is treated within the booking time.</p></li>
+  </ul>
+  <p class="partner">Staying in a holiday let, cabin or hotel? We come to you anywhere in the East Midlands. Planning a group weekend elsewhere in the UK? You can also book a pamper party for a group weekend through <a href="https://www.groupescapehouses.co.uk/experiences/pamper-party-package" target="_blank" rel="noopener">Group Escape Houses</a>.</p>
+</div></section>
+
+<!-- ============ TREATMENTS ============ -->
+<div class="head" data-page="treatments"><div class="wrap">
+  <dl class="fields">
+    <div class="field"><dt class="lbl">Slots</dt><dd><b>20, 30 or 60 minutes per person</b></dd></div>
+    <div class="field"><dt class="lbl">Settings</dt><dd><b>Workplace, parties, individual bookings</b></dd></div>
+    <div class="field"><dt class="lbl">Facials</dt><dd><b>Every treatment begins with a consultation</b></dd></div>
+    <div class="field"><dt class="lbl">Team</dt><dd><b>Qualified across massage and beauty</b></dd></div>
+  </dl>
+  <h1>The treatment <span class="hl">list.</span></h1>
+  <p class="lede">Not every treatment suits every setting. Chair massage works in an office corner; a full body massage needs a couch and a quiet room. Here is what works where.</p>
+</div></div>
+
+<section data-page="treatments"><div class="wrap">
+  <div class="tbl-scroll"><table class="sheet">
+    <thead><tr><th scope="col">Treatment</th><th scope="col">Slot</th><th scope="col">Good for</th><th scope="col">Setting</th></tr></thead>
+    <tbody>
+      <tr><td><b>Seated chair massage</b><span>Fully clothed, no oils, back, neck and shoulders</span></td><td>15 to 20 min</td><td>Desk tension, a break in the working day</td><td><span class="tag">Workplace</span><span class="tag">Events</span></td></tr>
+      <tr><td><b>Desk massage</b><span>At the employee's own desk</span></td><td>Short</td><td>Teams with no spare room</td><td><span class="tag">Workplace</span></td></tr>
+      <tr><td><b>Indian head massage</b><span>Scalp, neck and shoulders</span></td><td>20 or 30 min</td><td>Thinning hair, migraines, stress</td><td><span class="tag">Workplace</span><span class="tag">Parties</span></td></tr>
+      <tr><td><b>Back massage</b><span>With a free essential oil upgrade</span></td><td>20 or 30 min</td><td>Aches, tension, recovery</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+      <tr><td><b>Aromatherapy or full body massage</b><span>Couch-based</span></td><td>60 min</td><td>Deep relaxation</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+      <tr><td><b>Hot stone massage</b></td><td>30 or 60 min</td><td>Warmth for stiff muscles</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+      <tr><td><b>Facials</b><span>Consultation first, suits all skin types</span></td><td>30 or 60 min</td><td>Pamper days, wellbeing weeks</td><td><span class="tag">Parties</span><span class="tag">Events</span></td></tr>
+      <tr><td><b>Reflexology</b></td><td>30 min</td><td>Rebalancing, stress</td><td><span class="tag">Parties</span><span class="tag">Workplace</span></td></tr>
+      <tr><td><b>Pregnancy massage</b><span>Qualified pregnancy massage therapists who work with mum throughout</span></td><td>30 or 60 min</td><td>Mums-to-be, baby showers</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+      <tr><td><b>Hammam experience</b><span>Body scrub, mud mask, hot steam and a hot oil massage</span></td><td>60 min</td><td>The full pamper</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><span class="lbl">Pricing</span><p>Pamper parties and individual bookings are priced per person, per treatment: £24 for 20 minutes, £35 for 30, £65 for 60. Minimum booking two hours.</p><p>Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</p></div>
+  <div class="acts" style="margin-top:2rem"><a class="btn" href="#contact">Book the team <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="#parties">Party prices</a><a class="btn line" href="#corporate">Workplace formats</a></div>
+</div></section>
+
+<!-- ============ CONTACT HEAD ============ -->
+<div class="head" data-page="contact"><div class="wrap">
+  <dl class="fields">
+    <div class="field"><dt class="lbl">WhatsApp</dt><dd><b><a href="https://wa.me/447700900123" style="text-decoration:none">07700 900123</a></b></dd></div>
+    <div class="field"><dt class="lbl">Phone</dt><dd><b><a href="tel:+447700900123" style="text-decoration:none">07700 900123</a></b></dd></div>
+    <div class="field"><dt class="lbl">Email</dt><dd><b><a href="mailto:hello@kmpamperparties.co.uk" style="text-decoration:none">hello@kmpamperparties.co.uk</a></b></dd></div>
+    <div class="field"><dt class="lbl">Based</dt><dd><b>East Midlands, we come to you</b></dd></div>
+  </dl>
+  <h1>Book <span class="hl">the team.</span></h1>
+  <p class="lede">A few details and we'll come back with options and a clear price. No obligation. If it's quicker, WhatsApp us.</p>
+</div></div>
+
+<!-- ============ SHARED ENQUIRY ============ -->
+<section id="enquire" data-page="corporate parties contact"><div class="wrap enq-grid">
+  <div>
+    <h2>Tell us about your team <span class="hl">or occasion.</span></h2>
+    <ul class="contact">
+      <li><span class="lbl">WhatsApp</span><a href="https://wa.me/447700900123">07700 900123</a></li>
+      <li><span class="lbl">Email</span><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li>
+      <li><span class="lbl">Areas</span><span class="areas">Leicester, Lincoln, Grantham, Boston, Nottingham, Mansfield, Kettering, Melton Mowbray, Derby, Chesterfield, Worksop, Hinckley, Northampton, Loughborough, Corby</span></li>
+    </ul>
+  </div>
+  <div>
+    <form id="enqForm" novalidate>
+      <label>This enquiry is for<select id="f-type" name="type"><option value="workplace">A workplace wellbeing day or event</option><option value="programme">A regular workplace programme</option><option value="party">A pamper party</option><option value="individual">An individual treatment</option></select></label>
+      <div class="f2">
+        <label>Your name<input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></label>
+        <label>Email or phone<input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="jane@company.co.uk" required></label>
+      </div>
+      <div class="f2">
+        <label>Organisation or occasion<input id="f-co" name="org" type="text" placeholder="Company, university or hen do"></label>
+        <label>How many people<input id="f-n" name="people" type="text" inputmode="numeric" placeholder="e.g. 40"></label>
+      </div>
+      <label>Dates, location, anything else<textarea id="f-msg" name="notes" rows="3" placeholder="Monthly from January, Leicester office, around 40 staff"></textarea></label>
+      <p class="ferr" id="ferr" hidden role="alert">Please add your name and a way to reach you so we can reply.</p>
+      <div><button class="btn" type="submit">Send enquiry <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </form>
+    <div class="done" id="enqDone" hidden tabindex="-1">
+      <span class="stamp">Received</span>
+      <h3>Thanks, we've got your enquiry.</h3>
+      <p>We'll reply with options and a clear price. Need it sooner? WhatsApp <a href="https://wa.me/447700900123">07700 900123</a>.</p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap foot">
+  <div><b>KM Pamper Parties</b> · Holistic Therapy Team<br>Massage, beauty and wellbeing services, delivered on site across Nottingham, Derby, Leicester and the East Midlands.</div>
+  <ul><li><a href="#corporate">Workplaces</a></li><li><a href="#parties">Pamper parties</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#contact">Contact</a></li></ul>
+  <ul><li><a href="https://wa.me/447700900123">WhatsApp 07700 900123</a></li><li><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li><li><a href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener">Reviews on Google</a></li></ul>
+  <div class="proto">Concept 4 of 4, “Day Sheet”. Prototype for review, not the live site. Contact details are placeholders.</div>
+</div></footer>
+
+<div class="mbar" aria-label="Quick actions"><a href="https://wa.me/447700900123"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp</a><a class="solid" href="#contact">Book the team</a></div>
+
+<script>
+(function(){
+  var pages=['home','corporate','parties','treatments','contact'];
+  var stocks={parties:'pink',treatments:'gold'};
+  var titles={home:'KM Pamper Parties · Day Sheet',corporate:'Workplace wellbeing · KM Pamper Parties',parties:'Pamper parties · KM Pamper Parties',treatments:'Treatments · KM Pamper Parties',contact:'Book the team · KM Pamper Parties'};
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io=null;
+  function watchHighlights(){
+    var els=document.querySelectorAll('.hl');
+    if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on');});return;}
+    if(!io){io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target);}});},{threshold:.4});}
+    els.forEach(function(e){if(!e.classList.contains('on')&&e.offsetParent!==null){io.observe(e);}});
+  }
+  function go(){
+    var h=(location.hash||'').replace('#','');
+    var page=pages.indexOf(h)>=0?h:'home';
+    document.querySelectorAll('[data-page]').forEach(function(el){el.hidden=el.getAttribute('data-page').split(' ').indexOf(page)<0;});
+    document.querySelectorAll('[data-nav]').forEach(function(a){if(a.getAttribute('data-nav')===page){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}});
+    document.body.setAttribute('data-stock',stocks[page]||'white');
+    document.title=titles[page];
+    window.scrollTo(0,0);
+    watchHighlights();
+  }
+  window.addEventListener('hashchange',go);go();
+
+  var btn=document.getElementById('menuBtn'),ul=document.getElementById('navList');
+  function closeMenu(){ul.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){var open=ul.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});
+  ul.addEventListener('click',function(e){if(e.target.tagName==='A'){closeMenu();}});
+  window.addEventListener('hashchange',closeMenu);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ul.classList.contains('open')){closeMenu();btn.focus();}});
+
+  var form=document.getElementById('enqForm'),done=document.getElementById('enqDone'),ferr=document.getElementById('ferr');
+  function bad(el){el.setAttribute('aria-invalid','true');ferr.hidden=false;el.focus();el.addEventListener('input',function(){el.removeAttribute('aria-invalid');},{once:true});}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('f-name'),c=document.getElementById('f-contact');
+    if(!n.value.trim()){bad(n);return;}
+    if(!c.value.trim()){bad(c);return;}
+    ferr.hidden=true;form.hidden=true;done.hidden=false;done.focus();
+  });
+  document.querySelectorAll('[data-type]').forEach(function(a){a.addEventListener('click',function(){
+    var s=document.getElementById('f-type');if(s){s.value=a.getAttribute('data-type');}
+    if(!form.hidden){return;}
+    form.hidden=false;done.hidden=true;
+  });});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>KM Pamper Parties · Black Apron</title>
+<meta name="description" content="Mobile massage, beauty and wellbeing across the East Midlands. Workplace wellbeing days and pamper parties delivered on site by the Holistic Therapy Team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Black Apron. The uniform, rebuilt as a website: black cotton, gold print, brass rivets, one tan leather label. */
+:root{
+  --black:#161412; --black-2:#1E1B18; --black-3:#26221E;
+  --gold:#D2A64B; --gold-hi:#F1D68C; --gold-lo:#9C7A2E; --gold-line:rgba(210,166,75,.42);
+  --thread:#EFE7D8; --thread-2:#BDB3A2; --thread-3:#8F867A;
+  --tan:#B8703C; --tan-hi:#CB854F; --tan-ink:#1A120A;
+  --label:#F3EEE4; --label-2:#E6DFD2; --label-ink:#1A1713; --label-ink-2:#5A544A;
+  --err:#F2A19A;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--black)}
+body{margin:0;background:var(--black) repeating-linear-gradient(45deg,rgba(255,255,255,.022) 0 1px,transparent 1px 5px);color:var(--thread);font-family:"Red Hat Text",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--black)}
+img{display:block;max-width:100%}
+a{color:inherit}
+p,dl,dt,dd,ul,figure{margin:0}
+[hidden]{display:none!important}
+h1,h2,h3{margin:0;font-family:"Red Hat Display",system-ui,sans-serif;font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--gold);text-wrap:balance}
+h1{font-size:clamp(2.6rem,5.6vw,5.2rem)}
+h2{font-size:clamp(2rem,4vw,3.4rem)}
+h3{font-size:clamp(1.25rem,1.8vw,1.55rem);letter-spacing:-.01em;line-height:1.1}
+.caps{font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--black);padding:.6rem 1rem;z-index:100;text-decoration:none;font-weight:700}
+.skip:focus{left:20px;top:12px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold-hi);outline-offset:3px}
+
+/* the leather label: the one control */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.5rem;border:0;border-radius:5px;background:var(--tan);color:var(--tan-ink);font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;line-height:1.1;position:relative;box-shadow:0 2px 0 rgba(0,0,0,.35),0 10px 24px -10px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.18);text-shadow:0 1px 0 rgba(255,255,255,.22);transition:background-color .15s,transform .15s}
+.btn::after{content:"";position:absolute;inset:5px;border:1px dashed rgba(255,232,200,.42);border-radius:3px;pointer-events:none}
+.btn:hover{background:var(--tan-hi)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--gold);box-shadow:none;text-shadow:none;border:1px solid var(--gold-line)}
+.btn.ghost::after{content:none}
+.btn.ghost:hover{background:rgba(210,166,75,.12);border-color:var(--gold)}
+.btn svg{flex:none}
+.acts{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* brass rivet */
+.rivet{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F6E0A0 0,#D2A64B 45%,#7A5A1C 100%);box-shadow:0 1px 2px rgba(0,0,0,.6);flex:none;display:inline-block}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(22,20,18,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-line)}
+.nav{display:flex;align-items:center;gap:1.75rem;height:70px;position:relative}
+.logo{text-decoration:none;display:grid;line-height:1.05}
+.logo b{font-family:"Red Hat Display",sans-serif;font-weight:900;font-size:1.02rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.logo small{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--thread-2);font-weight:600;white-space:nowrap}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:1.6rem;font-size:.93rem;font-weight:500;white-space:nowrap}
+.nav ul a{text-decoration:none;color:var(--thread-2);padding:.25rem 0;border-bottom:2px solid transparent}
+.nav ul a:hover{color:var(--thread)}
+.nav ul a[aria-current]{color:var(--gold);border-color:var(--gold)}
+.nav .btn{padding:.7rem 1.1rem;font-size:.78rem}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--gold-line);border-radius:4px;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;margin-left:auto}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--gold)}
+@media(max-width:900px){
+  .menu-btn{display:flex}
+  .nav{gap:.75rem}
+  .nav ul,.nav .btn{display:none}
+  .nav ul.open{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:var(--black-2);border-bottom:1px solid var(--gold-line);padding:0 20px .5rem;white-space:normal}
+  .nav ul.open a{display:block;padding:1rem 0;font-size:1.1rem;border-bottom:1px solid rgba(239,231,216,.1)}
+  .nav ul.open li:last-child a{border-bottom:0}
+}
+
+/* the arched emblem, as printed on the apron */
+.emblem{display:block;width:100%;height:auto;overflow:visible}
+.emblem .arc{font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:31px;letter-spacing:3.2px}
+.emblem .sub{font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:15px;letter-spacing:5px;fill:var(--gold)}
+
+/* pocket: how every photo is framed */
+.pocket{position:relative;padding:10px;border:1px solid rgba(239,231,216,.14);border-radius:3px;background:var(--black-2)}
+.pocket::before{content:"";position:absolute;inset:4px;border:1px dashed rgba(239,231,216,.2);border-radius:2px;pointer-events:none}
+.pocket .rivet{position:absolute;top:-5px;z-index:2}
+.pocket .rivet:first-child{left:-5px}
+.pocket .rivet:nth-child(2){right:-5px}
+.pocket img{width:100%;object-fit:cover;border-radius:2px}
+.pocket figcaption{padding:.8rem .35rem .25rem;font-size:.88rem;color:var(--thread-2);line-height:1.45}
+.pocket figcaption b{color:var(--thread);font-weight:600}
+
+/* hero */
+.hero{padding:clamp(2rem,4vw,3.5rem) 0 clamp(2.5rem,5vw,4.5rem)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:2.5rem}}
+.hero .emblem{max-width:340px;margin:0 0 1.75rem -6px}
+.hero .lede{margin-top:1.4rem;max-width:34rem;font-size:1.12rem;color:var(--thread-2);text-wrap:pretty}
+.hero .lede b{color:var(--thread);font-weight:600}
+.hero .acts{margin-top:2rem}
+.hero .wa{margin-top:1.4rem;font-size:.95rem;color:var(--thread-2)}
+.hero .wa a{color:var(--gold);font-weight:600;text-decoration:none;text-underline-offset:.2em}
+.hero .wa a:hover{text-decoration:underline}
+.hero .pocket img{aspect-ratio:4/5}
+@media(max-width:960px){.hero .pocket img{aspect-ratio:4/4.4}}
+
+/* trust row */
+.trust{border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line);padding:1.1rem 0}
+.trust ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.7rem 1.25rem;font-family:"Red Hat Display",sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--thread)}
+.trust li{display:flex;align-items:center;gap:.7rem}
+@media(max-width:700px){.trust ul{justify-content:flex-start;gap:.7rem 1.4rem;font-size:.72rem}}
+
+section{padding-block:clamp(3rem,7vw,6rem)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem 3rem;margin-bottom:2.25rem}
+.sec-head p{max-width:34rem;color:var(--thread-2);text-wrap:pretty}
+.intro{max-width:40rem;color:var(--thread-2);margin:1rem 0 2rem;font-size:1.08rem;text-wrap:pretty}
+
+/* full-bleed team */
+.team-band{padding-top:0}
+.team-band .pocket img{aspect-ratio:16/8;object-position:50% 42%}
+@media(max-width:700px){.team-band .pocket img{aspect-ratio:4/3}}
+
+/* two doors */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem)}
+@media(max-width:820px){.doors{grid-template-columns:1fr}}
+.door{display:grid;gap:1.1rem;align-content:start}
+.door .pocket img{aspect-ratio:4/3}
+.door p{color:var(--thread-2);text-wrap:pretty}
+.door ul{list-style:none;padding:0;display:grid;gap:.35rem;font-size:.95rem;color:var(--thread)}
+.door ul li{display:flex;gap:.7rem;align-items:baseline}
+.door ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;position:relative;top:-2px}
+.door .btn{justify-self:start;margin-top:.4rem}
+
+/* stills */
+.stills{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,2.5vw,2rem)}
+@media(max-width:820px){.stills{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.stills{grid-template-columns:1fr}}
+.stills .pocket img{aspect-ratio:3/4}
+.stills .pocket.wide img{aspect-ratio:3/4;object-position:50% 40%}
+
+/* clients */
+.clients{border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line);padding:2.25rem 0}
+.clients .caps{display:block;margin-bottom:1rem}
+.clients ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 0;font-family:"Red Hat Display",sans-serif;font-weight:700;font-size:clamp(1.05rem,1.6vw,1.35rem);color:var(--thread)}
+.clients li{display:flex;align-items:center}
+.clients li+li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);margin:0 1rem;flex:none}
+.clients p{margin-top:1rem;font-size:.9rem;color:var(--thread-3)}
+
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,3vw,2.5rem)}
+@media(max-width:900px){.rev-grid{grid-template-columns:1fr}}
+.rev{display:grid;gap:1rem;align-content:start;padding-top:1.25rem;border-top:1px solid var(--gold-line)}
+.rev blockquote{margin:0;font-size:1.12rem;line-height:1.5;color:var(--thread);text-wrap:pretty}
+.rev .who{font-family:"Red Hat Display",sans-serif;font-weight:700;color:var(--gold);font-size:.95rem}
+.rev .who small{display:block;font-family:"Red Hat Text",sans-serif;font-weight:400;color:var(--thread-3);font-size:.85rem;margin-top:.15rem}
+.gbadge{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--gold);font-weight:600;font-size:.92rem;white-space:nowrap}
+.gbadge:hover{text-decoration:underline;text-underline-offset:.2em}
+.gline{margin-top:2rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;color:var(--thread-2);font-size:.95rem}
+
+/* closing band */
+.close{border-top:1px solid var(--gold-line);background:var(--black-2)}
+.close-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem 4rem;align-items:center}
+@media(max-width:860px){.close-grid{grid-template-columns:1fr}}
+.close .emblem{width:220px}
+.close p{color:var(--thread-2);margin-top:1rem;max-width:32rem;text-wrap:pretty}
+.close .acts{margin-top:1.6rem}
+
+/* page heads */
+.head{padding:clamp(2rem,4vw,3.5rem) 0 0}
+.head-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+@media(max-width:960px){.head-grid{grid-template-columns:1fr}}
+.head .caps{display:block;margin-bottom:1rem}
+.head .lede{margin-top:1.3rem;max-width:34rem;font-size:1.1rem;color:var(--thread-2);text-wrap:pretty}
+.head .acts{margin-top:1.8rem}
+.head .pocket img{aspect-ratio:4/3}
+
+/* ruled rows */
+.rows{list-style:none;padding:0;border-top:1px solid var(--gold-line)}
+.rows li{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 2rem;padding:1.25rem 0;border-bottom:1px solid rgba(239,231,216,.12)}
+.rows li:last-child{border-bottom:1px solid var(--gold-line)}
+.rows .k{font-family:"Red Hat Display",sans-serif;font-weight:800;color:var(--gold);font-size:1.15rem;letter-spacing:-.01em;line-height:1.15}
+.rows p{color:var(--thread-2);text-wrap:pretty}
+.rows p b{color:var(--thread);font-weight:600}
+.rows em{font-style:normal;color:var(--thread-3);font-size:.9rem;display:block;margin-top:.3rem}
+@media(max-width:640px){.rows li{grid-template-columns:1fr;gap:.3rem}}
+
+/* day table */
+table.day{width:100%;border-collapse:collapse;border-top:1px solid var(--gold-line)}
+.day th{text-align:left;padding:.6rem 1rem .6rem 0;border-bottom:1px solid var(--gold-line);font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.day td{padding:1rem 1rem 1rem 0;border-bottom:1px solid rgba(239,231,216,.12);vertical-align:top;font-size:.97rem;color:var(--thread-2)}
+.day tr:last-child td{border-bottom:1px solid var(--gold-line)}
+.day td.t{font-family:"Red Hat Display",sans-serif;font-weight:800;color:var(--gold);font-size:1.2rem;font-variant-numeric:tabular-nums;white-space:nowrap;width:6.5rem;line-height:1.2}
+.day td b{display:block;color:var(--thread);font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+
+/* note */
+.note{border:1px solid var(--gold-line);border-radius:3px;padding:1.2rem 1.4rem;margin-top:1.75rem;color:var(--thread-2);background:rgba(210,166,75,.06)}
+.note .caps{display:block;margin-bottom:.4rem}
+.note p{text-wrap:pretty}
+.note p+p{margin-top:.6rem}
+
+/* prices */
+.prices{width:100%;border-collapse:collapse;border-top:1px solid var(--gold-line)}
+.prices td{padding:1.1rem 0;border-bottom:1px solid rgba(239,231,216,.12);vertical-align:middle}
+.prices tr:last-child td{border-bottom:1px solid var(--gold-line)}
+.prices td:first-child{font-family:"Red Hat Display",sans-serif;font-weight:800;color:var(--thread);font-size:1.25rem;white-space:nowrap;width:8rem;line-height:1.15}
+.prices td:first-child small{display:block;font-family:"Red Hat Text",sans-serif;font-weight:400;font-size:.82rem;color:var(--thread-3)}
+.prices td:nth-child(2){color:var(--thread-2);font-size:.95rem;padding-right:1.5rem;text-wrap:pretty}
+.prices td:last-child{text-align:right;font-family:"Red Hat Display",sans-serif;font-weight:900;color:var(--gold);font-size:clamp(1.8rem,3vw,2.5rem);font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1}
+.fine{font-size:.9rem;color:var(--thread-2);margin-top:1rem;text-wrap:pretty}
+.occasions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.occasions span{border:1px solid var(--gold-line);border-radius:3px;padding:.45rem .85rem;font-weight:600;font-size:.93rem;color:var(--thread)}
+.partner{margin-top:2.25rem;padding-top:1.25rem;border-top:1px solid rgba(239,231,216,.12);color:var(--thread-2);font-size:.95rem;max-width:44rem;text-wrap:pretty}
+.partner a{color:var(--gold);font-weight:600;text-underline-offset:.2em}
+
+/* label panel: the woven care label, for dense reading */
+.label{background:var(--label);color:var(--label-ink);border-radius:4px;padding:clamp(1.25rem,3vw,2.25rem);box-shadow:0 18px 50px -20px rgba(0,0,0,.8),0 2px 0 rgba(255,255,255,.06);position:relative}
+.label::before{content:"";position:absolute;inset:6px;border:1px dashed rgba(26,23,19,.22);border-radius:3px;pointer-events:none}
+.label h2,.label h3{color:var(--label-ink)}
+.label .caps{color:var(--label-ink)}
+.label p{color:var(--label-ink-2)}
+table.tx{width:100%;border-collapse:collapse;min-width:640px}
+.tx th{text-align:left;padding:.6rem 1rem .6rem 0;border-bottom:1.5px solid var(--label-ink);font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--label-ink)}
+.tx td{padding:.95rem 1rem .95rem 0;border-bottom:1px solid rgba(26,23,19,.16);vertical-align:top;font-size:.95rem;color:var(--label-ink-2)}
+.tx tr:last-child td{border-bottom:0}
+.tx td b{display:block;color:var(--label-ink);font-weight:600;font-size:1rem}
+.tx td:last-child,.tx th:last-child{padding-right:0}
+.tag{display:inline-block;border:1px solid var(--label-ink);border-radius:2px;padding:.1rem .45rem;font-family:"Red Hat Display",sans-serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--label-ink);margin:.12rem .3rem .12rem 0;white-space:nowrap}
+.tbl-scroll{overflow-x:auto;position:relative;z-index:1}
+
+/* faq */
+.faq{border-top:1px solid var(--gold-line)}
+details{border-bottom:1px solid rgba(239,231,216,.12)}
+details:last-child{border-bottom:1px solid var(--gold-line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1.5rem;align-items:center;padding:1.1rem 0;font-family:"Red Hat Display",sans-serif;font-weight:700;font-size:1.1rem;color:var(--thread)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);margin-right:4px;transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:6px}
+details p{color:var(--thread-2);padding:0 0 1.2rem;max-width:44rem;text-wrap:pretty}
+
+/* enquiry */
+.enq-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+@media(max-width:900px){.enq-grid{grid-template-columns:1fr}}
+.contact{list-style:none;padding:0;margin-top:1.75rem;border-top:1px solid var(--gold-line)}
+.contact li{padding:.95rem 0;border-bottom:1px solid rgba(239,231,216,.12);display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;align-items:baseline}
+.contact li:last-child{border-bottom:1px solid var(--gold-line)}
+.contact a{font-weight:600;text-decoration:none;font-size:1.05rem;color:var(--thread)}
+.contact a:hover{text-decoration:underline;text-underline-offset:.2em;color:var(--gold)}
+.contact .areas{font-size:.95rem;color:var(--thread-2);line-height:1.5}
+form{display:grid;gap:1.1rem;position:relative;z-index:1}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:560px){.f2{grid-template-columns:1fr}}
+label{display:grid;gap:.4rem;font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--label-ink)}
+input,select,textarea{font:inherit;font-family:"Red Hat Text",sans-serif;letter-spacing:0;text-transform:none;font-size:1rem;padding:.75rem .85rem;border:1px solid rgba(26,23,19,.4);border-radius:3px;background:#fff;color:var(--label-ink);width:100%;caret-color:var(--tan)}
+select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231A1713' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .85rem center;padding-right:2.4rem}
+input::placeholder,textarea::placeholder{color:#6F675C}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--tan);box-shadow:0 0 0 3px rgba(184,112,60,.35)}
+[aria-invalid="true"]{border-color:#B3261E;box-shadow:0 0 0 3px rgba(179,38,30,.25)}
+.ferr{color:#B3261E;font-weight:600;font-size:.92rem}
+.done{display:grid;gap:1rem;justify-items:start;position:relative;z-index:1}
+.done h3{font-size:clamp(1.5rem,2.5vw,2rem)}
+.done p{max-width:32rem;text-wrap:pretty}
+.done .stamp{display:inline-flex;align-items:center;gap:.6rem;padding:.55rem 1rem;border:2px solid var(--tan);border-radius:4px;color:var(--tan);font-family:"Red Hat Display",sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.18em;font-size:.9rem;transform:rotate(-3deg);animation:stamp .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes stamp{from{transform:rotate(-3deg) scale(1.5);opacity:0}to{transform:rotate(-3deg) scale(1);opacity:1}}
+
+/* footer + mobile bar */
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--gold-line);font-size:.9rem;color:var(--thread-2)}
+.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem 3rem}
+.foot b{color:var(--gold);font-family:"Red Hat Display",sans-serif;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem}
+.foot ul{list-style:none;padding:0;display:grid;gap:.35rem}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--gold)}
+.foot .proto{grid-column:1/-1;padding-top:1rem;border-top:1px solid rgba(239,231,216,.12);font-size:.8rem;color:var(--thread-3)}
+@media(max-width:720px){.foot{grid-template-columns:1fr}}
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;grid-template-columns:1fr 1fr;gap:.6rem;padding:.6rem 12px calc(.6rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--gold-line);background:rgba(22,20,18,.96);backdrop-filter:blur(10px)}
+.mbar .btn{padding:.85rem .5rem;font-size:.78rem;width:100%}
+@media(max-width:900px){.mbar{display:grid}body{padding-bottom:74px}}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<!--
+DIRECTION CONTRACT · Black Apron
+THESIS: the team already owns one piece of brand that every photo shows: the black apron with gold arched lettering and a tan leather pocket label. The site is that uniform. It refuses the soft spa page (cream, serif, orchids) and the generic dark-luxe gold script page.
+OWN-WORLD: matte black cotton ground with a faint twill, gold print (#D2A64B) for headings, caps and hairlines, the arched wordmark rebuilt as live SVG text on a path, brass rivets at pocket corners, photos framed as topstitched pockets, one control only: the tan leather label. Dense reading (treatments, form) sits on a woven cream care label. Red Hat Display caps for the print, Red Hat Text for reading.
+STORY: a real uniformed crew of twenty-plus comes to my office or my house; here is the proof, the two ways to book, the price; enquire.
+FIRST VIEWPORT: the arched emblem in gold, then "For people, for teams, for every occasion." at up to 5.2rem, lede, two leather-label buttons (workplaces, parties) and the WhatsApp line on the left; the two therapists in their aprons beside the Massages sign, framed as a riveted pocket, on the right.
+FORM: the uniform itself, chosen by the client's brief (pinned direction beats the roll; earlier seed a61f5de0 retired with the Day Sheet concept).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <path id="arc" d="M42,182 A150,150 0 1 1 318,182" fill="none"/>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0" gradientTransform="translate(-1.3 0)">
+    <stop offset="0" stop-color="#CFA249"/><stop offset=".42" stop-color="#F3DA92"/><stop offset=".58" stop-color="#F3DA92"/><stop offset="1" stop-color="#CFA249"/>
+    <animateTransform id="sheenAnim" attributeName="gradientTransform" type="translate" from="-1.3 0" to="1.3 0" dur="2.4s" begin="0.6s" fill="freeze"/>
+  </linearGradient>
+</defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap nav">
+  <a class="logo" href="#home" aria-label="KM Pamper Parties, home"><b>KM Pamper Parties</b><small>Holistic Therapy Team</small></a>
+  <ul id="navList"><li><a href="#home" data-nav="home">Home</a></li><li><a href="#corporate" data-nav="corporate">Workplaces</a></li><li><a href="#parties" data-nav="parties">Pamper parties</a></li><li><a href="#treatments" data-nav="treatments">Treatments</a></li><li><a href="#contact" data-nav="contact">Contact</a></li></ul>
+  <a class="btn" href="#contact">Enquire</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ HOME ============ -->
+<section class="hero" data-page="home"><div class="wrap hero-grid">
+  <div>
+    <svg class="emblem" viewBox="0 0 360 200" role="img" aria-label="Holistic Therapy Team, wellbeing services"><text class="arc" fill="url(#sheen)"><textPath href="#arc" startOffset="50%" text-anchor="middle">HOLISTIC THERAPY TEAM</textPath></text><text class="sub" x="180" y="150" text-anchor="middle">WELLBEING</text><text class="sub" x="180" y="176" text-anchor="middle">SERVICES</text></svg>
+    <h1>For people, for teams, for every occasion.</h1>
+    <p class="lede">Professional massage, beauty and wellbeing, brought to your workplace, venue or home across the East Midlands.</p>
+    <div class="acts"><a class="btn" href="#corporate">Workplace wellbeing</a><a class="btn" href="#parties">Pamper parties</a></div>
+    <p class="wa">Quickest way to book: WhatsApp <a href="https://wa.me/447700900123">07700 900123</a></p>
+  </div>
+  <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/spa-pair.jpg" srcset="../img/spa-pair-sm.jpg 540w, ../img/spa-pair.jpg 900w" sizes="(max-width:960px) 100vw, 45vw" fetchpriority="high" alt="Two KM therapists in black Holistic Therapy Team aprons beside a pink Massages sign at a client's offices" style="object-position:50% 20%"><figcaption><b>On site at a client's offices.</b> The same aprons at every booking, from a night in for six to a conference for two thousand.</figcaption></figure>
+</div></section>
+
+<div class="trust" data-page="home"><div class="wrap"><ul>
+  <li><span class="rivet"></span>Established over 22 years</li>
+  <li><span class="rivet"></span>Fully insured</li>
+  <li><span class="rivet"></span>Professional, experienced team</li>
+  <li><span class="rivet"></span>On-site service</li>
+  <li><span class="rivet"></span>Tailored to your needs</li>
+</ul></div></div>
+
+<section class="team-band" data-page="home" style="padding-top:clamp(2.5rem,5vw,4rem)"><div class="wrap">
+  <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="(max-width:1240px) 100vw, 1200px" loading="lazy" alt="The full Holistic Therapy Team, more than twenty therapists in black aprons, seated on the steps of a conference hall"><figcaption><b>The Holistic Therapy Team.</b> Twenty-plus therapists, qualified across massage and beauty, on site at a conference. <a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener" aria-label="Rated 5.0 on Google from 7 reviews, opens Google Business profile"><svg width="78" height="14" viewBox="0 0 98 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(20,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(40,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(60,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/><path transform="translate(80,0)" d="M9 1.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L9 13.4l-4.6 2.5.9-5.2L1.5 7l5.2-.8z"/></svg> 5.0 on Google, 7 reviews</a></figcaption></figure>
+</div></section>
+
+<section data-page="home" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Two ways to book the team.</h2></div>
+  <div class="doors">
+    <div class="door">
+      <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:820px) 100vw, 50vw" loading="lazy" alt="Six KM therapists giving a thumbs up at a Hakim Group wellbeing day" style="object-position:50% 38%"></figure>
+      <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem)">Workplace wellbeing</h2>
+      <p>On-site chair massage and wellbeing treatments for offices, universities, colleges and conferences.</p>
+      <ul><li>One-off wellbeing days, or a monthly programme</li><li>Desk massage or seated chair massage, fully clothed</li><li>Quoted per team, on hours and headcount</li></ul>
+      <a class="btn" href="#corporate">See workplace wellbeing</a>
+    </div>
+    <div class="door">
+      <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/spa-letters.jpg" srcset="../img/spa-letters-sm.jpg 720w, ../img/spa-letters.jpg 1236w" sizes="(max-width:820px) 100vw, 50vw" loading="lazy" alt="A pamper party set up with balloons and light-up SPA marquee letters" style="object-position:45% 50%"></figure>
+      <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem)">Pamper parties</h2>
+      <p>Hen parties, birthdays, baby showers, Mother's Day and nights in, at your home, holiday let or venue.</p>
+      <ul><li>Pick and mix treatments from £24 per person</li><li>20, 30 or 60 minute slots, two-hour minimum</li><li>Extra therapists for bigger groups</li></ul>
+      <a class="btn" href="#parties">See pamper parties</a>
+    </div>
+  </div>
+</div></section>
+
+<div class="clients" data-page="home"><div class="wrap">
+  <span class="caps">Current and recent workplace clients</span>
+  <ul><li>Loughborough University</li><li>University of Leicester</li><li>Loughborough College</li><li>Hakim Group</li><li>Miniclip</li><li>Mosca</li><li>SDL Surveying</li><li>Rank Interactive</li><li>Homes By Honey</li><li>PR Eden</li></ul>
+  <p>Also on site recently for RAF Lincolnshire and Microlise.</p>
+</div></div>
+
+<section data-page="home"><div class="wrap">
+  <div class="sec-head"><h2>Wherever your people are.</h2><p>Office lobbies, conference halls, sports events, holiday cabins and kitchens.</p></div>
+  <div class="stills">
+    <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/event-truck.jpg" srcset="../img/event-truck-sm.jpg 600w, ../img/event-truck.jpg 1000w" sizes="(max-width:520px) 100vw, (max-width:820px) 50vw, 33vw" loading="lazy" alt="Two KM therapists in black uniforms outside a hospitality truck at an outdoor golf event" style="object-position:50% 40%"><figcaption><b>Event day.</b> On site at a golf event.</figcaption></figure>
+    <figure class="pocket wide"><span class="rivet"></span><span class="rivet"></span><img src="../img/chair-massage.jpg" srcset="../img/chair-massage-sm.jpg 800w, ../img/chair-massage.jpg 1400w" sizes="(max-width:520px) 100vw, (max-width:820px) 50vw, 33vw" loading="lazy" alt="A seated chair massage under a Wellbeing at Work neon sign" style="object-position:62% 50%"><figcaption><b>Wellbeing at work.</b> Seated chair massage, fully clothed, straight back to the desk.</figcaption></figure>
+    <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:520px) 100vw, (max-width:820px) 50vw, 33vw" loading="lazy" alt="Six KM therapists in black aprons giving a thumbs up in front of a Hakim Group branded backdrop" style="object-position:50% 40%"><figcaption><b>Conference.</b> Hakim Group wellbeing day, six therapists.</figcaption></figure>
+  </div>
+</div></section>
+
+<section data-page="home" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>What people say.</h2><p>Every review names Kathleen, KM's co-founder, and every one is five stars. Quoted word for word from Google.</p></div>
+  <div class="rev-grid">
+    <div class="rev"><blockquote>“Kathleen is exceptional. Such a talented massage therapist and a genuinely wonderful lady. We use her for our corporate massages and I also personally had a pamper party. The massages are heavenly! She is totally reliable, very well priced and gives a high quality service. 100% recommend”</blockquote><div class="who">Gaye Tytherley<small>Corporate client and pamper party host</small></div></div>
+    <div class="rev"><blockquote>“I have the pleasure of having Kathleen come to my workplace once a month to provide massages for myself and my colleagues, courtesy of the company. I can confidently say that she gives an exceptional massage, one of the best I've ever experienced!”</blockquote><div class="who">Denise Barker<small>Monthly workplace programme</small></div></div>
+    <div class="rev"><blockquote>“Myself and my Partner booked for a 30 minute each deep tissue massage with Kathleen. Kathleen came to our cabin based at Sherwood Pines, which was booked by Forest Holiday. Kathleen was very polite, well organised and would definitely recommend.”</blockquote><div class="who">Jodie Piggin<small>Couples booking, Sherwood Pines</small></div></div>
+  </div>
+  <div class="gline"><a class="gbadge" href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z"/><path fill="#EA4335" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6 12 6z"/></svg> Read all 7 reviews on Google</a></div>
+</div></section>
+
+<section class="close" data-page="home"><div class="wrap close-grid">
+  <svg class="emblem" viewBox="0 0 360 200" aria-hidden="true"><text class="arc" fill="var(--gold)"><textPath href="#arc" startOffset="50%" text-anchor="middle">HOLISTIC THERAPY TEAM</textPath></text><text class="sub" x="180" y="150" text-anchor="middle">WELLBEING</text><text class="sub" x="180" y="176" text-anchor="middle">SERVICES</text></svg>
+  <div><h2>Sit back, relax, and let us take care of you.</h2><p>Tell us the date, the place and how many people. We come back with options and a clear price, and we bring everything on the day.</p>
+  <div class="acts"><a class="btn" href="#contact" data-type="workplace">Workplace quote</a><a class="btn" href="#contact" data-type="party">Party booking</a><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp</a></div></div>
+</div></section>
+
+<!-- ============ WORKPLACES ============ -->
+<div class="head" data-page="corporate"><div class="wrap head-grid">
+  <div>
+    <h1>Wellbeing at work, delivered at the desk.</h1>
+    <p class="lede">On-site chair massage and wellbeing treatments for teams, as a one-off day, a monthly programme or a multi-therapist event.</p>
+    <div class="acts"><a class="btn" href="#contact" data-type="workplace">Request a quote</a><a class="btn ghost" href="https://wa.me/447700900123">WhatsApp 07700 900123</a></div>
+  </div>
+  <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/chair-massage.jpg" srcset="../img/chair-massage-sm.jpg 800w, ../img/chair-massage.jpg 1400w" sizes="(max-width:960px) 100vw, 45vw" alt="A seated chair massage under a Wellbeing at Work neon sign" style="object-position:60% 50%"><figcaption><b>Wellbeing at work.</b> Fifteen to twenty minutes in the chair, fully clothed, no oils.</figcaption></figure>
+</div></div>
+
+<section data-page="corporate"><div class="wrap two">
+  <div>
+    <h2>How the day runs.</h2>
+    <p class="intro">A typical single-therapist day. Bigger teams get more therapists, so everyone is seen on the same day.</p>
+    <table class="day">
+      <thead><tr><th scope="col">Time</th><th scope="col">What happens</th></tr></thead>
+      <tbody>
+        <tr><td class="t">08:45</td><td><b>Arrive and set up</b>Massage chair, music, towels and a sign-up sheet, in a meeting room or quiet corner. Roughly 2m by 2m and a plug socket per therapist.</td></tr>
+        <tr><td class="t">09:00</td><td><b>First slot</b>Fifteen to twenty minute seated massages, fully clothed, no oils. Straight back to the desk afterwards.</td></tr>
+        <tr><td class="t">All day</td><td><b>Around 18 to 24 people per therapist</b>Staff book their own slot on the sheet, so nobody waits around and managers don't have to organise it.</td></tr>
+        <tr><td class="t">16:30</td><td><b>Last slot and pack down</b>We leave the room as we found it.</td></tr>
+        <tr><td class="t">Next</td><td><b>Same again next month, if you like</b>Most workplaces move to a monthly or fortnightly programme with a single invoice.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h2>Three ways to book.</h2>
+    <p class="intro">Every corporate booking is quoted per therapist, per session, on hours and headcount.</p>
+    <ul class="rows">
+      <li><span class="k">One-off day</span><p><b>Wellbeing days and events.</b> Staff appreciation, awareness weeks, conferences, Christmas. Any headcount, we scale the team.</p></li>
+      <li><span class="k">Recurring</span><p><b>Monthly or fortnightly programmes.</b> A familiar therapist on a set day, a sign-up sheet for staff, one simple invoice.</p></li>
+      <li><span class="k">Large scale</span><p><b>Multi-therapist events.</b> Big offices, universities and multi-site wellbeing weeks, covered by a team of twenty-plus. The Hakim Group annual conference at Telford had more than 2,000 people attending.</p></li>
+    </ul>
+    <div class="note"><span class="caps">Please note</span><p>Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</p></div>
+  </div>
+</div></section>
+
+<section data-page="corporate" style="padding-top:0"><div class="wrap two">
+  <div>
+    <h3 style="margin-bottom:1rem">Desk or chair?</h3>
+    <ul class="rows">
+      <li><span class="k">Desk massage</span><p>Short, at the employee's own desk. Nothing to set up, nobody leaves their seat.</p></li>
+      <li><span class="k">Chair massage</span><p>We bring the massage chair. Needs a small, ideally secluded space, roughly 2m by 2m, with a plug socket.</p></li>
+    </ul>
+  </div>
+  <div>
+    <h3 style="margin-bottom:1rem">Why teams book it</h3>
+    <ul class="rows">
+      <li><span class="k">Morale</span><p>Boosts wellbeing and morale, and rewards and recognises the team.</p></li>
+      <li><span class="k">Health</span><p>Supports a healthier, more productive team. Reduces stress and absenteeism.</p></li>
+      <li><span class="k">Fit</span><p>Ideal for offices, events and ongoing projects. People go back to work lively and refreshed.</p></li>
+    </ul>
+  </div>
+</div></section>
+
+<section data-page="corporate" style="padding-top:0"><div class="wrap two">
+  <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:900px) 100vw, 50vw" loading="lazy" alt="Six KM therapists in black aprons giving a thumbs up at a Hakim Group wellbeing day" style="aspect-ratio:4/5;object-position:50% 35%"><figcaption><b>Hakim Group wellbeing day.</b> Six therapists, one conference, everyone seen.</figcaption></figure>
+  <div>
+    <h2>Recent days on site.</h2>
+    <ul class="rows" style="margin-top:1.5rem">
+      <li><span class="k">RAF Lincolnshire</span><p>On-site chair massage at a training-day wellbeing session.<em>March 2025</em></p></li>
+      <li><span class="k">Hakim Group</span><p>Annual conference at Telford International Centre, with more than 2,000 optical professionals attending. “A professional, well organised service and run smoothly with great outcome from the weekend conference retreat.”<em>December 2024</em></p></li>
+      <li><span class="k">Microlise</span><p>Corporate wellbeing day with chair massage for the whole office, Eastwood, Nottingham.<em>February 2025</em></p></li>
+    </ul>
+    <h3 style="margin:2.5rem 0 1rem">Questions office managers ask</h3>
+    <div class="faq">
+      <details open><summary>How many people can you see in a day?</summary><p>One therapist typically sees 18 to 24 people on fifteen to twenty minute slots. For bigger teams we add therapists so everyone is seen in one day.</p></details>
+      <details><summary>Do staff need to undress or use oils?</summary><p>No. Seated chair massage is done fully clothed with no oils, so people can go straight back to work.</p></details>
+      <details><summary>What do you need from us?</summary><p>A quiet space of roughly 2m by 2m per therapist and a plug socket. We bring the chairs, towels, music and sign-up sheet.</p></details>
+      <details><summary>Are you insured?</summary><p>Yes. All therapists are qualified and fully insured.</p></details>
+      <details><summary>Which areas do you cover?</summary><p>Leicester, Lincoln, Grantham, Boston, Nottingham, Mansfield, Kettering, Melton Mowbray, Derby, Chesterfield, Worksop, Hinckley, Northampton, Loughborough and Corby.</p></details>
+    </div>
+  </div>
+</div></section>
+
+<div class="clients" data-page="corporate"><div class="wrap">
+  <span class="caps">Current and recent workplace clients</span>
+  <ul><li>Loughborough University</li><li>University of Leicester</li><li>Loughborough College</li><li>Hakim Group</li><li>Miniclip</li><li>Mosca</li><li>SDL Surveying</li><li>Rank Interactive</li><li>Homes By Honey</li><li>PR Eden</li></ul>
+</div></div>
+
+<!-- ============ PARTIES ============ -->
+<div class="head" data-page="parties"><div class="wrap head-grid">
+  <div>
+    <h1>A pamper party, at your place.</h1>
+    <p class="lede">Guests pick and mix treatments from the list. We arrive with therapists, couches, towels and music, and the host gets to relax too.</p>
+    <div class="acts"><a class="btn" href="#contact" data-type="party">Plan my party</a><a class="btn ghost" href="https://wa.me/447700900123">WhatsApp 07700 900123</a></div>
+  </div>
+  <figure class="pocket"><span class="rivet"></span><span class="rivet"></span><img src="../img/spa-letters.jpg" srcset="../img/spa-letters-sm.jpg 720w, ../img/spa-letters.jpg 1236w" sizes="(max-width:960px) 100vw, 45vw" alt="A pamper party set up with balloons and light-up SPA marquee letters" style="object-position:45% 50%"><figcaption><b>A pamper party at a client's venue.</b> Balloons theirs, couches and calm ours.</figcaption></figure>
+</div></div>
+
+<section data-page="parties"><div class="wrap two">
+  <div>
+    <h2>Per person, per treatment.</h2>
+    <table class="prices" style="margin-top:1.75rem">
+      <tr><td>20 min<small>per person</small></td><td>Shorter treatments, or an add-on to build a longer, tailored slot.</td><td>£24</td></tr>
+      <tr><td>30 min<small>per person</small></td><td>Back massage, Indian head massage or a facial.</td><td>£35</td></tr>
+      <tr><td>60 min<small>per person</small></td><td>Full body massage, the Hammam experience, or a combination such as massage plus facial.</td><td>£65</td></tr>
+    </table>
+    <p class="fine">Minimum booking time two hours. A deposit secures the date and the balance is due seven days before the party. Gift vouchers available by enquiry.</p>
+    <div class="note"><span class="caps">Please note</span><p>Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</p></div>
+  </div>
+  <div>
+    <h2>Every occasion, pick and mix.</h2>
+    <p class="intro" style="margin-bottom:0">Each guest chooses from the treatment list. Popular combinations: Hen Party Pick &amp; Mix, Girls' Night In, I Love You Mum, Mum to Be with pregnancy massage, and Time Out for 2, where two therapists treat two people at once.</p>
+    <div class="occasions"><span>Hen parties</span><span>Birthdays</span><span>Baby showers</span><span>Girls' night in</span><span>Mother's Day</span><span>Couples, Time Out for 2</span><span>Pregnancy massage</span><span>Gift vouchers</span></div>
+    <ul class="rows" style="margin-top:2rem">
+      <li><span class="k">Before</span><p>Tell us the date, the address and how many guests. We confirm the therapists and take a deposit.</p></li>
+      <li><span class="k">On the day</span><p>We arrive ahead of time with couches, towels and music, set up in a bedroom or quiet room, and work through the guest list. The host is on the list too.</p></li>
+      <li><span class="k">Bigger groups</span><p>Additional therapists for larger parties, so everyone is treated within the booking time.</p></li>
+    </ul>
+    <p class="partner">Staying in a holiday let, cabin or hotel? We come to you anywhere in the East Midlands. Planning a group weekend elsewhere in the UK? You can also book a pamper party for a group weekend through <a href="https://www.groupescapehouses.co.uk/experiences/pamper-party-package" target="_blank" rel="noopener">Group Escape Houses</a>.</p>
+  </div>
+</div></section>
+
+<!-- ============ TREATMENTS ============ -->
+<div class="head" data-page="treatments"><div class="wrap">
+  <h1>The treatment list.</h1>
+  <p class="lede">Chair massage works in an office corner; a full body massage needs a couch and a quiet room. Here is what works where.</p>
+</div></div>
+
+<section data-page="treatments"><div class="wrap">
+  <div class="label">
+    <div class="tbl-scroll"><table class="tx">
+      <thead><tr><th scope="col">Treatment</th><th scope="col">Slot</th><th scope="col">Good for</th><th scope="col">Setting</th></tr></thead>
+      <tbody>
+        <tr><td><b>Seated chair massage</b>Fully clothed, no oils, back, neck and shoulders</td><td>15 to 20 min</td><td>Desk tension, a break in the working day</td><td><span class="tag">Workplace</span><span class="tag">Events</span></td></tr>
+        <tr><td><b>Desk massage</b>At the employee's own desk</td><td>Short</td><td>Teams with no spare room</td><td><span class="tag">Workplace</span></td></tr>
+        <tr><td><b>Indian head massage</b>Scalp, neck and shoulders</td><td>20 or 30 min</td><td>Thinning hair, migraines, stress</td><td><span class="tag">Workplace</span><span class="tag">Parties</span></td></tr>
+        <tr><td><b>Back massage</b>With a free essential oil upgrade</td><td>20 or 30 min</td><td>Aches, tension, recovery</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+        <tr><td><b>Aromatherapy or full body massage</b>Couch-based</td><td>60 min</td><td>Deep relaxation</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+        <tr><td><b>Hot stone massage</b></td><td>30 or 60 min</td><td>Warmth for stiff muscles</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+        <tr><td><b>Facials</b>Consultation first, suits all skin types</td><td>30 or 60 min</td><td>Pamper days, wellbeing weeks</td><td><span class="tag">Parties</span><span class="tag">Events</span></td></tr>
+        <tr><td><b>Reflexology</b></td><td>30 min</td><td>Rebalancing, stress</td><td><span class="tag">Parties</span><span class="tag">Workplace</span></td></tr>
+        <tr><td><b>Pregnancy massage</b>Qualified pregnancy massage therapists who work with mum throughout</td><td>30 or 60 min</td><td>Mums-to-be, baby showers</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+        <tr><td><b>Hammam experience</b>Body scrub, mud mask, hot steam and a hot oil massage</td><td>60 min</td><td>The full pamper</td><td><span class="tag">Parties</span><span class="tag">Individual</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="note"><span class="caps">Pricing</span><p>Pamper parties and individual bookings are priced per person, per treatment: £24 for 20 minutes, £35 for 30, £65 for 60. Minimum booking two hours.</p><p>Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</p></div>
+  <div class="acts" style="margin-top:2rem"><a class="btn" href="#contact">Enquire</a><a class="btn ghost" href="#parties">Party prices</a><a class="btn ghost" href="#corporate">Workplace formats</a></div>
+</div></section>
+
+<!-- ============ CONTACT HEAD ============ -->
+<div class="head" data-page="contact"><div class="wrap">
+  <h1>Book the team.</h1>
+  <p class="lede">A few details and we'll come back with options and a clear price. No obligation. If it's quicker, WhatsApp us.</p>
+</div></div>
+
+<!-- ============ SHARED ENQUIRY ============ -->
+<section id="enquire" data-page="corporate parties contact"><div class="wrap enq-grid">
+  <div>
+    <h2>Tell us about your team or occasion.</h2>
+    <ul class="contact">
+      <li><span class="caps">WhatsApp</span><a href="https://wa.me/447700900123">07700 900123</a></li>
+      <li><span class="caps">Phone</span><a href="tel:+447700900123">07700 900123</a></li>
+      <li><span class="caps">Email</span><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li>
+      <li><span class="caps">Areas</span><span class="areas">Leicester, Lincoln, Grantham, Boston, Nottingham, Mansfield, Kettering, Melton Mowbray, Derby, Chesterfield, Worksop, Hinckley, Northampton, Loughborough, Corby</span></li>
+    </ul>
+  </div>
+  <div class="label">
+    <form id="enqForm" novalidate>
+      <label>This enquiry is for<select id="f-type" name="type"><option value="workplace">A workplace wellbeing day or event</option><option value="programme">A regular workplace programme</option><option value="party">A pamper party</option><option value="individual">An individual treatment</option></select></label>
+      <div class="f2">
+        <label>Your name<input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></label>
+        <label>Email or phone<input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="jane@company.co.uk" required></label>
+      </div>
+      <div class="f2">
+        <label>Organisation or occasion<input id="f-co" name="org" type="text" placeholder="Company, university or hen do"></label>
+        <label>How many people<input id="f-n" name="people" type="text" inputmode="numeric" placeholder="e.g. 40"></label>
+      </div>
+      <label>Dates, location, anything else<textarea id="f-msg" name="notes" rows="3" placeholder="Monthly from January, Leicester office, around 40 staff"></textarea></label>
+      <p class="ferr" id="ferr" hidden role="alert">Please add your name and a way to reach you so we can reply.</p>
+      <div><button class="btn" type="submit">Send enquiry</button></div>
+    </form>
+    <div class="done" id="enqDone" hidden tabindex="-1">
+      <span class="stamp">Received</span>
+      <h3>Thanks, we've got your enquiry.</h3>
+      <p>We'll reply with options and a clear price. Need it sooner? WhatsApp <a href="https://wa.me/447700900123">07700 900123</a>.</p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap foot">
+  <div><b>KM Pamper Parties</b> · Holistic Therapy Team<br>Massage, beauty and wellbeing services, delivered on site across Nottingham, Derby, Leicester and the East Midlands.</div>
+  <ul><li><a href="#corporate">Workplace wellbeing</a></li><li><a href="#parties">Pamper parties</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#contact">Contact</a></li></ul>
+  <ul><li><a href="https://wa.me/447700900123">WhatsApp 07700 900123</a></li><li><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li><li><a href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener">Reviews on Google</a></li></ul>
+  <div class="proto">Concept 4 of 4, “Black Apron”. Prototype for review, not the live site. Contact details are placeholders.</div>
+</div></footer>
+
+<div class="mbar" aria-label="Quick actions"><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp</a><a class="btn" href="#contact">Enquire</a></div>
+
+<script>
+(function(){
+  var pages=['home','corporate','parties','treatments','contact'];
+  var titles={home:'KM Pamper Parties · Black Apron',corporate:'Workplace wellbeing · KM Pamper Parties',parties:'Pamper parties · KM Pamper Parties',treatments:'Treatments · KM Pamper Parties',contact:'Book the team · KM Pamper Parties'};
+  function go(){
+    var h=(location.hash||'').replace('#','');
+    var page=pages.indexOf(h)>=0?h:'home';
+    document.querySelectorAll('[data-page]').forEach(function(el){el.hidden=el.getAttribute('data-page').split(' ').indexOf(page)<0;});
+    document.querySelectorAll('[data-nav]').forEach(function(a){if(a.getAttribute('data-nav')===page){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}});
+    document.title=titles[page];
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',go);go();
+
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var g=document.getElementById('sheen');if(g){g.removeAttribute('gradientTransform');var an=document.getElementById('sheenAnim');if(an){an.remove();}}
+  }
+
+  var btn=document.getElementById('menuBtn'),ul=document.getElementById('navList');
+  function closeMenu(){ul.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){var open=ul.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});
+  ul.addEventListener('click',function(e){if(e.target.tagName==='A'){closeMenu();}});
+  window.addEventListener('hashchange',closeMenu);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ul.classList.contains('open')){closeMenu();btn.focus();}});
+
+  var form=document.getElementById('enqForm'),done=document.getElementById('enqDone'),ferr=document.getElementById('ferr');
+  function bad(el){el.setAttribute('aria-invalid','true');ferr.hidden=false;el.focus();el.addEventListener('input',function(){el.removeAttribute('aria-invalid');},{once:true});}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('f-name'),c=document.getElementById('f-contact');
+    if(!n.value.trim()){bad(n);return;}
+    if(!c.value.trim()){bad(c);return;}
+    ferr.hidden=true;form.hidden=true;done.hidden=false;done.focus();
+  });
+  document.querySelectorAll('[data-type]').forEach(function(a){a.addEventListener('click',function(){
+    var s=document.getElementById('f-type');if(s){s.value=a.getAttribute('data-type');}
+    if(!form.hidden){return;}
+    form.hidden=false;done.hidden=true;
+  });});
+})();
+</script>
+</body>
+</html>

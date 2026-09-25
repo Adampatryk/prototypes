@@ -53,7 +53,7 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 
 ## Evidence on Hand
 
-- Photos (embedded as base64 in each prototype): six therapists giving a thumbs up at a Hakim Group wellbeing day (portrait and wide crops); the full team of twenty-plus (low-resolution source, AI-upscaled); a seated chair massage under a "Wellbeing at Work" neon sign (has baked-in text); SPA marquee letters and balloons at a party. No other imagery exists; do not use stock.
+- Photos (full-size sources in `assets/`, web-sized JPEGs with `-sm` variants in `img/`, referenced by every prototype via srcset): six therapists giving a thumbs up at a Hakim Group wellbeing day (`team-six`, plus `team-six-hero` portrait and `team-six-wide` landscape crops); the full team of twenty-plus seated in a conference hall (`team-all`); two therapists beside a pink "Massages" sign at a client's offices (`spa-pair`); two therapists outside a branded hospitality truck at a golf event (`event-truck`, the truck carries a third-party brand, so caption it as "a golf event", not as a client); a seated chair massage under a "Wellbeing at Work" neon sign (`chair-massage`, has baked-in text); SPA marquee letters and balloons at a party (`spa-letters`). All sources are around 1000 to 1450px on the long edge, so avoid layouts that stretch one photo beyond about 1200px wide. No other imagery exists; do not use stock.
 - Seven verbatim 5-star Google reviews and other testimonials, in BUSINESS.md.
 - Case studies: RAF Lincolnshire training-day wellbeing session (Mar 2025); Hakim Group annual conference, Telford, Dec 2024, 2,000+ attendees; Microlise, Eastwood, corporate wellbeing day (Feb 2025).
 - Absent: client logos, an award citation, corporate prices. None may be fabricated.

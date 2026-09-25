@@ -66,13 +66,14 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 
 - Must look professional and established, and must not look template-generated. Avoid: rounded card grids with icon tiles, checkmark trust strips, "most popular" badges, generic gradient heroes.
 - Use the client's real photography (listed in BUSINESS.md section 3) rather than stock. Source photos live in `assets/`; web-sized JPEGs the prototypes reference live in `img/` (two sizes each, served via srcset).
-- Client's existing brand: pink, gold, navy, lotus/heart motif, "Holistic Therapy Team" wordmark. New direction may depart from this; three concepts have been produced for the client to choose from:
+- Client's existing brand: pink, gold, navy, lotus/heart motif, "Holistic Therapy Team" wordmark. New direction may depart from this; four concepts have been produced for the client to choose from:
 
 | Concept | Folder | Direction | Notes / feedback |
 |---------|--------|-----------|------------------|
 | Plum Edition | `plum/` | Dark plum, blush, gold; bold editorial serif | Adam's preferred direction |
 | Blush & Gold | `blush-gold/` | Blush paper, navy ink, gold rules; brochure feel | |
-| Classic Edition | `classic/` | The existing site's own brand refined: cream paper, olive gold, Cormorant capitals between rules, real photos | Replaced the earlier "Wellbeing at Work" concept, which read as generic |
+| Classic Edition | `classic/` | The existing site's own brand refined: cream paper, olive gold, Cormorant capitals between rules, real photos | Replaced the earlier "Wellbeing at Work" concept, which read as generic. Adam's feedback: hero photo must not be cropped or upscaled; reviews should lead the proof; keep text minimal |
+| Black Apron | `black-apron/` | Built from the team's uniform: black apron cotton, gold arched lettering as on the aprons, tan leather pocket label as the button, brass hairlines. Photo-led, built around the four new location photos | Replaced a "Day Sheet" document-style concept that Adam felt fitted nothing |
 
 - Every concept: single-page-app style routing across the five pages above, self-contained HTML, no build step.
 
@@ -103,3 +104,5 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 | 2026-09-25 | Split requirements into REQUIREMENTS.md (build spec) and BUSINESS.md (reference) | Spec was buried under testimonials and audit detail |
 | 2026-09-25 | Replaced the Wellbeing at Work concept with Classic Edition, based on the current site's brand | Adam found the teal concept generic; the client's existing look, done well, is a fairer third option |
 | 2026-09-25 | Photos moved out of the HTML into a shared `img/` folder | Four new full-size photos supplied; inline base64 would have tripled every page |
+| 2026-09-25 | Added a fourth concept, Black Apron, built from the therapists' uniform and the four new location photos | Adam rejected a first attempt (Day Sheet, a document-style concept) as fitting nothing; the aprons in every photo are the one consistent piece of brand the client already owns |
+| 2026-09-25 | Classic hero rebuilt as a split: tagline left, the six-therapist photo right at its own size (no crop, no overlay); reviews moved up to follow the two routes, set in full olive gold with one featured quote; the four "why" points kept as single lines; route and team copy cut to one or two sentences | Adam: heads were cut off, the image looked low quality and oddly sized, the page read as uninspiring, and he wants more focus on the reviews with clean, clutter-free text. The source photos are about 1000px wide, so any full-width hero upscales them; showing the photo at column width keeps it sharp |

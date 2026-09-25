@@ -63,7 +63,7 @@ Individual mobile appointments are also offered (implicit on current site; revie
 
 **Visual style today:** fonts Cormorant (headings), Roboto, Roboto Slab and Lato. Dominant colours are an olive gold (#897600), a bright pink (#fa9fff), off-white (#f8f6f1) and grey text (#54595f). Imagery is generic stock spa photography (hot stone, facial, back massage) plus a couple of real photos from 2023 (couples massage, mother and daughter) and one 2025 photo of a chair massage in an office. Logo file is a small square "Group-1" PNG.
 
-**Existing brand assets:** pink, gold, navy, lotus/heart motif, "Holistic Therapy Team" wordmark. Real photography supplied by the client: team photo at the Hakim Group wellbeing day (six therapists, thumbs up), full-team group photo (20+), chair massage under the "Wellbeing at Work" neon, SPA marquee letters at a party.
+**Existing brand assets:** pink, gold, navy, lotus/heart motif, "Holistic Therapy Team" wordmark. Real photography supplied by the client: team photo at the Hakim Group wellbeing day (six therapists, thumbs up), full-team group photo (20+) seated in a conference hall, two therapists beside a pink "Massages" sign at a client's offices, two therapists outside a branded hospitality truck at a golf event (third-party branding visible, so not to be captioned as a client), chair massage under the "Wellbeing at Work" neon, SPA marquee letters at a party. Sources in `assets/`, web sizes in `img/`.
 
 **Current enquiry form fields:** full name, pamper party location, date, number of people, duration (2, 3, 4 or 5 hours), email, contact number.
 

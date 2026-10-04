@@ -47,7 +47,8 @@ Real multi-page navigation (not in-page anchors):
 - **Pamper parties**: occasions, per-person pricing, minimum booking, booking terms, gallery/photo, enquiry form.
 - **Treatments**: full list with duration and suitable settings.
 - **Contact**: enquiry form, WhatsApp, email, areas covered.
-- (Optional, on current site) About Us, Gallery, Prices, Testimonials, Blog. Fold into the above unless client wants them separate. The three blog posts work better as case studies on the corporate page.
+- **Blog**: an index with the newest post featured and earlier posts beneath it; each post is its own page, set in the workplace or party colours to match its subject, and ends with the enquiry form pre-set to that side. Kathleen supplies posts as text plus photos. First entries: the hen party at Red Roofs Barn (new, 4 Oct 2026) and the three posts from the current site (RAF Lincolnshire, Hakim Group conference, Microlise). Inventory and old URLs in BUSINESS.md section 10. The three workplace posts are also linked from "Days on site" on the workplace page.
+- (Optional, on current site) About Us, Gallery, Prices, Testimonials. Fold into the above unless client wants them separate.
 
 Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launch, so existing rankings aren't lost.
 
@@ -103,6 +104,11 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 17. Original photographs for the build: events, pamper parties, corporate bookings and the team, ideally including the new aprons, banners and backdrops once they exist.
 18. Airbnb profile link, due once the profile is live.
 19. Which straplines are approved for the site: "Restore · Recharge · Reconnect", "Restoring People · Empowering Teams · Brighter Workplaces", "Invest in your team's wellbeing", "Relax · Rejuvenate"?
+20. The current site has 44 further articles that are live but hidden from its blog page (generic how-to guides such as "How to Host the Ultimate DIY Spa Party at Home", around 2,000 words each, with illustrative rather than original images). Migrate, redirect to the new blog, or drop? They were not brought into the prototype.
+21. Red Roofs Farm or Red Roofs Barn? Kathleen's suggested title says Farm; her text and a notice in her photo say Barn. The prototype uses Barn.
+22. Do the hen party guests agree to their photo being published, and is the bride happy for the welcome sign (which shows her first name) to appear?
+23. The RAF post cites another massage provider's blog (atworkwellbeing.co.uk) as its source for "Studies indicate…". Keep the link, point it at an independent source, or remove it?
+24. Three photos from the Microlise post were left out because they are mainly Microlise branding (logo wall, banner, Queen's Award plaque). Add them back once Microlise has agreed to its name and logo being used?
 
 ## 8. Decisions log
 
@@ -116,5 +122,8 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 | 2026-09-25 | Photos moved out of the HTML into a shared `img/` folder | Four new full-size photos supplied; inline base64 would have tripled every page |
 | 2026-09-25 | Added a fourth concept, Black Apron, built from the therapists' uniform and the four new location photos | Adam rejected a first attempt (Day Sheet, a document-style concept) as fitting nothing; the aprons in every photo are the one consistent piece of brand the client already owns |
 | 2026-10-04 | Added a fifth concept, KMP Collection, built from the client's own brand sheet | Kathleen sent her brand and website style direction; this is the first concept that starts from it rather than from our reading of the old brand |
+| 2026-10-04 | Added a Blog to the KMP Collection concept: Kathleen's new hen party post plus the three posts shown on the current site's blog page, carried over word for word | Kathleen sent a first new post with six photos, and asked for the existing posts to sit beneath it as older entries |
+| 2026-10-04 | Post titles keep the author's title case; everything else on the site stays sentence case | The titles are Kathleen's published content and existing search listings, not interface headings |
+| 2026-10-04 | The 44 hidden articles on the current site were not migrated | They are not listed on its blog page, read as generic search-engine filler, and use non-original images; left as an open question |
 | 2026-10-04 | Accommodation partners section holds three entries: Group Escape Houses, Ashbourne Self Catering, Darley House | Kathleen checked which providers actually link to or refer guests to her; the others give out her email directly, so they stay off for now |
 | 2026-09-25 | Classic hero rebuilt as a split: tagline left, the six-therapist photo right at its own size (no crop, no overlay); reviews moved up to follow the two routes, set in full olive gold with one featured quote; the four "why" points kept as single lines; route and team copy cut to one or two sentences | Adam: heads were cut off, the image looked low quality and oddly sized, the page read as uninspiring, and he wants more focus on the reviews with clean, clutter-free text. The source photos are about 1000px wide, so any full-width hero upscales them; showing the photo at column width keeps it sharp |

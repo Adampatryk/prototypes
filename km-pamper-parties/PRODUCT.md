@@ -34,7 +34,7 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 
 ## Capabilities and Constraints
 
-- Pages: Home, Workplace wellbeing, Pamper parties, Treatments, Contact. Prototypes simulate these with hash routing in one file. Production keeps or redirects the current URLs.
+- Pages: Home, Workplace wellbeing, Pamper parties, Treatments, Blog (index plus one page per post), Contact. Prototypes simulate these with hash routing in one file. Production keeps or redirects the current URLs.
 - Enquiry form: type (workplace day / regular programme / pamper party / individual), name, email or phone, organisation or occasion, headcount, dates/location/notes. Validates name and contact method with a visible message, shows a confirmation state, pre-selects type when arriving from a corporate or party CTA. Submission destination TBC.
 - Sticky header; hamburger menu below ~900px; current page highlighted; persistent WhatsApp/Enquire bar on mobile desirable.
 - Google review badge linking to the Google Business profile (place ID ChIJPbNj01L5gS4R5uGWW4tK2kU).
@@ -57,6 +57,8 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 ## Evidence on Hand
 
 - Photos (full-size sources in `assets/`, web-sized JPEGs with `-sm` variants in `img/`, referenced by every prototype via srcset): six therapists giving a thumbs up at a Hakim Group wellbeing day (`team-six`, plus `team-six-hero` portrait and `team-six-wide` landscape crops); the full team of twenty-plus seated in a conference hall (`team-all`); two therapists beside a pink "Massages" sign at a client's offices (`spa-pair`); two therapists outside a branded hospitality truck at a golf event (`event-truck`, the truck carries a third-party brand, so caption it as "a golf event", not as a client); a seated chair massage under a "Wellbeing at Work" neon sign (`chair-massage`, has baked-in text); SPA marquee letters and balloons at a party (`spa-letters`). All sources are around 1000 to 1450px on the long edge, so avoid layouts that stretch one photo beyond about 1200px wide. No other imagery exists; do not use stock.
+- Blog photos (added 4 Oct 2026): six from a hen party at Red Roofs Barn supplied by Kathleen (`hen-redroofs-*`), and eight from the current site's three posts (`raf-lincs-*`, `hakim-conf-*`, `microlise-*`). The hen party set is the only real pamper party photography on hand. Inventory in BUSINESS.md section 10.
+- Four blog posts: one new (hen party) and three carried over word for word from the current site. BUSINESS.md section 10.
 - Seven verbatim 5-star Google reviews and other testimonials, in BUSINESS.md.
 - Case studies: RAF Lincolnshire training-day wellbeing session (Mar 2025); Hakim Group annual conference, Telford, Dec 2024, 2,000+ attendees; Microlise, Eastwood, corporate wellbeing day (Feb 2025).
 - Accommodation partners to show on the parties page: Group Escape Houses (link), Ashbourne Self Catering (link), Darley House Matlock (Lucy Arterton, 07719 894 663). Others are deliberately left off; see BUSINESS.md section 8.

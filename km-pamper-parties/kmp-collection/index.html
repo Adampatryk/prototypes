@@ -87,8 +87,8 @@ header.top{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--hair)}
 .logo .pt{animation:bloom 1.3s cubic-bezier(.16,1,.3,1) .15s both}
 @keyframes bloom{from{transform:rotate(0deg) scale(calc(var(--s)*.55))}}
 .for-work{display:none}
-body[data-page="corporate"] .for-all{display:none}
-body[data-page="corporate"] .for-work{display:inline}
+body[data-side="work"] .for-all{display:none}
+body[data-side="work"] .for-work{display:inline}
 header.top.scrolled .nav{padding-block:.4rem}
 header.top.scrolled .logo .words{display:none}
 header.top.scrolled .logo .lotus{width:36px;height:22px}
@@ -99,8 +99,8 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
 .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 @media(max-width:800px){.nav-r li:last-child{display:none}}
-@media(min-width:1001px) and (max-width:1180px){.nav{gap:1.2rem}.nav ul{gap:1.3rem;font-size:.68rem;letter-spacing:.14em}.nav .btn.sm{padding-inline:1rem}}
-@media(max-width:1000px){
+@media(min-width:1061px) and (max-width:1260px){.nav{gap:1.2rem}.nav ul{gap:1.3rem;font-size:.68rem;letter-spacing:.14em}.nav .btn.sm{padding-inline:1rem}}
+@media(max-width:1060px){
   .nav{grid-template-columns:auto 1fr auto;gap:1rem;padding-block:.5rem}
   .menu-btn{display:flex}
   .logo{grid-column:1;justify-self:start;grid-auto-flow:column;align-items:center;column-gap:.8rem}
@@ -272,6 +272,45 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
   .tx td:nth-child(3){font-size:.9rem;color:var(--m)}
 }
 
+/* blog */
+.post-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;text-decoration:none;color:inherit}
+.post-row .ph img,.post-card .ph img{aspect-ratio:4/3;transition:filter .3s}
+.post-row:hover .ph img,.post-card:hover .ph img{filter:brightness(1.05)}
+.post-row h2{font-size:clamp(1.5rem,2.7vw,2.2rem)}
+.date{margin-top:.9rem}
+.post-row p{margin-top:1rem;max-width:34rem}
+.more{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;padding-bottom:.3rem;border-bottom:1px solid var(--gold);font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--a)}
+.more svg{transition:transform .2s}
+.post-row:hover .more svg{transform:translateX(4px)}
+@media(max-width:760px){.post-row{grid-template-columns:1fr}}
+.earlier-h{margin-top:clamp(3.5rem,7vw,5.5rem);padding-top:clamp(2.2rem,4vw,3rem);border-top:1px solid var(--hair);font-size:clamp(1.5rem,2.4vw,1.9rem)}
+.earlier{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem clamp(2rem,4vw,3.2rem)}
+@media(max-width:860px){.earlier{grid-template-columns:1fr}}
+.post-card{display:block;text-decoration:none;color:inherit}
+.post-card h3{margin-top:1.7rem;font-size:1.25rem;line-height:1.3;transition:color .2s}
+.post-card:hover h3{color:var(--a)}
+.post-title{font-size:clamp(1.8rem,3.1vw,2.65rem);line-height:1.14}
+.nw{white-space:nowrap}
+.prose{max-width:44rem;margin-inline:auto}
+.prose > p{font-size:1.05rem}
+.prose > * + p{margin-top:1.3rem}
+.prose h2{font-size:clamp(1.4rem,2.2vw,1.75rem);line-height:1.2;margin-top:2.8rem}
+.prose h2 + p{margin-top:1rem}
+.prose > :first-child{margin-top:0}
+.prose > p a{color:var(--h);text-decoration-color:var(--gold);text-underline-offset:.2em}
+.prose ul{list-style:none;margin:1.4rem 0 0;padding:0;border-top:1px solid var(--hair)}
+.prose li{padding:1rem 0;border-bottom:1px solid var(--hair);font-size:1.02rem}
+.prose li b{color:var(--h);font-weight:600}
+.prose .last{margin-top:2.4rem;font-size:clamp(1.2rem,1.9vw,1.45rem);line-height:1.5;color:var(--h)}
+.prose figure{margin-block:2.8rem}
+.prose .wide{margin-inline:min(0px,calc((100% - min(100vw - 64px,60rem))/2))}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.pair .ph img{aspect-ratio:4/5}
+.pair.land .ph img{aspect-ratio:4/3}
+.pair figcaption{grid-column:1/-1;font:italic 500 1rem/1.5 "Playfair Display",Georgia,serif;color:var(--m);margin-top:-.6rem}
+@media(max-width:560px){.pair{grid-template-columns:1fr}}
+.prose .acts{margin-top:2.4rem}
+
 /* enquiry */
 .enq{padding-block:clamp(3.2rem,7vw,5.5rem)}
 #enquire{scroll-margin-top:84px}
@@ -348,7 +387,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav id="navList" aria-label="Main">
     <ul class="nav-l"><li class="home-link"><a href="#home" data-nav="home">Home</a></li><li><a href="#corporate" data-nav="corporate">Workplace wellbeing</a></li><li><a href="#parties" data-nav="parties">Pamper parties</a></li></ul>
-    <ul class="nav-r"><li><a href="#treatments" data-nav="treatments">Treatments</a></li><li><a href="#contact" data-nav="contact">Contact</a></li><li><a class="btn sm" href="#contact">Enquire</a></li></ul>
+    <ul class="nav-r"><li><a href="#treatments" data-nav="treatments">Treatments</a></li><li><a href="#blog" data-nav="blog">Blog</a></li><li><a href="#contact" data-nav="contact">Contact</a></li><li><a class="btn sm" href="#contact">Enquire</a></li></ul>
   </nav>
 </div></header>
 
@@ -459,9 +498,9 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <div>
     <h2>Days on site</h2>
     <ul class="rows">
-      <li><span class="k">RAF Lincolnshire</span><p>On-site chair massage at a training-day wellbeing session.<em>March 2025</em></p></li>
-      <li><span class="k">Microlise</span><p>Corporate wellbeing day with chair massage, Eastwood, Nottingham.<em>February 2025</em></p></li>
-      <li><span class="k">Hakim Group</span><p>Annual conference at Telford International Centre, with more than 2,000 optical professionals attending.<em>December 2024</em></p></li>
+      <li><span class="k"><a href="#blog-raf-lincolnshire-training-day">RAF Lincolnshire</a></span><p>On-site chair massage at a training-day wellbeing session.<em>March 2025</em></p></li>
+      <li><span class="k"><a href="#blog-microlise-eastwood">Microlise</a></span><p>Corporate wellbeing day with chair massage, Eastwood, Nottingham.<em>February 2025</em></p></li>
+      <li><span class="k"><a href="#blog-hakim-group-conference-2024">Hakim Group</a></span><p>Annual conference at Telford International Centre, with more than 2,000 optical professionals attending.<em>December 2024</em></p></li>
     </ul>
     <span class="caps" style="margin-top:2.4rem">Current and recent workplace clients</span>
     <ul class="names"><li>Loughborough University</li><li>University of Leicester</li><li>Loughborough College</li><li>Hakim Group</li><li>Miniclip</li><li>Mosca</li><li>SDL Surveying</li><li>Rank Interactive</li><li>Homes By Honey</li><li>PR Eden</li></ul>
@@ -536,6 +575,168 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <div class="acts"><a class="btn" href="#contact">Enquire</a><a class="btn ghost" href="#parties">Party prices</a><a class="btn ghost" href="#corporate">Workplace formats</a></div>
 </div></section>
 
+<!-- ============ BLOG ============ -->
+<div class="head plain" data-page="blog"><div class="wrap">
+  <h1>Blog</h1>
+  <p class="lede">Stories from our pamper parties and wellbeing days.</p>
+</div></div>
+
+<section class="sec" data-page="blog"><div class="wrap">
+  <a class="post-row" href="#blog-hen-party-red-roofs-barn">
+    <figure class="ph"><img src="../img/hen-redroofs-close.jpg" srcset="../img/hen-redroofs-close-sm.jpg 720w, ../img/hen-redroofs-close.jpg 1200w" sizes="(max-width:760px) 100vw, 520px" width="1200" height="1122" loading="lazy" alt="A treatment couch dressed in black and cream throws, set up beside a sofa in a holiday barn" style="object-position:50% 40%"></figure>
+    <div>
+      <h2>A Relaxing Hen Party Pamper Experience at Red Roofs Barn</h2>
+      <span class="caps date">October 2026</span>
+      <p>KM Pamper Parties recently provided a mobile pamper experience for a group of six celebrating a hen party at Red Roofs Barn.</p>
+      <span class="more">Read the story <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </div>
+  </a>
+  <h2 class="earlier-h">Earlier posts</h2>
+  <ul class="earlier">
+    <li><a class="post-card" href="#blog-raf-lincolnshire-training-day">
+      <figure class="ph"><img src="../img/raf-lincs-jet.jpg" srcset="../img/raf-lincs-jet-sm.jpg 800w, ../img/raf-lincs-jet.jpg 1400w" sizes="(max-width:760px) 100vw, 380px" width="1400" height="1007" loading="lazy" alt="Kathleen in front of a wall-sized photograph of a fast jet at the RAF Wellbeing Day in Lincolnshire" style="object-position:25% 50%"></figure>
+      <h3>Enhancing Employee <span class="nw">Well-being:</span> Onsite Chair Massages at RAF Lincolnshire Training Day</h3>
+      <span class="caps date">March 2025</span>
+    </a></li>
+    <li><a class="post-card" href="#blog-hakim-group-conference-2024">
+      <figure class="ph"><img src="../img/hakim-conf-team.jpg" srcset="../img/hakim-conf-team-sm.jpg 800w, ../img/hakim-conf-team.jpg 1400w" sizes="(max-width:760px) 100vw, 380px" width="1400" height="1050" loading="lazy" alt="The team of therapists gathered on the steps at Telford International Centre" style="object-position:50% 60%"></figure>
+      <h3>Hakim Group’s Annual Conference 2024: A Weekend of <span class="nw">Well-being</span> and Professional Growth</h3>
+      <span class="caps date">March 2025</span>
+    </a></li>
+    <li><a class="post-card" href="#blog-microlise-eastwood">
+      <figure class="ph"><img src="../img/microlise-massage.jpg" srcset="../img/microlise-massage-sm.jpg 600w, ../img/microlise-massage.jpg 1000w" sizes="(max-width:760px) 100vw, 380px" width="1000" height="1333" loading="lazy" alt="A member of staff leaning into the massage chair with a cream towel across their back, in a bright office" style="object-position:50% 30%"></figure>
+      <h3>KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham</h3>
+      <span class="caps date">February 2025</span>
+    </a></li>
+  </ul>
+</div></section>
+
+<article data-page="blog-hen-party-red-roofs-barn">
+<div class="head blush"><div class="wrap head-grid">
+  <div>
+    <h1 class="post-title">A Relaxing Hen Party Pamper Experience at Red Roofs Barn</h1>
+    <p class="caps date">October 2026</p>
+    <p class="lede">A hen party is often a busy weekend of celebrations, so adding some time to relax and unwind can be a lovely way for everyone to enjoy a little time out together.</p>
+  </div>
+  <figure class="ph"><img src="../img/hen-redroofs-welcome.jpg" srcset="../img/hen-redroofs-welcome-sm.jpg 540w, ../img/hen-redroofs-welcome.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1260" alt="A sign on an easel reading Welcome to Lauren&#39;s hen do, she&#39;s tying the knot, with white and black balloons around it" style="aspect-ratio:4/5;object-position:50% 42%"></figure>
+</div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
+
+<section class="sec"><div class="wrap">
+  <div class="prose">
+    <p>KM Pamper Parties recently provided a mobile pamper experience for a group of six celebrating a hen party at Red Roofs Barn.</p>
+    <p>We brought everything needed to create a comfortable treatment area within the accommodation, allowing the group to enjoy their treatments without having to travel anywhere or interrupt their weekend plans.</p>
+    <figure class="pair wide">
+      <div class="ph"><img src="../img/hen-redroofs-room.jpg" srcset="../img/hen-redroofs-room-sm.jpg 600w, ../img/hen-redroofs-room.jpg 1000w" sizes="(max-width:560px) 100vw, 460px" width="1000" height="1125" loading="lazy" alt="The treatment couch set up in the living room, with a large black bow balloon above a wood-burning stove"></div>
+      <div class="ph"><img src="../img/hen-redroofs-couch.jpg" srcset="../img/hen-redroofs-couch-sm.jpg 600w, ../img/hen-redroofs-couch.jpg 1000w" sizes="(max-width:560px) 100vw, 460px" width="1000" height="1042" loading="lazy" alt="Looking along the treatment couch, dressed in black and cream throws, towards a sofa and a table of products" style="object-position:50% 30%"></div>
+      <figcaption>The treatment couch, set up in the living room at Red Roofs Barn.</figcaption>
+    </figure>
+    <p>One of the benefits of our mobile pamper parties is that we set up within your chosen accommodation. Whether you’re staying in a holiday cottage, group house or other private accommodation, we bring our professional treatment equipment and products with us.</p>
+    <figure class="ph wide"><img src="../img/hen-redroofs-products.jpg" srcset="../img/hen-redroofs-products-sm.jpg 800w, ../img/hen-redroofs-products.jpg 1400w" sizes="(max-width:1000px) 100vw, 960px" width="1400" height="945" loading="lazy" alt="Skincare products, essential oils, towels and a headband laid out on a sideboard"><figcaption>Products, oils and towels laid out ready for the group.</figcaption></figure>
+    <p>Treatments are organised into a schedule before the booking so everyone knows their allocated treatment time. Once we know the number of guests, their chosen treatments and the time available, we put together a treatment schedule to help everything run smoothly.</p>
+    <p>The group gave lovely positive feedback about their treatments, which was wonderful to hear.</p>
+    <figure class="ph wide"><img src="../img/hen-redroofs-group.jpg" srcset="../img/hen-redroofs-group-sm.jpg 800w, ../img/hen-redroofs-group.jpg 1400w" sizes="(max-width:1000px) 100vw, 960px" width="1400" height="936" loading="lazy" alt="Four of the hen party smiling under a wooden pergola outside the brick barn, with open fields behind"><figcaption>Four of the group outside the barn.</figcaption></figure>
+    <p>KM Pamper Parties provides mobile massage, beauty and holistic treatments for hen parties, birthdays, girls’ weekends, group getaways and other special occasions.</p>
+    <p>With more than 22 years of experience, our aim is to provide a professional, friendly and well-organised service while giving guests the opportunity to relax and enjoy quality treatments in the comfort of their chosen accommodation.</p>
+    <p>If you’re planning a hen party or group stay, simply get in touch with your date, location and approximate group size and we can help you plan your pamper experience.</p>
+    <div class="acts"><a class="btn to-form" href="#contact" data-type="party">Plan my party</a><a class="btn ghost" href="#blog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All posts</a></div>
+  </div>
+</div></section>
+</article>
+
+<article data-page="blog-raf-lincolnshire-training-day">
+<div class="head dark"><div class="wrap head-grid">
+  <div>
+    <h1 class="post-title">Enhancing Employee <span class="nw">Well-being:</span> Onsite Chair Massages at RAF Lincolnshire Training Day</h1>
+    <p class="caps date">March 2025</p>
+    <p class="lede">The Royal Air Force (RAF) Wellbeing Day in Lincolnshire marked a significant step towards integrating holistic wellness into military training programs. For the first time, the defence team experienced onsite chair massages during their training day event, aiming to enhance both physical and mental well-being.</p>
+  </div>
+  <figure class="ph"><img src="../img/raf-lincs-jet.jpg" srcset="../img/raf-lincs-jet-sm.jpg 800w, ../img/raf-lincs-jet.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="1007" alt="Kathleen in front of a wall-sized photograph of a fast jet at the RAF Wellbeing Day in Lincolnshire" style="aspect-ratio:4/3;object-position:30% 50%"></figure>
+</div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
+
+<section class="sec"><div class="wrap">
+  <div class="prose">
+    <h2>Pioneering Onsite Chair Massage in Military Training</h2>
+    <p>Introducing corporate chair massage services into the structured environment of military training was a novel initiative. Initially, some staff members were sceptical about receiving massages in the workplace. However, this approach aligns with broader trends in corporate wellness programs that have shown significant benefits in various professional settings. <a href="https://atworkwellbeing.co.uk/blog/improve-employee-productivity-with-corporate-chair-massage" target="_blank" rel="noopener">Studies indicate that chair massages can decrease anxiety, relieve muscle tension, and improve overall employee productivity.</a></p>
+    <h2>Transformative Feedback from Defence Personnel</h2>
+    <p>Post-event feedback revealed a positive shift in perception among the defence team. Many expressed gratitude for the opportunity to experience workplace massage services, noting substantial benefits such as reduced stress levels and alleviated muscle tension. This mirrors findings from corporate environments where onsite chair massages have led to improved employee morale and productivity.</p>
+    <figure class="ph wide"><img src="../img/raf-lincs-cockpit.jpg" srcset="../img/raf-lincs-cockpit-sm.jpg 800w, ../img/raf-lincs-cockpit.jpg 1400w" sizes="(max-width:1000px) 100vw, 960px" width="1400" height="1029" loading="lazy" alt="Kathleen beside a wall-sized photograph of two aircrew in a cockpit"><figcaption>At the RAF Wellbeing Day in Lincolnshire.</figcaption></figure>
+    <h2>The Strategic Advantage of Onsite Chair Massages</h2>
+    <p>Incorporating onsite chair massages into the RAF’s training regimen offers several strategic advantages:</p>
+    <ul>
+      <li><b>Stress Reduction:</b> Regular massage sessions have been shown to lower stress and anxiety, contributing to better focus and decision-making.</li>
+      <li><b>Enhanced Physical Readiness:</b> Addressing muscle tension and discomfort ensures personnel are physically prepared for the demands of their roles.</li>
+      <li><b>Boosted Morale and Cohesion:</b> Offering wellness services demonstrates a commitment to personnel well-being, fostering a supportive and cohesive team environment.</li>
+    </ul>
+    <h2>Looking Ahead: Integrating Wellness into Military Culture</h2>
+    <p>The success of the Wellbeing Day in Lincolnshire sets a precedent for future initiatives within the RAF and potentially other branches of the military. Embracing corporate wellness solutions like onsite chair massages can lead to a more resilient and effective defence force, ready to meet the challenges of their demanding roles.</p>
+    <p class="last script">Investing in the well-being of military personnel is not just a compassionate approach but a strategic imperative, ensuring that those who serve are at their best, both physically and mentally.</p>
+    <div class="acts"><a class="btn to-form" href="#contact" data-type="workplace">Request a quote</a><a class="btn ghost" href="#blog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All posts</a></div>
+  </div>
+</div></section>
+</article>
+
+<article data-page="blog-hakim-group-conference-2024">
+<div class="head dark"><div class="wrap head-grid">
+  <div>
+    <h1 class="post-title">Hakim Group’s Annual Conference 2024: A Weekend of <span class="nw">Well-being</span> and Professional Growth</h1>
+    <p class="caps date">March 2025</p>
+    <p class="lede">The Hakim Group Annual Conference took place in December 2024 at the Telford International Centre, bringing together over 2,000 optical industry professionals for a weekend focused on success and well-being.</p>
+  </div>
+  <figure class="ph"><img src="../img/hakim-conf-team.jpg" srcset="../img/hakim-conf-team-sm.jpg 800w, ../img/hakim-conf-team.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="1050" alt="The team of therapists gathered on the steps at Telford International Centre" style="aspect-ratio:4/3;object-position:50% 60%"></figure>
+</div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
+
+<section class="sec"><div class="wrap">
+  <div class="prose">
+    <h2>Well-being Interventions: Onsite Chair Massages and Makeup Sessions</h2>
+    <p>A team of 22 therapists provided onsite chair massages and makeup sessions throughout the weekend. These services were in high demand, with all slots fully booked, reflecting the attendees’ appreciation for relaxation and self-care opportunities.</p>
+    <figure class="pair wide land">
+      <div class="ph"><img src="../img/hakim-conf-spa.jpg" srcset="../img/hakim-conf-spa-sm.jpg 720w, ../img/hakim-conf-spa.jpg 1080w" sizes="(max-width:560px) 100vw, 460px" width="1080" height="810" loading="lazy" alt="Light-up SPA letters and balloons in a corridor at the conference, with one of the team kneeling behind them"></div>
+      <div class="ph"><img src="../img/hakim-conf-group.jpg" srcset="../img/hakim-conf-group-sm.jpg 800w, ../img/hakim-conf-group.jpg 1400w" sizes="(max-width:560px) 100vw, 460px" width="1400" height="1050" loading="lazy" alt="The full team seated on the steps of the conference centre"></div>
+      <figcaption>The SPA letters and the team at Telford International Centre.</figcaption>
+    </figure>
+    <h2>Positive Feedback and Anticipation for Future Events</h2>
+    <p>Delegates expressed immense satisfaction with the well-being services, noting that the treatments left them feeling rejuvenated and more focused for the day’s sessions. The success of these interventions has heightened anticipation for the next conference, scheduled for November 2025.</p>
+    <h2>About the Telford International Centre</h2>
+    <p>The Telford International Centre is a premier event venue in the heart of the Midlands, offering over 15,000 square meters of versatile event space. Its modern facilities and central location make it an ideal choice for large-scale conferences and exhibitions.</p>
+    <p class="last script">Investing in attendee well-being not only enhances the conference experience but also fosters a more engaged and productive professional community.</p>
+    <div class="acts"><a class="btn to-form" href="#contact" data-type="workplace">Request a quote</a><a class="btn ghost" href="#blog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All posts</a></div>
+  </div>
+</div></section>
+</article>
+
+<article data-page="blog-microlise-eastwood">
+<div class="head dark"><div class="wrap head-grid">
+  <div>
+    <h1 class="post-title">KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham</h1>
+    <p class="caps date">February 2025</p>
+    <p class="lede">KM Pamper Parties recently collaborated with Microlise to host a Corporate Wellbeing Day at their Nottingham branch in Eastwood, offering onsite chair massages that were fully booked and enthusiastically received by the staff.</p>
+  </div>
+  <figure class="ph"><img src="../img/microlise-massage.jpg" srcset="../img/microlise-massage-sm.jpg 600w, ../img/microlise-massage.jpg 1000w" sizes="(max-width:860px) 100vw, 480px" width="1000" height="1333" alt="A member of staff leaning into the massage chair with a cream towel across their back, in a bright office" style="aspect-ratio:4/5;object-position:50% 35%"></figure>
+</div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
+
+<section class="sec"><div class="wrap">
+  <div class="prose">
+    <h2>Tailored Onsite Chair Massages</h2>
+    <p>Employees had the opportunity to enjoy personalised chair massages, with options to incorporate hot stones over clothing. This approach provided a warming, relaxing experience that effectively eased tight muscles. The convenience of receiving these treatments onsite allowed staff to seamlessly integrate relaxation into their workday.</p>
+    <figure class="pair wide">
+      <div class="ph"><img src="../img/microlise-chair.jpg" srcset="../img/microlise-chair-sm.jpg 600w, ../img/microlise-chair.jpg 1000w" sizes="(max-width:560px) 100vw, 460px" width="1000" height="1333" loading="lazy" alt="The massage chair set up in a meeting room beside a table of oils and towels"></div>
+      <div class="ph"><img src="../img/microlise-back.jpg" srcset="../img/microlise-back-sm.jpg 600w, ../img/microlise-back.jpg 1000w" sizes="(max-width:560px) 100vw, 460px" width="1000" height="1333" loading="lazy" alt="A member of staff seated in the massage chair, seen from behind, with a cream towel over their shoulders"></div>
+      <figcaption>The chair set up in a meeting room at Microlise, and a session under way.</figcaption>
+    </figure>
+    <h2>Aromatherapy Enhancements</h2>
+    <p>To further enhance the experience, aromatherapy oils were available, offering a delightful way for employees to take a moment of calm amidst their busy schedules. The soothing scents contributed to a tranquil atmosphere, promoting mental clarity and stress relief.</p>
+    <h2>Positive Staff Feedback</h2>
+    <p>Feedback from Microlise employees was overwhelmingly positive. Participants reported feeling more relaxed and appreciated the opportunity to unwind without leaving the workplace. Such initiatives not only boost morale but also demonstrate a company’s commitment to the well-being of its team.</p>
+    <h2>About KM Pamper Parties</h2>
+    <p>KM Pamper Parties specialises in bringing holistic therapies directly to clients, whether for corporate events, hen parties, baby showers, or girls’ nights in. Their team of qualified therapists offers a range of treatments, including massages, facials, and more, tailored to meet the unique needs of each group. With a focus on convenience and personalised care, they transform any setting into a serene spa-like environment.</p>
+    <p>For businesses looking to invest in employee wellness, KM Pamper Parties provides customisable corporate packages designed to rejuvenate and reward staff, enhancing productivity and workplace satisfaction.</p>
+    <p>To learn more about our services or to book an event, please visit our <a href="#home">homepage</a> for more information.</p>
+    <p class="last script">Investing in employee well-being is not just a perk but a strategic move towards fostering a motivated and productive workforce.</p>
+    <div class="acts"><a class="btn to-form" href="#contact" data-type="workplace">Request a quote</a><a class="btn ghost" href="#blog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All posts</a></div>
+  </div>
+</div></section>
+</article>
+
 <!-- ============ CONTACT ============ -->
 <div class="head plain" data-page="contact"><div class="wrap">
   <h1>Book the team</h1>
@@ -543,7 +744,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 </div></div>
 
 <!-- ============ SHARED ENQUIRY ============ -->
-<section class="enq" id="enquire" data-page="corporate parties contact"><div class="wrap enq-grid">
+<section class="enq" id="enquire" data-page="corporate parties contact blog-hen-party-red-roofs-barn blog-raf-lincolnshire-training-day blog-hakim-group-conference-2024 blog-microlise-eastwood"><div class="wrap enq-grid">
   <div>
     <h2>Tell us about your team or occasion</h2>
     <ul class="contact">
@@ -578,7 +779,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <footer class="dark"><div class="wrap foot">
   <div><b><span>KM Pamper Parties ·</span> <span>Holistic Therapy Team</span></b>Massage, beauty and wellbeing services, brought to you across Nottingham, Derby, Leicester and the East Midlands.</div>
-  <ul><li><a href="#corporate">Workplace wellbeing</a></li><li><a href="#parties">Pamper parties</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#contact">Contact</a></li></ul>
+  <ul><li><a href="#corporate">Workplace wellbeing</a></li><li><a href="#parties">Pamper parties</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#blog">Blog</a></li><li><a href="#contact">Contact</a></li></ul>
   <ul><li><a href="https://wa.me/447700900123">WhatsApp 07700 900123</a></li><li><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li><li><a href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener">Reviews on Google</a></li></ul>
   <p class="proto">The “KMP Collection” concept, built from Kathleen's brand sheet. Prototype for review, not the live site. Contact details are placeholders.</p>
 </div></footer>
@@ -587,8 +788,9 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <script>
 (function(){
-  var pages=['home','corporate','parties','treatments','contact'];
-  var titles={home:'KM Pamper Parties · KMP Collection',corporate:'Workplace wellbeing · Holistic Therapy Team',parties:'Pamper parties · KM Pamper Parties',treatments:'Treatments · KM Pamper Parties',contact:'Book the team · KM Pamper Parties'};
+  var pages=['home','corporate','parties','treatments','contact','blog','blog-hen-party-red-roofs-barn','blog-raf-lincolnshire-training-day','blog-hakim-group-conference-2024','blog-microlise-eastwood'];
+  var titles={'home':'KM Pamper Parties · KMP Collection','corporate':'Workplace wellbeing · Holistic Therapy Team','parties':'Pamper parties · KM Pamper Parties','treatments':'Treatments · KM Pamper Parties','contact':'Book the team · KM Pamper Parties','blog':'Blog · KM Pamper Parties','blog-hen-party-red-roofs-barn':'A Relaxing Hen Party Pamper Experience at Red Roofs Barn · KM Pamper Parties','blog-raf-lincolnshire-training-day':'Enhancing Employee Well-being: Onsite Chair Massages at RAF Lincolnshire Training Day · KM Pamper Parties','blog-hakim-group-conference-2024':'Hakim Group’s Annual Conference 2024: A Weekend of Well-being and Professional Growth · KM Pamper Parties','blog-microlise-eastwood':'KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham · KM Pamper Parties'};
+  var workPosts=['blog-raf-lincolnshire-training-day','blog-hakim-group-conference-2024','blog-microlise-eastwood'],partyPosts=['blog-hen-party-red-roofs-barn'];
   var enq=document.getElementById('enquire'),sel=document.getElementById('f-type');
   var hints={
     work:['jane@company.co.uk','Company or university','e.g. 40','Monthly from January, Leicester office, around 40 staff'],
@@ -605,11 +807,14 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     var h=(location.hash||'').replace('#','');
     var page=pages.indexOf(h)>=0?h:'home';
     document.querySelectorAll('[data-page]').forEach(function(el){if(el===document.body){return;}el.hidden=el.getAttribute('data-page').split(' ').indexOf(page)<0;});
-    document.querySelectorAll('[data-nav]').forEach(function(a){if(a.getAttribute('data-nav')===page){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}});
+    var navKey=page.indexOf('blog')===0?'blog':page;
+    document.querySelectorAll('[data-nav]').forEach(function(a){if(a.getAttribute('data-nav')===navKey){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}});
     document.title=titles[page];
     document.body.setAttribute('data-page',page);
-    enq.className='enq'+(page==='corporate'?' dark':page==='parties'?' tint':'');
-    if(page==='corporate'){setType('workplace');}else if(page==='parties'){setType('party');}
+    var work=page==='corporate'||workPosts.indexOf(page)>=0,soft=page==='parties'||partyPosts.indexOf(page)>=0;
+    document.body.setAttribute('data-side',work?'work':soft?'party':'');
+    enq.className='enq'+(work?' dark':soft?' tint':'');
+    if(work){setType('workplace');}else if(soft){setType('party');}
     window.scrollTo(0,0);
   }
   window.addEventListener('hashchange',go);go();

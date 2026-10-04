@@ -242,3 +242,33 @@ Kathleen sent a visual brand sheet (`assets/kmp-brand-sheet.png`) and a covering
 **Event presentation.** Separate pamper party and corporate wellbeing pull-up banners and backdrops, with soft ambient lighting, galaxy lighting and aromatherapy diffusers where appropriate.
 
 **Imagery.** Everything on the sheet is AI-generated concept imagery, including the team photograph, which is not the real team. None of it goes on the site. The finished website uses Kathleen's original photographs from events, pamper parties, corporate bookings and the therapy team; she will send them when asked.
+
+## 10. Blog
+
+### Posts in the new site (KMP Collection prototype)
+
+| Post | Published | Side | Prototype route | Current-site URL to redirect |
+|---|---|---|---|---|
+| A Relaxing Hen Party Pamper Experience at Red Roofs Barn | New, sent by Kathleen 4 Oct 2026 | Parties | `#blog-hen-party-red-roofs-barn` | None, new post |
+| Enhancing Employee Well-being: Onsite Chair Massages at RAF Lincolnshire Training Day | 26 Mar 2025 | Workplace | `#blog-raf-lincolnshire-training-day` | /employee-well-being-onsite-chair-massages-raf-lincolnshire/ |
+| Hakim Group's Annual Conference 2024: A Weekend of Well-being and Professional Growth | 20 Mar 2025 | Workplace | `#blog-hakim-group-conference-2024` | /hakim-groups-annual-conference-2024-a-weekend-of-well-being-and-professional-growth/ |
+| KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham | 27 Feb 2025 | Workplace | `#blog-microlise-eastwood` | /km-pamper-parties-microlise-chair-massages-eastwood-nottingham/ |
+
+The three older posts were copied from the current site on 4 Oct 2026 and checked word for word against its WordPress API. Only the bold keyword styling and invisible characters were dropped. The closing "visit our homepage" link in the Microlise post points at the new home page.
+
+**The hen party post.** Kathleen's suggested title was "A Relaxing Hen Party Pamper Experience at Red Roofs Farm"; her text says "Red Roofs Barn" and a notice in one of her photos is headed "Redroofs Barn", so the prototype uses Barn (open question 21). A group of six; the photos show the welcome sign (bride's first name visible), the treatment couch in the living room, the products table, and four of the guests outside.
+
+### Photos added for the blog
+
+Sources in `assets/`, web sizes in `img/` with `-sm` variants.
+
+- Hen party, from Kathleen: `hen-redroofs-welcome`, `hen-redroofs-room`, `hen-redroofs-couch`, `hen-redroofs-close` (a closer crop of the couch), `hen-redroofs-products`, `hen-redroofs-group` (cropped to the four guests under the pergola).
+- RAF, from the current post: `raf-lincs-jet`, `raf-lincs-cockpit` (both are Kathleen in front of wall-sized aircraft photographs; neither shows a massage).
+- Hakim Group, from the current post: `hakim-conf-team`, `hakim-conf-group` (two near-identical team shots on the steps at Telford International Centre), `hakim-conf-spa` (the light-up SPA letters in a conference corridor).
+- Microlise, from the current post: `microlise-massage`, `microlise-chair`, `microlise-back`. Not used: Kathleen in front of the Microlise logo wall, a selfie in front of a Microlise banner, the Queen's Award plaque, and the three-photo collage used as the post's featured image (open question 24).
+
+Worth knowing: `hakim-conf-spa` shows that the light-up SPA letters photo used across the concepts as the "pamper party" image (`spa-letters`) was taken at the Hakim Group conference, not at a pamper party. The hen party photos are now the only real party photographs we hold.
+
+### Hidden articles on the current site
+
+The current site's sitemap lists 44 more articles that are live but do not appear on its blog page or in its public post feed. They are generic how-to guides published in bulk in March 2025 ("How to Host the Ultimate DIY Spa Party at Home", "Best Spa Party Ideas for Bachelorette Event", "How to Organize Spa Happy Hour at Work" and similar), around 2,000 words each, with illustrative images rather than Kathleen's own photographs. They were not migrated. For launch they need a decision: redirect each to the new blog, rewrite the useful ones, or let them go (open question 20). The full list is at https://kmpamperparties.co.uk/post-sitemap.xml.

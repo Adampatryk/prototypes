@@ -111,7 +111,7 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
   .logo .words{justify-items:start}.logo .l1{margin-top:0;font-size:.68rem;letter-spacing:.16em;padding-left:0}
   header.top.scrolled .nav{padding-block:.5rem}header.top.scrolled .logo .words{display:grid}header.top.scrolled .logo .lotus{width:34px;height:21px}header.top.scrolled .logo .kmp{font-size:1.7rem}
   #navList{display:none}
-  #navList.open{display:block;position:absolute;left:0;right:0;top:100%;background:var(--charcoal);border-bottom:1px solid var(--hair);padding:.3rem 24px 1.4rem}
+  #navList.open{display:block;animation:menu-in .26s cubic-bezier(.16,1,.3,1);position:absolute;left:0;right:0;top:100%;background:var(--charcoal);border-bottom:1px solid var(--hair);padding:.3rem 24px 1.4rem}
   .nav ul{flex-direction:column;align-items:stretch;gap:0;font-size:.8rem;white-space:normal}
   .nav-l,.nav-r{justify-self:stretch}
   .nav .home-link{display:block}
@@ -119,40 +119,14 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
   .nav-r .btn{width:100%;margin-top:1.2rem}
 }
 
-/* home: tagline, then the two banners */
-.strip{text-align:center;padding:clamp(1.8rem,3.6vw,2.7rem) 0 clamp(1.6rem,3vw,2.3rem)}
-.strip h1{font-size:clamp(1.85rem,3.4vw,2.85rem)}
-.strip .sig{margin-top:1.1rem;letter-spacing:.22em;line-height:1.9}
-.sig span{white-space:nowrap}.sig span+span::before{content:"·";margin-inline:.7em}
-@media(max-width:700px){.sig span{display:block}.sig span+span::before{content:none}}
-.banners{display:grid;grid-template-columns:1fr 1fr}
-.banner{position:relative;display:flex;padding-top:clamp(2.2rem,4.4vw,3.8rem);overflow:hidden;isolation:isolate}
-.banner.dark{padding-left:24px}.banner.blush{padding-right:24px}
-.banner .in{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;width:100%;max-width:576px}
-.banner.dark .in{margin-left:auto;padding-right:clamp(0px,3vw,44px)}
-.banner.blush .in{padding-left:clamp(0px,3vw,44px)}
-.banner h2{font-size:clamp(1.5rem,3.5vw,3rem)}
-.banner.dark h2{color:var(--gold)}
-.three{margin-top:.9rem;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--a)}
-.three span+span::before{content:"·";margin-inline:.7em}
-.banner .btn{margin-top:1.6rem}
-.rise{position:relative;align-self:stretch;margin-top:auto;padding-top:2.6rem}
-.rise .rib{left:50%;bottom:auto;top:-1.4rem;width:230%;height:6.2rem;transform:translateX(-50%);z-index:-1}
-.rise img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:16px 16px 0 0}
-.rise::after{content:"";position:absolute;left:-9px;right:-9px;top:calc(2.6rem - 9px);bottom:-2px;border:1px solid var(--hair);border-bottom:0;border-radius:24px 24px 0 0;pointer-events:none}
-@media(max-width:700px){
-  .banner,.banner.dark,.banner.blush{padding:1.7rem 14px 0}
-  .banner .in{padding:0!important;max-width:none}
-  .banner h2{font-size:1.4rem;min-height:2.2em}
-  .three{font-size:.68rem;letter-spacing:.16em;margin-top:.7rem;line-height:1.85}
-  .rise .rib{top:-1rem;height:4rem}
-  .three span{display:block}.three span+span::before{content:none}
-  .banner .btn{align-self:stretch;margin-top:1.1rem;min-height:44px;padding:.5rem .8rem;font-size:.68rem}
-  .banner .btn .lg{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-  .rise{padding-top:1.6rem}
-  .rise::after{left:-7px;right:-7px;top:calc(1.6rem - 7px);border-radius:18px 18px 0 0}
-  .rise img{aspect-ratio:1/1;border-radius:12px 12px 0 0}
-}
+/* home: one hero, two routes */
+.hero h1{font-size:clamp(2.2rem,4.3vw,3.5rem)}
+.hero .lede{font-size:1.1rem}
+.btn.work{background:var(--charcoal);border-color:var(--charcoal);color:var(--gold)}
+.btn.work:hover{background:#34302D;border-color:#34302D}
+.btn.party{background:var(--blush);border-color:var(--blush);color:var(--charcoal)}
+.btn.party:hover{background:#CFA5A1;border-color:#CFA5A1}
+@media(max-width:520px){.hero .acts .btn{flex:1 1 100%}}
 
 .trust{border-bottom:1px solid var(--hair)}
 .trust ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 0;padding-block:1.4rem;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--a)}
@@ -268,7 +242,7 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
-.about-grid .ph img{aspect-ratio:16/15}
+.about-grid .ph img{aspect-ratio:4/5}
 .about-grid p{margin-top:1.1rem;max-width:35rem}
 .about-grid .lede{margin-top:1.3rem}
 .about-quote{margin-top:2.2rem;padding-top:1.9rem;border-top:1px solid var(--hair);max-width:35rem}
@@ -359,16 +333,24 @@ footer{padding:2.6rem 0 3rem;font-size:.88rem;border-top:1px solid var(--hair)}
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--hair)}
 .mbar .btn{flex:1;min-height:46px;padding:.6rem 1rem}
 @media(max-width:800px){.mbar{display:flex}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* page changes */
+header.top{view-transition-name:site-header}
+.mbar{view-transition-name:site-bar}
+::view-transition-old(root){animation:none;mix-blend-mode:normal}
+::view-transition-new(root){animation:page-in .38s cubic-bezier(.16,1,.3,1) both;mix-blend-mode:normal}
+@keyframes page-in{from{opacity:0;transform:translateY(10px)}}
+main.enter{animation:page-in .38s cubic-bezier(.16,1,.3,1)}
+@keyframes menu-in{from{opacity:0;transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 </style>
 </head>
 <body data-page="home">
 <!--
 DIRECTION CONTRACT · KMP Collection
-THESIS: Kathleen's own brand sheet, built as the site. The two pull-up banners on the sheet stand side by side as the first screen: a charcoal and gold one for workplaces, a blush one for parties. It refuses the single soft-spa page that treats both audiences alike.
+THESIS: Kathleen's own brand sheet, built as the site. One calm first screen names both sides of the business and routes to them with two buttons in their own colours, charcoal and gold for workplaces, blush for parties; each side then has its own page in those colours. It refuses the single soft-spa page that treats both audiences alike.
 OWN-WORLD: apron charcoal #1A1A1A, warm gold #C9A96A, blush #D9B4B0, cream #F7EFE9, white. The lotus over a three-colour KMP (gold K, cream M, blush P), Playfair Display headings and italic lines, Montserrat tracked capitals and body, the heart between two hairlines, flowing ribbon lines at the foot of dark and blush bands, pill buttons, photos with soft corners in a hairline frame.
 STORY: one team, two ways to book. A workplace buyer lands in the charcoal and gold Holistic Therapy Team world, a party organiser in the blush one, and both enquire by form or WhatsApp.
-FIRST VIEWPORT: charcoal header with the centred lotus KMP lockup and navigation either side; the tagline centred on cream; then two full-bleed banners side by side, each with its title, its three words, one button and a real photo rising from the foot.
+FIRST VIEWPORT: charcoal header with the centred lotus KMP lockup and navigation either side; on cream, the tagline, one sentence naming the business and its two sides, two buttons (Workplace wellbeing in charcoal and gold, Pamper parties in blush) and the full-team photo beside them.
 FORM: the client's brand sheet of 4 Oct 2026, pinned by the client; no roll.
 FINISH: reviewed before handover. DESIGN.md still records the Classic concept only.
 -->
@@ -401,25 +383,14 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <main id="main" tabindex="-1">
 
 <!-- ============ HOME ============ -->
-<div class="strip" data-page="home"><div class="wrap">
-  <h1>Sit back, relax, and let us take care of you.</h1>
-  <p class="caps sig"><span>KM Pamper Parties</span><span>Holistic Therapy Team</span><span>Wellbeing Services</span></p>
+<div class="head hero" data-page="home"><div class="wrap head-grid">
+  <div>
+    <h1>Sit back, relax, and let us take care of you.</h1>
+    <p class="lede">KM Pamper Parties and the Holistic Therapy Team bring massage, beauty and wellbeing to workplaces and celebrations across the East Midlands.</p>
+    <div class="acts"><a class="btn work" href="#corporate">Workplace wellbeing</a><a class="btn party" href="#parties">Pamper parties</a></div>
+  </div>
+  <figure class="ph"><img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="(max-width:860px) 100vw, 520px" width="1400" height="1050" fetchpriority="high" alt="The Holistic Therapy Team, more than twenty therapists in black aprons, together at a conference venue"></figure>
 </div></div>
-
-<div class="banners" data-page="home">
-  <section class="banner dark" aria-labelledby="b-work"><div class="in">
-    <h2 id="b-work">Workplace wellbeing</h2>
-    <p class="three"><span>Restore</span><span>Recharge</span><span>Reconnect</span></p>
-    <a class="btn" href="#corporate"><span>Explore<span class="lg"> workplace wellbeing</span></span></a>
-    <figure class="rise"><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg><img src="../img/chair-massage.jpg" srcset="../img/chair-massage-sm.jpg 600w, ../img/chair-massage.jpg 1000w" sizes="(max-width:700px) 46vw, (max-width:1200px) 44vw, 540px" width="1000" height="1333" fetchpriority="high" alt="A KM therapist giving a seated chair massage in a room lit with galaxy lighting" style="object-position:50% 34%"></figure>
-  </div></section>
-  <section class="banner blush" aria-labelledby="b-party"><div class="in">
-    <h2 id="b-party">Pamper parties</h2>
-    <p class="three"><span>Pamper</span><span>Relax</span><span>Rejuvenate</span></p>
-    <a class="btn" href="#parties"><span>Explore<span class="lg"> pamper parties</span></span></a>
-    <figure class="rise"><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg><img src="../img/spa-letters.jpg" srcset="../img/spa-letters-sm.jpg 800w, ../img/spa-letters.jpg 1400w" sizes="(max-width:700px) 46vw, (max-width:1200px) 44vw, 540px" width="1400" height="1050" alt="Light-up SPA letters and balloons at a pamper party venue" style="object-position:62% 50%"></figure>
-  </div></section>
-</div>
 
 <div class="trust" data-page="home"><ul class="wrap">
   <li>Established over 22 years</li><li>Fully insured</li><li>On-site service</li>
@@ -569,7 +540,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <!-- ============ ABOUT ============ -->
 <section class="sec" data-page="about"><div class="wrap about-grid">
-  <figure class="ph"><img src="../img/kathleen-portrait.jpg" srcset="../img/kathleen-portrait-sm.jpg 600w, ../img/kathleen-portrait.jpg 1000w" sizes="(max-width:860px) 90vw, 440px" width="1000" height="937" alt="Kathleen in her black apron, smiling, beside a sign on a blue office screen that reads Massages in progress"><p class="badge"><b>22+</b><span>years of<br>experience</span></p></figure>
+  <figure class="ph"><img src="../img/kathleen-portrait.jpg" srcset="../img/kathleen-portrait-sm.jpg 520w, ../img/kathleen-portrait.jpg 1000w" sizes="(max-width:860px) 90vw, 440px" width="1000" height="1250" alt="Kathleen smiling, standing in front of a blue and pink wall mural"><p class="badge"><b>22+</b><span>years of<br>experience</span></p></figure>
   <div>
     <h1>Meet Kathleen</h1>
     <p class="lede">Kathleen is the co-founder of KM Pamper Parties and the Holistic Therapy Team.</p>
@@ -588,7 +559,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <section class="sec" data-page="blog"><div class="wrap">
   <a class="post-row" href="#blog-hen-party-red-roofs-barn">
-    <figure class="ph"><img src="../img/hen-redroofs-close.jpg" srcset="../img/hen-redroofs-close-sm.jpg 720w, ../img/hen-redroofs-close.jpg 1200w" sizes="(max-width:760px) 100vw, 520px" width="1200" height="1122" loading="lazy" alt="A treatment couch dressed in black and cream throws, set up beside a sofa in a holiday barn" style="object-position:50% 40%"></figure>
+    <figure class="ph"><img src="../img/hen-redroofs-group.jpg" srcset="../img/hen-redroofs-group-sm.jpg 800w, ../img/hen-redroofs-group.jpg 1400w" sizes="(max-width:760px) 100vw, 520px" width="1400" height="936" alt="Four of the hen party smiling under a wooden pergola outside the brick barn, with open fields behind" style="object-position:42% 50%"></figure>
     <div>
       <h2>A Relaxing Hen Party Pamper Experience at Red Roofs Barn</h2>
       <span class="caps date">October 2026</span>
@@ -623,7 +594,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <p class="caps date">October 2026</p>
     <p class="lede">A hen party is often a busy weekend of celebrations, so adding some time to relax and unwind can be a lovely way for everyone to enjoy a little time out together.</p>
   </div>
-  <figure class="ph"><img src="../img/hen-redroofs-welcome.jpg" srcset="../img/hen-redroofs-welcome-sm.jpg 540w, ../img/hen-redroofs-welcome.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1260" alt="A sign on an easel reading Welcome to Lauren&#39;s hen do, she&#39;s tying the knot, with white and black balloons around it" style="aspect-ratio:4/5;object-position:50% 42%"></figure>
+  <figure class="ph"><img src="../img/hen-redroofs-group.jpg" srcset="../img/hen-redroofs-group-sm.jpg 800w, ../img/hen-redroofs-group.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="936" alt="Four of the hen party smiling under a wooden pergola outside the brick barn, with open fields behind" style="aspect-ratio:4/3;object-position:42% 50%"></figure>
 </div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
 
 <section class="sec"><div class="wrap">
@@ -631,15 +602,15 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <p>KM Pamper Parties recently provided a mobile pamper experience for a group of six celebrating a hen party at Red Roofs Barn.</p>
     <p>We brought everything needed to create a comfortable treatment area within the accommodation, allowing the group to enjoy their treatments without having to travel anywhere or interrupt their weekend plans.</p>
     <figure class="pair wide">
+      <div class="ph"><img src="../img/hen-redroofs-welcome.jpg" srcset="../img/hen-redroofs-welcome-sm.jpg 540w, ../img/hen-redroofs-welcome.jpg 900w" sizes="(max-width:560px) 100vw, 460px" width="900" height="1260" loading="lazy" alt="A sign on an easel reading Welcome to Lauren&#39;s hen do, she&#39;s tying the knot, with white and black balloons around it" style="object-position:50% 42%"></div>
       <div class="ph"><img src="../img/hen-redroofs-room.jpg" srcset="../img/hen-redroofs-room-sm.jpg 600w, ../img/hen-redroofs-room.jpg 1000w" sizes="(max-width:560px) 100vw, 460px" width="1000" height="1125" loading="lazy" alt="The treatment couch set up in the living room, with a large black bow balloon above a wood-burning stove"></div>
-      <div class="ph"><img src="../img/hen-redroofs-couch.jpg" srcset="../img/hen-redroofs-couch-sm.jpg 600w, ../img/hen-redroofs-couch.jpg 1000w" sizes="(max-width:560px) 100vw, 460px" width="1000" height="1042" loading="lazy" alt="Looking along the treatment couch, dressed in black and cream throws, towards a sofa and a table of products" style="object-position:50% 30%"></div>
-      <figcaption>The treatment couch, set up in the living room at Red Roofs Barn.</figcaption>
+      <figcaption>The welcome sign, and the treatment couch set up in the living room.</figcaption>
     </figure>
     <p>One of the benefits of our mobile pamper parties is that we set up within your chosen accommodation. Whether you’re staying in a holiday cottage, group house or other private accommodation, we bring our professional treatment equipment and products with us.</p>
     <figure class="ph wide"><img src="../img/hen-redroofs-products.jpg" srcset="../img/hen-redroofs-products-sm.jpg 800w, ../img/hen-redroofs-products.jpg 1400w" sizes="(max-width:1000px) 100vw, 960px" width="1400" height="945" loading="lazy" alt="Skincare products, essential oils, towels and a headband laid out on a sideboard"><figcaption>Products, oils and towels laid out ready for the group.</figcaption></figure>
     <p>Treatments are organised into a schedule before the booking so everyone knows their allocated treatment time. Once we know the number of guests, their chosen treatments and the time available, we put together a treatment schedule to help everything run smoothly.</p>
     <p>The group gave lovely positive feedback about their treatments, which was wonderful to hear.</p>
-    <figure class="ph wide"><img src="../img/hen-redroofs-group.jpg" srcset="../img/hen-redroofs-group-sm.jpg 800w, ../img/hen-redroofs-group.jpg 1400w" sizes="(max-width:1000px) 100vw, 960px" width="1400" height="936" loading="lazy" alt="Four of the hen party smiling under a wooden pergola outside the brick barn, with open fields behind"><figcaption>Four of the group outside the barn.</figcaption></figure>
+    <figure class="ph"><img src="../img/hen-redroofs-couch.jpg" srcset="../img/hen-redroofs-couch-sm.jpg 600w, ../img/hen-redroofs-couch.jpg 1000w" sizes="(max-width:760px) 100vw, 704px" width="1000" height="1042" loading="lazy" alt="Looking along the treatment couch, dressed in black and cream throws, towards a sofa and a table of products" style="aspect-ratio:5/4;object-position:50% 40%"><figcaption>The treatment couch, made up and ready.</figcaption></figure>
     <p>KM Pamper Parties provides mobile massage, beauty and holistic treatments for hen parties, birthdays, girls’ weekends, group getaways and other special occasions.</p>
     <p>With more than 22 years of experience, our aim is to provide a professional, friendly and well-organised service while giving guests the opportunity to relax and enjoy quality treatments in the comfort of their chosen accommodation.</p>
     <p>If you’re planning a hen party or group stay, simply get in touch with your date, location and approximate group size and we can help you plan your pamper experience.</p>
@@ -808,9 +779,12 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   }
   function setType(v){sel.value=v;syncHints();}
   sel.addEventListener('change',syncHints);
-  function go(){
-    var h=(location.hash||'').replace('#','');
-    var page=pages.indexOf(h)>=0?h:'home';
+  var calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var main=document.getElementById('main'),top=document.querySelector('header.top');
+  function onScroll(){var y=window.scrollY;if(y>150){top.classList.add('scrolled');}else if(y<40){top.classList.remove('scrolled');}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  function pageOf(hash){var h=(hash||'').replace('#','');return pages.indexOf(h)>=0?h:'home';}
+  function show(page,y){
     document.querySelectorAll('[data-page]').forEach(function(el){if(el===document.body){return;}el.hidden=el.getAttribute('data-page').split(' ').indexOf(page)<0;});
     var navKey=page.indexOf('blog')===0?'blog':page;
     document.querySelectorAll('[data-nav]').forEach(function(a){if(a.getAttribute('data-nav')===navKey){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}});
@@ -820,13 +794,27 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     document.body.setAttribute('data-side',work?'work':soft?'party':'');
     enq.className='enq'+(work?' dark':soft?' tint':'');
     if(work){setType('workplace');}else if(soft){setType('party');}
-    window.scrollTo(0,0);
+    window.scrollTo(0,y);onScroll();
+  }
+  /* Page changes: a cross-fade where the browser supports view transitions, a plain fade-in where it does not.
+     Links start the new page at the top; Back and Forward return to where you were. */
+  var current=null,viaLink=false,scrolls={};
+  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a[href^="#"]'):null;
+    if(a&&!e.defaultPrevented&&pageOf(a.getAttribute('href'))!==current){viaLink=true;}
+  });
+  function go(){
+    var page=pageOf(location.hash);
+    if(page===current){return;}
+    var first=current===null,y=viaLink?0:(scrolls[page]||0);
+    if(!first){scrolls[current]=window.scrollY;}
+    viaLink=false;current=page;
+    if(!first&&!calm&&document.startViewTransition){document.startViewTransition(function(){show(page,y);});return;}
+    show(page,y);
+    if(!first&&!calm){main.classList.remove('enter');void main.offsetWidth;main.classList.add('enter');}
   }
   window.addEventListener('hashchange',go);go();
-
-  var top=document.querySelector('header.top');
-  function onScroll(){var y=window.scrollY;if(y>150){top.classList.add('scrolled');}else if(y<40){top.classList.remove('scrolled');}}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   var btn=document.getElementById('menuBtn'),nav=document.getElementById('navList');
   function closeMenu(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menu');}
@@ -845,7 +833,6 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     if(!c.value.trim()){bad(c,'Please add an email or phone number so we can reply.');return;}
     ferr.hidden=true;form.hidden=true;done.hidden=false;done.focus();
   });
-  var calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('[data-type]').forEach(function(a){a.addEventListener('click',function(e){
     setType(a.getAttribute('data-type'));
     if(form.hidden){form.hidden=false;done.hidden=true;}

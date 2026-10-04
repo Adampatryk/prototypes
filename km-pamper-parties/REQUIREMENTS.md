@@ -35,7 +35,8 @@ Each item points to the source in BUSINESS.md.
 - **Google reviews**, verbatim, with a badge linking to the Google Business profile. Section 7.
 - **Contact**: phone, WhatsApp (number shown, deep-linked), email, areas covered. Section 2.
 - **Taglines**: "Sit back, relax, and let us take care of you" as the primary; others available for section headings. Section 6.
-- **Partner link to Group Escape Houses** on the pamper parties page, in a short "group weekends and holiday lets" paragraph. Keep their anchor text "Group Escape Houses" pointing at their pamper party listing, but keep KM's direct enquiry as the primary route so East Midlands visitors aren't sent away. Suggested wording: "Staying in a holiday let, cabin or hotel? We come to you anywhere in the East Midlands. Planning a group weekend elsewhere in the UK? You can also book a pamper party for a group weekend through Group Escape Houses." Section 8.
+- **Accommodation partners** on the pamper parties page, as confirmed by Kathleen on 4 Oct 2026: Group Escape Houses (link, wording below), Ashbourne Self Catering (link to https://www.ashbourneselfcatering.com/) and Darley House, Matlock (no link; contact Lucy Arterton, 07719 894 663). An Airbnb profile link will follow. Leave off The Malthouse, The Temple, The Mill Managers and The Old Barn Apartments for now. Details in BUSINESS.md section 8.
+- **Group Escape Houses wording** on the pamper parties page, in a short "group weekends and holiday lets" paragraph. Keep their anchor text "Group Escape Houses" pointing at their pamper party listing, but keep KM's direct enquiry as the primary route so East Midlands visitors aren't sent away. Suggested wording: "Staying in a holiday let, cabin or hotel? We come to you anywhere in the East Midlands. Planning a group weekend elsewhere in the UK? You can also book a pamper party for a group weekend through Group Escape Houses." Section 8.
 
 ## 4. Site structure
 
@@ -59,20 +60,23 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 - Sticky header; on mobile a persistent WhatsApp/Enquire bar is desirable.
 - Google review badge linking to the Google Business profile (place ID in BUSINESS.md section 2).
 - No em dashes in copy (client preference).
-- Outbound partner links (Group Escape Houses) open in a new tab with rel="noopener", stay followed (no nofollow) because they are genuine editorial partners, and sit below KM's own call to action, never in the header or hero.
+- Outbound partner links (Group Escape Houses, Ashbourne Self Catering) open in a new tab with rel="noopener", stay followed (no nofollow) because they are genuine editorial partners, and sit below KM's own call to action, never in the header or hero.
 - noindex on prototypes; remove for launch. SEO basics for launch: page titles, meta descriptions, local keywords (Nottingham, Derby, Leicester, corporate massage, pamper party), Google Business link, schema for LocalBusiness. Current titles and descriptions are in BUSINESS.md section 3 as a baseline.
 
 ## 6. Design requirements
 
 - Must look professional and established, and must not look template-generated. Avoid: rounded card grids with icon tiles, checkmark trust strips, "most popular" badges, generic gradient heroes.
 - Use the client's real photography (listed in BUSINESS.md section 3) rather than stock. Source photos live in `assets/`; web-sized JPEGs the prototypes reference live in `img/` (two sizes each, served via srcset).
-- Client's existing brand: pink, gold, navy, lotus/heart motif, "Holistic Therapy Team" wordmark. New direction may depart from this; four concepts have been produced for the client to choose from:
+- **Client's brand direction (4 Oct 2026).** Kathleen sent a visual brand sheet (`assets/kmp-brand-sheet.png`) as the starting point for the rebuild, not something to copy exactly. Palette: charcoal black #1A1A1A, warm gold #C9A96A, blush pink #D9B4B0, cream #F7EFE9, white. Type: Playfair Display headings, Montserrat sub headings and body. Logo: a lotus over a three-colour KMP. Feel: professional, warm, luxurious and welcoming, not overly corporate or clinical; cohesive, softer details, premium wellbeing, clean and easy to navigate. Corporate wellbeing gets its own professional identity (Holistic Therapy Team, on-site chair massage, wellbeing days, team building, stress relief, healthier happier teams); pamper parties keep a softer, boutique, welcoming feel. Full notes in BUSINESS.md section 9.
+- **Naming.** The business and website stay "KM Pamper Parties / Holistic Therapy Team – Wellbeing Services". "KMP" is the merchandise and event branding. The imagery on the brand sheet is AI-generated and must not be used; the site uses Kathleen's own photographs, which she will send.
+- Earlier brand (before the sheet): pink, gold, navy, lotus/heart motif, "Holistic Therapy Team" wordmark. Five concepts have been produced:
 
 | Concept | Folder | Direction | Notes / feedback |
 |---------|--------|-----------|------------------|
 | Plum Edition | `plum/` | Dark plum, blush, gold; bold editorial serif | Adam's preferred direction |
 | Blush & Gold | `blush-gold/` | Blush paper, navy ink, gold rules; brochure feel | |
 | Classic Edition | `classic/` | The existing site's own brand refined: cream paper, olive gold, Cormorant capitals between rules, real photos | Replaced the earlier "Wellbeing at Work" concept, which read as generic. Adam's feedback: hero photo must not be cropped or upscaled; reviews should lead the proof; keep text minimal |
+| KMP Collection | `kmp-collection/` | Built from Kathleen's brand sheet: apron charcoal, warm gold, blush and cream; the lotus KMP lockup centred in a charcoal header; the two pull-up banners side by side as the home page (charcoal and gold for workplaces, blush for parties); Playfair Display and Montserrat; ribbon lines at the foot of dark and blush bands. Workplace pages run in charcoal and gold under a "Holistic Therapy Team" lockup, party pages in blush | The first concept that follows the client's own direction. Uses the existing real photos until Kathleen sends hers |
 | Black Apron | `black-apron/` | Built from the team's uniform: black apron cotton, gold arched lettering as on the aprons, tan leather pocket label as the button, brass hairlines. Photo-led, built around the four new location photos | Replaced a "Day Sheet" document-style concept that Adam felt fitted nothing |
 
 - Every concept: single-page-app style routing across the five pages above, self-contained HTML, no build step.
@@ -81,7 +85,7 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 
 1. Real WhatsApp number, email, phone and social links. Confirm 07891 652 750 and info@kmpamperparties.co.uk from the current site are still correct.
 2. Confirmation that all ten corporate clients can be named publicly; logos or names only. Same for RAF Lincolnshire and Microlise, which are already named on the current blog. Would any client give a short quote?
-3. Preferred concept, or elements to combine.
+3. Preferred concept, or elements to combine. Since the brand sheet arrived, the question is mostly whether the KMP Collection concept reads the sheet the way Kathleen intends.
 4. Where enquiry form submissions should go.
 5. Any treatments to add or remove; confirm durations. Keep the manicure/pedicure and men's facial lines?
 6. Keep the Amethyst / Sapphire / Diamond packages, or move to per-person pricing only?
@@ -94,6 +98,12 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 13. Is there an existing Google Analytics / Search Console property (Site Kit is installed) to carry over?
 14. Group Escape Houses: their listing doesn't name KM or link back, and shows a different package and price. Is KM the supplier behind it for East Midlands bookings? Can Kathleen ask them for a named listing and a link to kmpamperparties.co.uk in return? Is there a similar arrangement with Forest Holidays (Sherwood Pines)?
 
+15. Logo artwork: can Kathleen send the KMP lotus logo as vector files (SVG, AI or PDF), in the dark and light versions? The prototype redraws it in code.
+16. Should the KMP mark lead the website header, given the business name stays KM Pamper Parties? The prototype uses the KMP lockup with "Pamper Parties" and "Holistic Therapy Team" beneath it, and "KM Pamper Parties" in the footer and page titles.
+17. Original photographs for the build: events, pamper parties, corporate bookings and the team, ideally including the new aprons, banners and backdrops once they exist.
+18. Airbnb profile link, due once the profile is live.
+19. Which straplines are approved for the site: "Restore · Recharge · Reconnect", "Restoring People · Empowering Teams · Brighter Workplaces", "Invest in your team's wellbeing", "Relax · Rejuvenate"?
+
 ## 8. Decisions log
 
 | Date | Decision | Why |
@@ -105,4 +115,6 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 | 2026-09-25 | Replaced the Wellbeing at Work concept with Classic Edition, based on the current site's brand | Adam found the teal concept generic; the client's existing look, done well, is a fairer third option |
 | 2026-09-25 | Photos moved out of the HTML into a shared `img/` folder | Four new full-size photos supplied; inline base64 would have tripled every page |
 | 2026-09-25 | Added a fourth concept, Black Apron, built from the therapists' uniform and the four new location photos | Adam rejected a first attempt (Day Sheet, a document-style concept) as fitting nothing; the aprons in every photo are the one consistent piece of brand the client already owns |
+| 2026-10-04 | Added a fifth concept, KMP Collection, built from the client's own brand sheet | Kathleen sent her brand and website style direction; this is the first concept that starts from it rather than from our reading of the old brand |
+| 2026-10-04 | Accommodation partners section holds three entries: Group Escape Houses, Ashbourne Self Catering, Darley House | Kathleen checked which providers actually link to or refer guests to her; the others give out her email directly, so they stay off for now |
 | 2026-09-25 | Classic hero rebuilt as a split: tagline left, the six-therapist photo right at its own size (no crop, no overlay); reviews moved up to follow the two routes, set in full olive gold with one featured quote; the four "why" points kept as single lines; route and team copy cut to one or two sentences | Adam: heads were cut off, the image looked low quality and oddly sized, the page read as uninspiring, and he wants more focus on the reviews with clean, clutter-free text. The source photos are about 1000px wide, so any full-width hero upscales them; showing the photo at column width keeps it sharp |

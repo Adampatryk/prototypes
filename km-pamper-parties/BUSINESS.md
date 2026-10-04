@@ -6,7 +6,7 @@ Sources: audit of https://kmpamperparties.co.uk/ on 25 Sep 2026, the client's ow
 
 ## 1. The business
 
-**Trading names:** KM Pamper Parties · Holistic Therapy Team · "Massage, Beauty & Wellbeing Services". Co-founded by KM (Kathleen), who is the therapist named in every review.
+**Trading names:** KM Pamper Parties · Holistic Therapy Team · "Massage, Beauty & Wellbeing Services". Confirmed by Kathleen on 4 Oct 2026: the business and website remain "KM Pamper Parties / Holistic Therapy Team – Wellbeing Services"; "KMP Pamper Parties" is used specifically for the new merchandise and event branding, with the lotus in the KMP logo (see section 9). Co-founded by KM (Kathleen), who is the therapist named in every review.
 
 **What they do:** Mobile massage, beauty and wellbeing treatments delivered at the client's location. Two audiences, one team.
 
@@ -200,6 +200,45 @@ Kathleen is happy for us to change the placement or wording for SEO.
 
 So as it stands the link is one-way: it sends KM's visitors and link equity to the platform, and the platform gives KM no visible credit. It is still a genuine referral channel for group weekend bookings, and Kathleen wants the relationship, so the link goes in. The ask back is a named listing and a backlink (see REQUIREMENTS.md open question 14).
 
+### Accommodation providers (Kathleen, 4 Oct 2026)
+
+Kathleen checked which accommodation providers actually link to her site. Include these for now:
+
+| Provider | What to show | Notes |
+|---|---|---|
+| Group Escape Houses | Link to https://www.groupescapehouses.co.uk/experiences/pamper-party-package | Wording: "Book a pamper party for a group weekend through Group Escape Houses." |
+| Ashbourne Self Catering | Link to https://www.ashbourneselfcatering.com/ | |
+| Darley House, Matlock | Contact: Lucy Arterton, 07719 894 663 | They give guests Kathleen's details rather than linking, so Lucy's contact details are enough for now. Lucy's number goes on a public page: worth confirming she is happy with that |
+| Airbnb | Profile link to follow | Profile being set up; Kathleen will send the direct link when live |
+
+Leave off for now: The Malthouse, The Temple and The Mill Managers (they give guests Kathleen's email rather than linking) and The Old Barn Apartments, Edwinstowe (no link to her site found).
+
 ### Forest Holidays / Sherwood Pines
 
 Not a confirmed partner, but a Google review says a couples booking at a Sherwood Pines cabin "was booked by Forest Holiday". Worth asking whether there is an arrangement worth naming, since it is the same holiday-let channel as Group Escape Houses but local.
+
+## 9. Brand direction from the client (4 Oct 2026)
+
+Kathleen sent a visual brand sheet (`assets/kmp-brand-sheet.png`) and a covering note. It is the direction she is happy to start from; individual areas get refined as the site takes shape. It is a starting point, not something to copy exactly.
+
+**Naming.** The main business remains KM Pamper Parties / Holistic Therapy Team – Wellbeing Services. KMP is the shortened branding for the new collection, merchandise and event presentation.
+
+**Palette (from the sheet).** Charcoal Black #1A1A1A · Warm Gold #C9A96A · Blush Pink #D9B4B0 · Cream #F7EFE9 · White #FFFFFF.
+
+**Type (from the sheet).** Headings in Playfair Display ("elegant serif"). Sub headings and body in Montserrat ("clean and modern", "readable and professional").
+
+**Logo.** A blush lotus above a serif KMP: gold K, black M on light or white M on dark, blush P. Beneath it "PAMPER PARTIES", then "HOLISTIC THERAPY TEAM" in gold and "WELLBEING SERVICES", closed by a small gold heart between two hairlines. We do not have the artwork files yet.
+
+**Feel.** Professional, warm, luxurious and welcoming, rather than overly corporate or clinical. Cohesive, with softer details and a premium wellbeing feel throughout, while still clean and easy to navigate. Brand words on the sheet: professional, approachable, trusted, luxurious, wellbeing.
+
+**Two sides, clearly represented.**
+- Corporate wellbeing has its own professional identity: the Holistic Therapy Team, workplace wellbeing, on-site chair massage, wellbeing days, team building, stress relief, and supporting healthier, happier teams.
+- Pamper parties keep the softer, relaxing, boutique and welcoming feel, with a sense of quality and attention to detail.
+
+**Straplines on the sheet.** Workplace banner: "Restore · Recharge · Reconnect" and "Invest in your team's wellbeing". Corporate backdrop: "Restoring People · Empowering Teams · Brighter Workplaces". Party banner: "Relax · Rejuvenate · Pamper Parties · Wellbeing Events · Private Groups". Closing panel: "Pamper · Relax · Rejuvenate · Wellbeing · Together".
+
+**The KMP collection.** Black embroidered aprons, gold "Spa Holistic Therapy Team" dispatching badges that attach to the apron, embroidered towels in black and pink, a couch set-up with a branded fitted sheet and top sheet, a one metre by one metre sheet for on-site chair massage, and massage chair covers.
+
+**Event presentation.** Separate pamper party and corporate wellbeing pull-up banners and backdrops, with soft ambient lighting, galaxy lighting and aromatherapy diffusers where appropriate.
+
+**Imagery.** Everything on the sheet is AI-generated concept imagery, including the team photograph, which is not the real team. None of it goes on the site. The finished website uses Kathleen's original photographs from events, pamper parties, corporate bookings and the therapy team; she will send them when asked.

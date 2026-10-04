@@ -46,7 +46,10 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 ## Brand Commitments
 
 - Names: "KM Pamper Parties", "Holistic Therapy Team". Co-founder KM (Kathleen) is named in every review.
-- Existing identity: pink, gold, navy, a lotus/heart motif, "Holistic Therapy Team" wordmark. The client is open to a new direction; three concepts are being compared.
+- Client-pinned brand direction (4 Oct 2026, brand sheet at `assets/kmp-brand-sheet.png`): charcoal black #1A1A1A, warm gold #C9A96A, blush pink #D9B4B0, cream #F7EFE9, white; Playfair Display headings, Montserrat body; a lotus over a three-colour KMP mark. Feel: professional, warm, luxurious and welcoming, not overly corporate or clinical. Corporate wellbeing has its own professional identity; pamper parties stay softer and boutique; the whole site stays cohesive. The sheet is a starting point, not a layout to copy.
+- Naming: the business and website remain "KM Pamper Parties / Holistic Therapy Team – Wellbeing Services". "KMP" is merchandise and event branding.
+- The brand sheet's imagery is AI-generated and must never be used on the site.
+- Earlier identity, now superseded: pink, gold, navy, a lotus/heart motif, "Holistic Therapy Team" wordmark.
 - Taglines available: "Sit back, relax, and let us take care of you" (primary), "A happier, healthier you", "Wellbeing at Work", "Take time for you", "Relax · Recharge · Feel Amazing", "For people · for teams · for every occasion".
 - Must look professional and established and must not look template-generated. Avoid rounded card grids with icon tiles, checkmark trust strips, "most popular" badges, generic gradient heroes.
 - Real photography only, no stock.
@@ -56,7 +59,8 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 - Photos (full-size sources in `assets/`, web-sized JPEGs with `-sm` variants in `img/`, referenced by every prototype via srcset): six therapists giving a thumbs up at a Hakim Group wellbeing day (`team-six`, plus `team-six-hero` portrait and `team-six-wide` landscape crops); the full team of twenty-plus seated in a conference hall (`team-all`); two therapists beside a pink "Massages" sign at a client's offices (`spa-pair`); two therapists outside a branded hospitality truck at a golf event (`event-truck`, the truck carries a third-party brand, so caption it as "a golf event", not as a client); a seated chair massage under a "Wellbeing at Work" neon sign (`chair-massage`, has baked-in text); SPA marquee letters and balloons at a party (`spa-letters`). All sources are around 1000 to 1450px on the long edge, so avoid layouts that stretch one photo beyond about 1200px wide. No other imagery exists; do not use stock.
 - Seven verbatim 5-star Google reviews and other testimonials, in BUSINESS.md.
 - Case studies: RAF Lincolnshire training-day wellbeing session (Mar 2025); Hakim Group annual conference, Telford, Dec 2024, 2,000+ attendees; Microlise, Eastwood, corporate wellbeing day (Feb 2025).
-- Absent: client logos, an award citation, corporate prices. None may be fabricated.
+- Accommodation partners to show on the parties page: Group Escape Houses (link), Ashbourne Self Catering (link), Darley House Matlock (Lucy Arterton, 07719 894 663). Others are deliberately left off; see BUSINESS.md section 8.
+- Absent: the KMP logo artwork files, Kathleen's new photographs, client logos, an award citation, corporate prices. None may be fabricated.
 
 ## Product Principles
 

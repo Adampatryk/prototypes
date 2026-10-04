@@ -89,9 +89,6 @@ header.top{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--hair)}
 .logo:hover .pt,.lockup .pt{animation:none}
 .logo .pt{animation:bloom 1.3s cubic-bezier(.16,1,.3,1) .15s both}
 @keyframes bloom{from{transform:rotate(0deg) scale(calc(var(--s)*.55))}}
-.for-work{display:none}
-body[data-side="work"] .for-all{display:none}
-body[data-side="work"] .for-work{display:inline}
 header.top.scrolled .nav{padding-block:.4rem}
 header.top.scrolled .logo .words{display:none}
 header.top.scrolled .logo .lotus{width:36px;height:22px}
@@ -173,6 +170,7 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 /* route heads */
 .head{position:relative;overflow:hidden;padding-block:clamp(2.6rem,6vw,4.6rem)}
 .head.dark,.head.blush{padding-bottom:clamp(5.5rem,12vw,9.5rem)}
+.head.dark[data-page] .ph img,.head.blush[data-page] .ph img{aspect-ratio:4/5}
 .head.plain{text-align:center;padding-bottom:0}
 .head.plain .lede{margin-inline:auto}
 .head-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;z-index:1}
@@ -371,7 +369,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
       <svg class="lotus" viewBox="0 0 120 72"><g transform="translate(60 68)"><g class="pt o" style="--a:-68deg;--s:.76"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt o" style="--a:68deg;--s:.76"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt i" style="--a:-34deg;--s:.88"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt i" style="--a:34deg;--s:.88"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt" style="--a:0deg;--s:1"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g></g></svg>
       <span class="kmp"><b class="k">K</b><b class="m">M</b><b class="p">P</b></span>
     </span>
-    <span class="words" aria-hidden="true"><span class="l1"><span class="for-all">Pamper Parties</span><span class="for-work">Holistic Therapy Team</span></span></span>
+    <span class="words" aria-hidden="true"><span class="l1">Pamper Parties</span></span>
   </a>
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav id="navList" aria-label="Main">
@@ -427,7 +425,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <p class="lede">On-site chair massage, wellbeing days and team building from the Holistic Therapy Team, for healthier, happier teams.</p>
     <div class="acts"><a class="btn to-form" href="#contact" data-type="workplace">Request a quote</a><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp 07700 900123</a></div>
   </div>
-  <figure class="ph"><img src="../img/spa-pair.jpg" srcset="../img/spa-pair-sm.jpg 540w, ../img/spa-pair.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1350" alt="Two KM therapists in black Holistic Therapy Team aprons beside a pink Massages sign at a client's offices" style="aspect-ratio:4/5;object-position:50% 22%"></figure>
+  <figure class="ph"><img src="../img/spa-pair.jpg" srcset="../img/spa-pair-sm.jpg 540w, ../img/spa-pair.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1350" alt="Two KM therapists in black Holistic Therapy Team aprons beside a pink Massages sign at a client's offices" style="object-position:50% 22%"></figure>
 </div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
 
 <section class="sec" data-page="corporate"><div class="wrap two">
@@ -479,7 +477,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <p class="lede">Guests pick and mix treatments at your home, holiday let or venue. We arrive with therapists, couches and towels, and soft lighting and aromatherapy diffusers where appropriate.</p>
     <div class="acts"><a class="btn to-form" href="#contact" data-type="party">Plan my party</a><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp 07700 900123</a></div>
   </div>
-  <figure class="ph"><img src="../img/spa-letters.jpg" srcset="../img/spa-letters-sm.jpg 800w, ../img/spa-letters.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="1050" alt="Light-up SPA letters and balloons at a pamper party venue"></figure>
+  <figure class="ph"><img src="../img/hen-redroofs-welcome.jpg" srcset="../img/hen-redroofs-welcome-sm.jpg 540w, ../img/hen-redroofs-welcome.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1260" alt="A welcome sign for a hen do on an easel, surrounded by white and black balloons" style="object-position:50% 42%"></figure>
 </div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
 
 <section class="sec" data-page="parties"><div class="wrap">
@@ -791,7 +789,6 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     document.title=titles[page];
     document.body.setAttribute('data-page',page);
     var work=page==='corporate'||workPosts.indexOf(page)>=0,soft=page==='parties'||partyPosts.indexOf(page)>=0;
-    document.body.setAttribute('data-side',work?'work':soft?'party':'');
     enq.className='enq'+(work?' dark':soft?' tint':'');
     if(work){setType('workplace');}else if(soft){setType('party');}
     window.scrollTo(0,y);onScroll();

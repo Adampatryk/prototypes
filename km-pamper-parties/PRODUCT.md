@@ -34,7 +34,7 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 
 ## Capabilities and Constraints
 
-- Pages: Home, Workplace wellbeing, Pamper parties, Treatments, Blog (index plus one page per post), Contact. Prototypes simulate these with hash routing in one file. Production keeps or redirects the current URLs.
+- Pages: Home, Workplace wellbeing, Pamper parties, About, Treatments, Blog (index plus one page per post), Contact. Prototypes simulate these with hash routing in one file. Production keeps or redirects the current URLs.
 - Enquiry form: type (workplace day / regular programme / pamper party / individual), name, email or phone, organisation or occasion, headcount, dates/location/notes. Validates name and contact method with a visible message, shows a confirmation state, pre-selects type when arriving from a corporate or party CTA. Submission destination TBC.
 - Sticky header; hamburger menu below ~900px; current page highlighted; persistent WhatsApp/Enquire bar on mobile desirable.
 - Google review badge linking to the Google Business profile (place ID ChIJPbNj01L5gS4R5uGWW4tK2kU).

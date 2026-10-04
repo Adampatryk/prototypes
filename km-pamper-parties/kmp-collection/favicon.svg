@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>KM Pamper Parties</title>
+  <rect width="64" height="64" rx="14" fill="#1A1A1A"/>
+  <g transform="translate(32 45.5) scale(.56)" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round">
+    <path transform="rotate(-68) scale(.76)" fill="#C89B98" d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/>
+    <path transform="rotate(68) scale(.76)" fill="#C89B98" d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/>
+    <path transform="rotate(-34) scale(.88)" fill="#D9B4B0" d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/>
+    <path transform="rotate(34) scale(.88)" fill="#D9B4B0" d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/>
+    <path fill="#EBCFCB" d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/>
+  </g>
+  <path d="M21 52.5h22" fill="none" stroke="#C9A96A" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

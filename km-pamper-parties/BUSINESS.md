@@ -6,7 +6,7 @@ Sources: audit of https://kmpamperparties.co.uk/ on 25 Sep 2026, the client's ow
 
 ## 1. The business
 
-**Trading names:** KM Pamper Parties · Holistic Therapy Team · "Massage, Beauty & Wellbeing Services". Confirmed by Kathleen on 4 Oct 2026: the business and website remain "KM Pamper Parties / Holistic Therapy Team – Wellbeing Services"; "KMP Pamper Parties" is used specifically for the new merchandise and event branding, with the lotus in the KMP logo (see section 9). Co-founded by KM (Kathleen), who is the therapist named in every review.
+**Trading names:** KM Pamper Parties · Holistic Therapy Team · "Massage, Beauty & Wellbeing Services". Updated by Kathleen on 5 Oct 2026 (prototype feedback): "KMP Pamper Parties" is now the main displayed brand name across the new website; the web address and email keep "KM". "22+ years" refers to her own experience, not the age of the business, and she is not to be called "co-founder". Earlier, on 4 Oct 2026, she had said the business and website would remain "KM Pamper Parties / Holistic Therapy Team – Wellbeing Services"; "KMP Pamper Parties" is used specifically for the new merchandise and event branding, with the lotus in the KMP logo (see section 9). Co-founded by KM (Kathleen), who is the therapist named in every review.
 
 **What they do:** Mobile massage, beauty and wellbeing treatments delivered at the client's location. Two audiences, one team.
 
@@ -87,7 +87,23 @@ Current site descriptions worth reusing:
 
 ## 5. Pricing and booking terms
 
-### Pamper party pricing (per person, per treatment)
+### Agreed new pamper party pricing (from Kathleen, received 6 Oct 2026)
+
+| Duration | Price per person |
+|---|---|
+| 20 minutes | £25 |
+| 30 minutes | £37 |
+| 45 minutes | £52 |
+| 60 minutes | £70 |
+
+Minimum booking: 2 hours of treatment time per therapist.
+
+- The new prices take effect when the rebuilt website goes live. Kathleen asked for them to be added at the final pre-launch stage and "held ready" until then.
+- Bookings already confirmed at previously agreed prices stay at the price originally quoted.
+- Still to come before launch: the cancellation policy and booking terms; deposit, payment and balance arrangements; any other pricing or booking information agreed at the final review.
+- The table below is the old pricing from the current site, kept for reference. The live site still charges these until launch.
+
+### Old pamper party pricing (per person, per treatment)
 
 | Duration | Price | Current site's description |
 |---|---|---|
@@ -278,6 +294,8 @@ Sources in `assets/`, web sizes in `img/` with `-sm` variants.
 Worth knowing: `hakim-conf-spa` shows that the light-up SPA letters photo used across the concepts as the "pamper party" image (`spa-letters`) was taken at the Hakim Group conference, not at a pamper party. The hen party photos are now the only real party photographs we hold.
 
 **The Hakim Group 2026 post.** Text used as supplied, including Kathleen's "KMP Pamper Parties" wording. Her three chosen photos are original, not AI-generated: `hakim-2026-team` (seven therapists around a blue sofa, the lead image), `hakim-2026-massage` (four therapists with four seated delegates) and `hakim-2026-display` (three therapists at the "I'm a Clinician" display). Organiser feedback has been requested and is to be added to the post when it arrives. Delegates are identifiable in the massage photo.
+
+**Full-team photo replaced (5 Oct 2026).** `team-all` in `img/` is now an edited version Adam supplied of the same group photo on the conference steps (source: `assets/team-all-edit.jpg`); the earlier version is still in `assets/` under its original file name. It is used by all five concepts. The edit appears to have been made with an AI image tool: some apron lettering is garbled and faces may differ slightly from the original, which matters because Kathleen asked for genuine photographs rather than AI-generated people.
 
 ### Hidden articles on the current site
 

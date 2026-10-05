@@ -28,7 +28,7 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 
 - Mobile service. The team brings chairs, couches, towels, music and a sign-up sheet.
 - Workplace formats: desk massage (short, at the desk) or seated chair massage (needs a quiet ~2m x 2m space and a plug socket per therapist). Fully clothed, no oils, 15 to 20 minute slots, roughly 18 to 24 people per therapist per day. Delivered as one-off wellbeing days, multi-therapist events, or recurring programmes with one monthly invoice. Corporate work is quoted per therapist per session on hours and headcount.
-- Parties: guests pick and mix treatments in 20, 30 or 60 minute slots at £24, £35 or £65 per person. Minimum booking 2 hours. Deposit on booking, full payment 7 days before. Gift vouchers by enquiry. Additional therapists for larger parties.
+- Parties: guests pick and mix treatments in 20, 30, 45 or 60 minute slots. Agreed prices for the rebuilt site: £25, £37, £52 and £70 per person (old site: £24, £35, £65 for 20, 30, 60). Minimum booking 2 hours of treatment time per therapist. Deposit on booking, full payment 7 days before. Gift vouchers by enquiry. Additional therapists for larger parties.
 - Areas: Nottingham, Derby, Leicester headline. Full list: Leicester, Lincoln, Grantham, Boston, Nottingham, Mansfield, Kettering, Melton Mowbray, Derby, Chesterfield, Worksop, Hinckley, Northampton, Loughborough, Corby.
 - Contact channels: enquiry form, WhatsApp (deep link, number must be shown), email, phone.
 
@@ -47,7 +47,8 @@ One crew of twenty-plus qualified, insured therapists, co-founded by KM (Kathlee
 
 - Names: "KM Pamper Parties", "Holistic Therapy Team". Co-founder KM (Kathleen) is named in every review.
 - Client-pinned brand direction (4 Oct 2026, brand sheet at `assets/kmp-brand-sheet.png`): charcoal black #1A1A1A, warm gold #C9A96A, blush pink #D9B4B0, cream #F7EFE9, white; Playfair Display headings, Montserrat body; a lotus over a three-colour KMP mark. Feel: professional, warm, luxurious and welcoming, not overly corporate or clinical. Corporate wellbeing has its own professional identity; pamper parties stay softer and boutique; the whole site stays cohesive. The sheet is a starting point, not a layout to copy.
-- Naming: the business and website remain "KM Pamper Parties / Holistic Therapy Team – Wellbeing Services". "KMP" is merchandise and event branding.
+- Naming (client decision, 5 Oct 2026): the displayed brand name on the website is "KMP Pamper Parties", with "Holistic Therapy Team" and "Wellbeing Services" beneath. The web address and email keep "KM". "22+ years" is Kathleen's experience, not the age of the business; do not call her "co-founder".
+- Copy rule (client, 5 Oct 2026): no medical or health-outcome claims; describe treatments in terms of relaxation, wellbeing, comfort and everyday tension.
 - The brand sheet's imagery is AI-generated and must never be used on the site.
 - Earlier identity, now superseded: pink, gold, navy, a lotus/heart motif, "Holistic Therapy Team" wordmark.
 - Taglines available: "Sit back, relax, and let us take care of you" (primary), "A happier, healthier you", "Wellbeing at Work", "Take time for you", "Relax · Recharge · Feel Amazing", "For people · for teams · for every occasion".

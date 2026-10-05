@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>KM Pamper Parties · KMP Collection</title>
+<title>KMP Pamper Parties · KMP Collection</title>
 <meta name="description" content="Mobile massage, beauty and wellbeing across the East Midlands. Workplace wellbeing and pamper parties from the Holistic Therapy Team.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -188,6 +188,10 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 .rows .k{font:500 1.15rem/1.35 "Playfair Display",Georgia,serif;color:var(--h)}
 .rows p{font-size:.95rem}
 .rows em{display:block;font-style:normal;font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--a);margin-top:.45rem}
+.rows.steps{counter-reset:step;padding:0}
+.rows.steps li{grid-template-columns:17rem 1fr;counter-increment:step}
+.rows.steps .k::before{content:counter(step) ". ";color:var(--a)}
+@media(max-width:700px){.rows.steps li{grid-template-columns:1fr}}
 .rows a{color:var(--h);text-decoration-color:var(--gold);text-underline-offset:.2em}
 @media(max-width:520px){.rows li{grid-template-columns:1fr}}
 .note{margin-top:1.8rem;padding:1.2rem 1.4rem;border:1px solid var(--hair);border-radius:16px;background:var(--white);font-size:.95rem}
@@ -205,12 +209,12 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 
 
 /* parties: prices and occasions */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);margin-top:1.8rem;border-block:1px solid var(--hair)}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);margin-top:1.8rem;border-block:1px solid var(--hair)}
 .tier{padding:1.7rem clamp(1rem,2.6vw,2.2rem)}
 .tier+.tier{border-left:1px solid var(--hair)}
 .tier:first-child{padding-left:0}.tier:last-child{padding-right:0}
 .tier .d{display:block;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--a)}
-.tier .p{display:block;font:500 clamp(2.4rem,4.4vw,3.3rem)/1 "Playfair Display",Georgia,serif;color:var(--h);margin:.7rem 0 .85rem;font-variant-numeric:lining-nums}
+.tier .p{display:block;font:500 clamp(2.4rem,4.4vw,3.3rem)/1 "Playfair Display",Georgia,serif;color:var(--h);margin:.7rem 0 0;font-variant-numeric:lining-nums}
 .tier p{font-size:.95rem;max-width:22rem}
 @media(max-width:700px){.tiers{grid-template-columns:1fr}.tier,.tier:first-child,.tier:last-child{padding:1.15rem 0;display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:.25rem 1rem}.tier+.tier{border-left:0;border-top:1px solid var(--hair)}.tier .d{grid-column:1;grid-row:1}.tier .p{grid-column:2;grid-row:1;margin:0;font-size:2rem}.tier p{grid-column:1/-1;max-width:none}}
 .after{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem clamp(2.5rem,6vw,5rem);margin-top:1.8rem;align-items:start}
@@ -228,7 +232,7 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 .tx{width:100%;border-collapse:collapse;font-size:.95rem}
 .tx th,.tx td{padding:1.05rem 1.2rem 1.05rem 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--hair)}
 .tx thead th{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--a);border-bottom:1px solid var(--gold)}
-.tx td:first-child{width:38%}
+.tx td:first-child{width:62%}
 .tx td b{display:block;font:500 1.2rem/1.3 "Playfair Display",Georgia,serif;color:var(--h);margin-bottom:.15rem}
 .tx td:nth-child(2){white-space:nowrap;color:var(--h)}
 .tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.32rem .7rem;border-radius:999px;margin:.12rem .3rem .12rem 0;white-space:nowrap}
@@ -238,8 +242,8 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
   .tx tr{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;padding:1.1rem 0;border-bottom:1px solid var(--hair)}
   .tx tbody tr:first-child{border-top:1px solid var(--gold)}
   .tx td{padding:0;border:0}.tx td:first-child{width:auto}
-  .tx td:nth-child(3),.tx td:nth-child(4){grid-column:1/-1}
-  .tx td:nth-child(3){font-size:.9rem;color:var(--m)}
+  .tx tr{grid-template-columns:1fr}
+  .tx td:nth-child(2){font-size:.9rem;color:var(--m)}
 }
 
 /* about */
@@ -295,6 +299,9 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 .prose .acts{margin-top:2.4rem}
 
 /* enquiry */
+.areas-sec{border-top:1px solid var(--hair)}
+.areas-list{justify-content:flex-start}
+.areas-list a{text-decoration-color:var(--gold);text-underline-offset:.2em}
 .enq{padding-block:clamp(3.2rem,7vw,5.5rem)}
 #enquire{scroll-margin-top:84px}
 .enq-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(2.2rem,5vw,4.5rem);align-items:start}
@@ -306,7 +313,7 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 .contact small{font-size:.88rem;color:var(--t)}
 .contact small a{font:inherit;color:var(--h);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:.2em}
 body[data-page="contact"] .enq h2{display:none}
-body[data-page="contact"] .enq .contact{margin-top:0}
+body[data-page="contact"] .enq .intro{margin-top:0}
 .contact .areas{font-size:.9rem;line-height:1.65}
 .sheet{padding:clamp(1.3rem,3vw,2.3rem);border-radius:20px;border:1px solid var(--line)}
 form{display:grid;gap:1.1rem}
@@ -330,6 +337,7 @@ footer{padding:2.6rem 0 3rem;font-size:.88rem;border-top:1px solid var(--hair)}
 .foot b span{white-space:nowrap}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
 .foot a{text-decoration:none}.foot a:hover{color:var(--gold)}
+.legal{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem}
 .proto{grid-column:1/-1;padding-top:1.4rem;border-top:1px solid var(--hair);font-size:.8rem;color:var(--m)}
 
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--hair)}
@@ -368,7 +376,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 </defs></svg>
 <a class="skip" href="#main" onclick="event.preventDefault();document.getElementById('main').focus()">Skip to content</a>
 <header class="top dark"><div class="wrap nav">
-  <a class="logo" href="#home" aria-label="KM Pamper Parties, Holistic Therapy Team. Home">
+  <a class="logo" href="#home" aria-label="KMP Pamper Parties, Holistic Therapy Team. Home">
     <span class="mark" aria-hidden="true">
       <svg class="lotus" viewBox="0 0 120 72"><g transform="translate(60 68)"><g class="pt o" style="--a:-68deg;--s:.76"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt o" style="--a:68deg;--s:.76"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt i" style="--a:-34deg;--s:.88"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt i" style="--a:34deg;--s:.88"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g><g class="pt" style="--a:0deg;--s:1"><path d="M0,0C-15,-15-13,-41 0,-58C13,-41 15,-15 0,0Z"/></g></g></svg>
       <span class="kmp"><b class="k">K</b><b class="m">M</b><b class="p">P</b></span>
@@ -378,7 +386,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav id="navList" aria-label="Main">
     <ul class="nav-l"><li class="home-link"><a href="#home" data-nav="home">Home</a></li><li><a href="#corporate" data-nav="corporate">Workplace wellbeing</a></li><li><a href="#parties" data-nav="parties">Pamper parties</a></li><li><a href="#about" data-nav="about">About</a></li></ul>
-    <ul class="nav-r"><li><a href="#treatments" data-nav="treatments">Treatments</a></li><li><a href="#blog" data-nav="blog">Blog</a></li><li><a href="#contact" data-nav="contact">Contact</a></li><li><a class="btn sm" href="#contact">Enquire</a></li></ul>
+    <ul class="nav-r"><li><a href="#treatments" data-nav="treatments">Treatments</a></li><li><a href="#blog" data-nav="blog">Latest</a></li><li><a href="#contact" data-nav="contact">Contact</a></li><li><a class="btn sm" href="#contact">Enquire</a></li></ul>
   </nav>
 </div></header>
 
@@ -389,14 +397,14 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head hero" data-page="home"><div class="wrap head-grid">
   <div>
     <h1>Sit back, relax, and let us take care of you.</h1>
-    <p class="lede">KM Pamper Parties and the Holistic Therapy Team bring massage, beauty and wellbeing to workplaces and celebrations across the East Midlands.</p>
+    <p class="lede">KMP Pamper Parties and our Holistic Therapy Team bring professional massage, beauty and wellbeing services to workplaces, events and celebrations across the East Midlands.</p>
     <div class="acts"><a class="btn work" href="#corporate">Workplace wellbeing</a><a class="btn party" href="#parties">Pamper parties</a></div>
   </div>
-  <figure class="ph"><img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="(max-width:860px) 100vw, 520px" width="1400" height="1050" fetchpriority="high" alt="The Holistic Therapy Team, more than twenty therapists in black aprons, together at a conference venue"></figure>
+  <figure class="ph"><img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="(max-width:860px) 100vw, 520px" width="1400" height="979" fetchpriority="high" alt="The Holistic Therapy Team, more than twenty therapists in black aprons, together at a conference venue"></figure>
 </div></div>
 
 <div class="trust" data-page="home"><ul class="wrap">
-  <li>Established over 22 years</li><li>Fully insured</li><li>On-site service</li>
+  <li>22+ years’ experience</li><li>Qualified &amp; fully insured therapists</li><li>Professional mobile service</li>
 </ul></div>
 
 <section class="sec reviews" data-page="home"><div class="wrap">
@@ -427,7 +435,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <div>
     <h1>Workplace wellbeing</h1>
     <p class="script sub">Restore. Recharge. Reconnect.</p>
-    <p class="lede">On-site chair massage, wellbeing days and team building from the Holistic Therapy Team, for healthier, happier teams.</p>
+    <p class="lede">Professional on-site massage, workplace wellbeing days and event services from our experienced Holistic Therapy Team.</p>
     <div class="acts"><a class="btn to-form" href="#contact" data-type="workplace">Request a quote</a><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp 07700 900123</a></div>
   </div>
   <figure class="ph"><img src="../img/spa-pair.jpg" srcset="../img/spa-pair-sm.jpg 540w, ../img/spa-pair.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1350" loading="lazy" alt="Two KM therapists in black Holistic Therapy Team aprons beside a pink Massages sign at a client's offices" style="object-position:50% 22%"></figure>
@@ -436,19 +444,21 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <section class="sec" data-page="corporate"><div class="wrap two">
   <div>
     <h2>Three ways to book</h2>
+    <p class="intro">Every booking is bespoke, planned around your workplace or event.</p>
     <ul class="rows">
-      <li><span class="k">One-off day</span><p>Wellbeing days, conferences and team building. Any headcount; we scale the team.</p></li>
-      <li><span class="k">Regular visits</span><p>Monthly or fortnightly visits, with one invoice a month.</p></li>
+      <li><span class="k">One-off days</span><p>Wellbeing days, conferences and team building.</p></li>
+      <li><span class="k">Regular visits</span><p>Monthly or fortnightly visits to your workplace.</p></li>
       <li><span class="k">Large events</span><p>Multi-therapist days for big offices, universities and conferences.</p></li>
     </ul>
-    <div class="note"><b>Pricing.</b> Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually. Quotes are based on number of staff and time per person.</div>
+    <div class="note"><b>Pricing.</b> Corporate and event bookings are quoted individually according to the booking length, number of therapists required, location and individual event requirements. Please contact us for a tailored quotation.</div>
   </div>
   <div>
-    <h2>How a day runs</h2>
+    <h2>How it works</h2>
     <ul class="rows">
-      <li><span class="k">Set-up</span><p>A meeting room or quiet corner, roughly 2m by 2m and a plug socket per therapist. We bring the chair, towels, music and a sign-up sheet.</p></li>
-      <li><span class="k">Each session</span><p>Fifteen to twenty minutes, seated and fully clothed, with no oils. Straight back to work afterwards.</p></li>
-      <li><span class="k">In a day</span><p>Around 18 to 24 people per therapist. Bigger teams get more therapists.</p></li>
+      <li><span class="k">Planning</span><p>We discuss your workplace or event, number of attendees and the wellbeing service required.</p></li>
+      <li><span class="k">Set-up</span><p>Our therapists arrive with the professional equipment required and work with the agreed treatment areas.</p></li>
+      <li><span class="k">Treatments</span><p>Treatment length and format can be tailored around the working day or event programme, from shorter on-site massage sessions to longer treatments where appropriate.</p></li>
+      <li><span class="k">Larger teams and events</span><p>Multiple therapists and event coordination can be provided where required.</p></li>
       <li><span class="k">Desk or chair</span><p>Desk massage is short and happens at the employee's own desk. Chair massage uses our massage chair and needs a small, ideally secluded space.</p></li>
     </ul>
   </div>
@@ -456,7 +466,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <section class="backdrop dark" data-page="corporate"><div class="wrap" style="z-index:1">
   <p class="script"><span>Restoring people.</span> <span>Empowering teams.</span> <span>Brighter workplaces.</span></p>
-  <ul class="benefits"><li>Boosts wellbeing and morale</li><li>Supports a healthier, more productive team</li><li>Reduces stress and absenteeism</li><li>Ideal for offices, events and ongoing projects</li></ul>
+  <ul class="benefits"><li>Supports employee wellbeing and morale</li><li>Provides valuable time to relax and recharge</li><li>Helps create a positive workplace wellbeing experience</li><li>Ideal for workplaces, conferences, events and ongoing projects</li></ul>
 </div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></section>
 
 <section class="sec reviews" data-page="corporate" style="padding-bottom:0"><div class="wrap">
@@ -484,21 +494,34 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <div>
     <h1>Pamper parties</h1>
     <p class="script sub">Pamper. Relax. Rejuvenate.</p>
-    <p class="lede">Guests pick and mix treatments at your home, holiday let or venue. We arrive with therapists, couches and towels, and soft lighting and aromatherapy diffusers where appropriate.</p>
+    <p class="lede">Enjoy professional massage, beauty and holistic treatments in the comfort of your home, holiday accommodation or chosen venue. Guests can choose from a selection of treatments, while our experienced therapists bring the equipment and products needed to create your pamper experience.</p>
     <div class="acts"><a class="btn to-form" href="#contact" data-type="party">Plan my party</a><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp 07700 900123</a></div>
   </div>
   <figure class="ph"><img src="../img/hen-redroofs-welcome.jpg" srcset="../img/hen-redroofs-welcome-sm.jpg 540w, ../img/hen-redroofs-welcome.jpg 900w" sizes="(max-width:860px) 100vw, 480px" width="900" height="1260" loading="lazy" alt="A welcome sign for a hen do on an easel, surrounded by white and black balloons" style="object-position:50% 42%"></figure>
 </div><svg class="rib" aria-hidden="true"><use href="#ribbons"/></svg></div>
 
+<section class="sec" data-page="parties" style="padding-bottom:0"><div class="wrap">
+  <h2>How your pamper party works</h2>
+  <ol class="rows steps">
+    <li><span class="k">Tell us about your party</span><p>Date, location, approximate group size and occasion.</p></li>
+    <li><span class="k">Select your treatment options</span><p>We’ll agree the treatments and treatment lengths available for your group. Guests can choose their preferred treatment in advance or, where appropriate, individual choices can be decided on the day from the treatments already arranged for the booking. This can be particularly helpful when the pamper party is a surprise for the bride-to-be, birthday guest or guest of honour.</p></li>
+    <li><span class="k">We organise the schedule</span><p>We’ll help organise the treatment schedule around your group, booking time and the treatments being provided. Where individual treatment choices are being kept as a surprise or decided on the day, we can allow for this within the agreed treatment options.</p></li>
+    <li><span class="k">We come to you</span><p>Our therapist or team arrives at the home, holiday accommodation or venue with the required professional equipment and products.</p></li>
+    <li><span class="k">Relax and enjoy</span><p>We set up and work through the agreed schedule while the group enjoys the celebration.</p></li>
+  </ol>
+  <p class="fine">For larger groups, additional therapists can be arranged to help treatments run smoothly within the available booking time. Soft lighting, aromatherapy diffusers and other finishing touches can also be incorporated where appropriate.</p>
+</div></section>
+
 <section class="sec" data-page="parties"><div class="wrap">
   <h2>Per person, per treatment</h2>
   <div class="tiers">
-    <div class="tier"><span class="d">20 minutes</span><span class="p">£24</span><p>Shorter treatments, or an add-on to build a longer, tailored slot.</p></div>
-    <div class="tier"><span class="d">30 minutes</span><span class="p">£35</span><p>Back massage, Indian head massage or a facial.</p></div>
-    <div class="tier"><span class="d">60 minutes</span><span class="p">£65</span><p>Full body massage, the Hammam experience, or a combination such as massage plus facial.</p></div>
+    <div class="tier"><span class="d">20 minutes</span><span class="p">£25</span></div>
+    <div class="tier"><span class="d">30 minutes</span><span class="p">£37</span></div>
+    <div class="tier"><span class="d">45 minutes</span><span class="p">£52</span></div>
+    <div class="tier"><span class="d">60 minutes</span><span class="p">£70</span></div>
   </div>
   <div class="after">
-    <p class="fine"><b>Minimum booking time two hours.</b> A deposit secures the date and the balance is due seven days before the party. Gift vouchers are available by enquiry.</p>
+    <p class="fine"><b>Minimum booking: 2 hours of treatment time per therapist.</b> Gift vouchers are available by enquiry.</p>
     <div class="note"><b>Please note.</b> Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</div>
   </div>
 </div></section>
@@ -506,8 +529,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <section class="sec" data-page="parties" style="padding-top:0"><div class="wrap two">
   <div>
     <h2>Every occasion</h2>
-    <ul class="occ"><li>Hen parties</li><li>Birthdays</li><li>Baby showers</li><li>Girls' night in</li><li>Mother's Day</li><li>Time Out for 2</li><li>Pregnancy massage</li></ul>
-    <p class="fine">Additional therapists are available for larger parties.</p>
+    <ul class="occ"><li>Hen parties</li><li>Birthdays</li><li>Baby showers</li><li>Girls’ weekends</li><li>Group getaways</li><li>Special occasions</li><li>Time Out for Two</li></ul>
   </div>
   <div>
     <h2>Staying with a group?</h2>
@@ -523,26 +545,26 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <!-- ============ TREATMENTS ============ -->
 <div class="head plain" data-page="treatments"><div class="wrap">
   <h1>Treatments</h1>
-  <p class="lede">Chair massage works in an office corner. A full body massage needs a couch and a quiet room. Here is what works where.</p>
+  <p class="lede">Treatment availability may vary depending on your booking and the therapists attending. We’ll help you choose the most suitable treatment selection for your group.</p>
 </div></div>
 
 <section class="sec" data-page="treatments"><div class="wrap">
   <table class="tx">
-    <thead><tr><th scope="col">Treatment</th><th scope="col">Slot</th><th scope="col">Good for</th><th scope="col">Setting</th></tr></thead>
+    <thead><tr><th scope="col">Treatment</th><th scope="col">Slot</th><th scope="col">Setting</th></tr></thead>
     <tbody>
-      <tr><td><b>Seated chair massage</b>Fully clothed, no oils. Back, neck and shoulders</td><td>15 to 20 min</td><td>Desk tension, a break in the working day</td><td><span class="tag w">Workplace</span><span class="tag e">Events</span></td></tr>
-      <tr><td><b>Desk massage</b>At the employee's own desk</td><td>Short</td><td>Teams with no spare room</td><td><span class="tag w">Workplace</span></td></tr>
-      <tr><td><b>Indian head massage</b>Scalp, neck and shoulders</td><td>30 min</td><td>Thinning hair, migraines, stress</td><td><span class="tag w">Workplace</span><span class="tag p">Parties</span></td></tr>
-      <tr><td><b>Back massage</b>With a free essential oil upgrade</td><td>30 min</td><td>Aches and tension</td><td><span class="tag p">Parties</span></td></tr>
-      <tr><td><b>Aromatherapy or full body massage</b>Couch-based</td><td>30 or 60 min</td><td>Deep relaxation</td><td><span class="tag p">Parties</span></td></tr>
-      <tr><td><b>Hot stone massage</b></td><td>60 min</td><td>Warmth for stiff muscles</td><td><span class="tag p">Parties</span></td></tr>
-      <tr><td><b>Facials</b>Consultation first, suits all skin types</td><td>30 or 60 min</td><td>Pamper days, wellbeing weeks</td><td><span class="tag p">Parties</span><span class="tag e">Events</span></td></tr>
-      <tr><td><b>Reflexology</b></td><td>30 min</td><td>Rebalancing, stress</td><td><span class="tag w">Workplace</span><span class="tag p">Parties</span></td></tr>
-      <tr><td><b>Pregnancy massage</b>Qualified pregnancy massage therapists who work with mum throughout</td><td>Ask us</td><td>Mums-to-be, baby showers</td><td><span class="tag p">Parties</span></td></tr>
-      <tr><td><b>Hammam experience</b>Body scrub, mud mask, hot steam and a hot oil massage</td><td>60 min</td><td>The full pamper</td><td><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Seated chair massage</b>Fully clothed, with no oils. Back, neck and shoulders.</td><td>Tailored to your day</td><td><span class="tag w">Workplace</span><span class="tag e">Events</span></td></tr>
+      <tr><td><b>Desk massage</b>A short massage at the employee’s own desk.</td><td>Tailored to your day</td><td><span class="tag w">Workplace</span></td></tr>
+      <tr><td><b>Indian head massage</b>A relaxing treatment focusing on the upper back, shoulders, neck, scalp and head. Ideal for helping you unwind, release everyday tension and enjoy a deeply relaxing experience.</td><td>30 min</td><td><span class="tag w">Workplace</span><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Back, neck and shoulder massage</b>A focused massage concentrating on common areas of tension across the back, neck and shoulders. Perfect for anyone looking to relax, unwind and enjoy some well-deserved time out.</td><td>30 min</td><td><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Full body massage</b>A relaxing massage designed to provide an overall sense of relaxation and wellbeing. Pressure can be adapted to individual preference, creating a treatment tailored to you.</td><td>30 or 60 min</td><td><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Hot stone massage</b>A warming massage using heated stones.</td><td>60 min</td><td><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Facials</b>Every facial begins with a consultation and suits all skin types.</td><td>30 or 60 min</td><td><span class="tag p">Parties</span><span class="tag e">Events</span></td></tr>
+      <tr><td><b>Reflexology</b>A relaxing treatment using gentle pressure techniques on specific areas of the feet. A wonderful choice for anyone looking to switch off, unwind and enjoy some peaceful time for themselves.</td><td>30 min</td><td><span class="tag w">Workplace</span><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Pregnancy massage</b>A gentle, relaxing massage adapted to the needs and comfort of the expectant mum. Treatments are provided with appropriate positioning and support to create a comfortable and nurturing experience.</td><td>Ask us</td><td><span class="tag p">Parties</span></td></tr>
+      <tr><td><b>Hammam-inspired body treatment</b>Body scrub, mud mask, hot steam and a hot oil massage.</td><td>60 min</td><td><span class="tag p">Parties</span></td></tr>
     </tbody>
   </table>
-  <div class="note"><b>Pricing.</b> Pamper parties are priced per person, per treatment: £24 for 20 minutes, £35 for 30, £65 for 60. Minimum booking two hours. Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</div>
+  <div class="note"><b>Pricing.</b> Pamper parties are priced per person, per treatment: £25 for 20 minutes, £37 for 30, £52 for 45 and £70 for 60. Minimum booking: 2 hours of treatment time per therapist. Pamper party prices do not apply to corporate massage, wellbeing days or ongoing projects. All corporate enquiries are quoted individually.</div>
   <div class="acts"><a class="btn" href="#contact">Enquire</a><a class="btn ghost" href="#parties">Party prices</a><a class="btn ghost" href="#corporate">Workplace formats</a></div>
 </div></section>
 
@@ -551,7 +573,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <figure class="ph"><img src="../img/kathleen-portrait.jpg" srcset="../img/kathleen-portrait-sm.jpg 520w, ../img/kathleen-portrait.jpg 1000w" sizes="(max-width:860px) 90vw, 440px" width="1000" height="1250" loading="lazy" alt="Kathleen smiling, standing in front of a blue and pink wall mural"><p class="badge"><b>22+</b><span>years of<br>experience</span></p></figure>
   <div>
     <h1>Meet Kathleen</h1>
-    <p class="lede">Kathleen is the co-founder of KM Pamper Parties and the Holistic Therapy Team.</p>
+    <p class="lede">Kathleen is the therapist behind KMP Pamper Parties and the Holistic Therapy Team.</p>
     <p>The business brings massage, beauty and wellbeing treatments to people where they are: at work, at home and in their holiday accommodation across the East Midlands.</p>
     <p>The team has grown to more than twenty qualified, insured therapists, and Kathleen still gives treatments herself. Every one of our Google reviews mentions her by name.</p>
     <figure class="about-quote"><blockquote>“Thank you so much Kathleen, your kind, caring nature made me feel so at ease. Your massages are amazing and have really helped my back. Highly recommend to anyone”</blockquote><figcaption class="who">Steff Ryman<small>Google review</small></figcaption></figure>
@@ -561,8 +583,8 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <!-- ============ BLOG ============ -->
 <div class="head plain" data-page="blog"><div class="wrap">
-  <h1>Blog</h1>
-  <p class="lede">Stories from our pamper parties and wellbeing days.</p>
+  <h1>Latest from KMP</h1>
+  <p class="lede">Recent work and case studies from our pamper parties, workplace wellbeing days and events.</p>
 </div></div>
 
 <section class="sec" data-page="blog"><div class="wrap">
@@ -570,7 +592,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <figure class="ph"><img src="../img/hakim-2026-team.jpg" srcset="../img/hakim-2026-team-sm.jpg 800w, ../img/hakim-2026-team.jpg 1400w" sizes="(max-width:760px) 100vw, 520px" width="1400" height="764" loading="lazy" alt="Seven therapists from the Holistic Therapy Team in black aprons, sitting together around a blue sofa" style="object-position:45% 50%"></figure>
     <div>
       <h2>Hakim Group Conference: Corporate Wellbeing at the East Midlands Conference Centre</h2>
-      <span class="caps date">27 September 2026</span>
+      <span class="caps date">Conferences &amp; Events · 27 September 2026</span>
       <p>A team of seven therapists provided on-site massage and wellbeing services for the Hakim Group Conference.</p>
       <span class="more">Read the story <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </div>
@@ -580,22 +602,22 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <li><a class="post-card" href="#blog-hen-party-red-roofs-barn">
       <figure class="ph"><img src="../img/hen-redroofs-group.jpg" srcset="../img/hen-redroofs-group-sm.jpg 800w, ../img/hen-redroofs-group.jpg 1400w" sizes="(max-width:860px) 100vw, 560px" width="1400" height="936" loading="lazy" alt="Four of the hen party smiling under a wooden pergola outside the brick barn, with open fields behind" style="object-position:42% 50%"></figure>
       <h3>A Relaxing Hen Party Pamper Experience at Red Roofs Barn</h3>
-      <span class="caps date">October 2026</span>
+      <span class="caps date">Pamper Parties &amp; Group Getaways · October 2026</span>
     </a></li>
     <li><a class="post-card" href="#blog-raf-lincolnshire-training-day">
       <figure class="ph"><img src="../img/raf-lincs-jet.jpg" srcset="../img/raf-lincs-jet-sm.jpg 800w, ../img/raf-lincs-jet.jpg 1400w" sizes="(max-width:860px) 100vw, 560px" width="1400" height="1007" loading="lazy" alt="Kathleen in front of a wall-sized photograph of a fast jet at the RAF Wellbeing Day in Lincolnshire" style="object-position:25% 50%"></figure>
       <h3>Enhancing Employee <span class="nw">Well-being:</span> Onsite Chair Massages at RAF Lincolnshire Training Day</h3>
-      <span class="caps date">March 2025</span>
+      <span class="caps date">Workplace Wellbeing · March 2025</span>
     </a></li>
     <li><a class="post-card" href="#blog-hakim-group-conference-2024">
       <figure class="ph"><img src="../img/hakim-conf-team.jpg" srcset="../img/hakim-conf-team-sm.jpg 800w, ../img/hakim-conf-team.jpg 1400w" sizes="(max-width:860px) 100vw, 560px" width="1400" height="1050" loading="lazy" alt="The team of therapists gathered on the steps at Telford International Centre" style="object-position:50% 60%"></figure>
       <h3>Hakim Group’s Annual Conference 2024: A Weekend of <span class="nw">Well-being</span> and Professional Growth</h3>
-      <span class="caps date">March 2025</span>
+      <span class="caps date">Conferences &amp; Events · March 2025</span>
     </a></li>
     <li><a class="post-card" href="#blog-microlise-eastwood">
       <figure class="ph"><img src="../img/microlise-massage.jpg" srcset="../img/microlise-massage-sm.jpg 600w, ../img/microlise-massage.jpg 1000w" sizes="(max-width:860px) 100vw, 560px" width="1000" height="1333" loading="lazy" alt="A member of staff leaning into the massage chair with a cream towel across their back, in a bright office" style="object-position:50% 30%"></figure>
       <h3>KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham</h3>
-      <span class="caps date">February 2025</span>
+      <span class="caps date">Workplace Wellbeing · February 2025</span>
     </a></li>
   </ul>
 </div></section>
@@ -604,7 +626,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head dark"><div class="wrap head-grid">
   <div>
     <h1 class="post-title">Hakim Group Conference: Corporate Wellbeing at the East Midlands Conference Centre</h1>
-    <p class="caps date">27 September 2026</p>
+    <p class="caps date">Conferences &amp; Events · 27 September 2026</p>
     <p class="lede">KMP Pamper Parties and our Holistic Therapy Team were delighted to provide on-site massage and wellbeing services for the Hakim Group Conference at the East Midlands Conference Centre.</p>
   </div>
   <figure class="ph"><img src="../img/hakim-2026-team.jpg" srcset="../img/hakim-2026-team-sm.jpg 800w, ../img/hakim-2026-team.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="764" loading="lazy" alt="Seven therapists from the Holistic Therapy Team in black aprons, sitting together around a blue sofa" style="aspect-ratio:4/3;object-position:45% 50%"><figcaption>The Holistic Therapy Team at the Hakim Group Conference, East Midlands Conference Centre.</figcaption></figure>
@@ -646,7 +668,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head blush"><div class="wrap head-grid">
   <div>
     <h1 class="post-title">A Relaxing Hen Party Pamper Experience at Red Roofs Barn</h1>
-    <p class="caps date">October 2026</p>
+    <p class="caps date">Pamper Parties &amp; Group Getaways · October 2026</p>
     <p class="lede">A hen party is often a busy weekend of celebrations, so adding some time to relax and unwind can be a lovely way for everyone to enjoy a little time out together.</p>
   </div>
   <figure class="ph"><img src="../img/hen-redroofs-group.jpg" srcset="../img/hen-redroofs-group-sm.jpg 800w, ../img/hen-redroofs-group.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="936" loading="lazy" alt="Four of the hen party smiling under a wooden pergola outside the brick barn, with open fields behind" style="aspect-ratio:4/3;object-position:42% 50%"></figure>
@@ -654,7 +676,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <section class="sec"><div class="wrap">
   <div class="prose">
-    <p>KM Pamper Parties recently provided a mobile pamper experience for a group of six celebrating a hen party at Red Roofs Barn.</p>
+    <p>KMP Pamper Parties recently provided a mobile pamper experience for a group of six celebrating a hen party at Red Roofs Barn.</p>
     <p>We brought everything needed to create a comfortable treatment area within the accommodation, allowing the group to enjoy their treatments without having to travel anywhere or interrupt their weekend plans.</p>
     <figure class="pair wide">
       <div class="ph"><img src="../img/hen-redroofs-welcome.jpg" srcset="../img/hen-redroofs-welcome-sm.jpg 540w, ../img/hen-redroofs-welcome.jpg 900w" sizes="(max-width:560px) 100vw, 460px" width="900" height="1260" loading="lazy" alt="A sign on an easel reading Welcome to Lauren&#39;s hen do, she&#39;s tying the knot, with white and black balloons around it" style="object-position:50% 42%"></div>
@@ -666,7 +688,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <p>Treatments are organised into a schedule before the booking so everyone knows their allocated treatment time. Once we know the number of guests, their chosen treatments and the time available, we put together a treatment schedule to help everything run smoothly.</p>
     <p>The group gave lovely positive feedback about their treatments, which was wonderful to hear.</p>
     <figure class="ph"><img src="../img/hen-redroofs-couch.jpg" srcset="../img/hen-redroofs-couch-sm.jpg 600w, ../img/hen-redroofs-couch.jpg 1000w" sizes="(max-width:760px) 100vw, 704px" width="1000" height="1042" loading="lazy" alt="Looking along the treatment couch, dressed in black and cream throws, towards a sofa and a table of products" style="aspect-ratio:5/4;object-position:50% 40%"><figcaption>The treatment couch, made up and ready.</figcaption></figure>
-    <p>KM Pamper Parties provides mobile massage, beauty and holistic treatments for hen parties, birthdays, girls’ weekends, group getaways and other special occasions.</p>
+    <p>KMP Pamper Parties provides mobile massage, beauty and holistic treatments for hen parties, birthdays, girls’ weekends, group getaways and other special occasions.</p>
     <p>With more than 22 years of experience, our aim is to provide a professional, friendly and well-organised service while giving guests the opportunity to relax and enjoy quality treatments in the comfort of their chosen accommodation.</p>
     <p>If you’re planning a hen party or group stay, simply get in touch with your date, location and approximate group size and we can help you plan your pamper experience.</p>
     <div class="acts"><a class="btn to-form" href="#contact" data-type="party">Plan my party</a><a class="btn ghost" href="#blog"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All posts</a></div>
@@ -678,7 +700,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head dark"><div class="wrap head-grid">
   <div>
     <h1 class="post-title">Enhancing Employee <span class="nw">Well-being:</span> Onsite Chair Massages at RAF Lincolnshire Training Day</h1>
-    <p class="caps date">March 2025</p>
+    <p class="caps date">Workplace Wellbeing · March 2025</p>
     <p class="lede">The Royal Air Force (RAF) Wellbeing Day in Lincolnshire marked a significant step towards integrating holistic wellness into military training programs. For the first time, the defence team experienced onsite chair massages during their training day event, aiming to enhance both physical and mental well-being.</p>
   </div>
   <figure class="ph"><img src="../img/raf-lincs-jet.jpg" srcset="../img/raf-lincs-jet-sm.jpg 800w, ../img/raf-lincs-jet.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="1007" loading="lazy" alt="Kathleen in front of a wall-sized photograph of a fast jet at the RAF Wellbeing Day in Lincolnshire" style="aspect-ratio:4/3;object-position:30% 50%"></figure>
@@ -710,7 +732,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head dark"><div class="wrap head-grid">
   <div>
     <h1 class="post-title">Hakim Group’s Annual Conference 2024: A Weekend of <span class="nw">Well-being</span> and Professional Growth</h1>
-    <p class="caps date">March 2025</p>
+    <p class="caps date">Conferences &amp; Events · March 2025</p>
     <p class="lede">The Hakim Group Annual Conference took place in December 2024 at the Telford International Centre, bringing together over 2,000 optical industry professionals for a weekend focused on success and well-being.</p>
   </div>
   <figure class="ph"><img src="../img/hakim-conf-team.jpg" srcset="../img/hakim-conf-team-sm.jpg 800w, ../img/hakim-conf-team.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="1050" loading="lazy" alt="The team of therapists gathered on the steps at Telford International Centre" style="aspect-ratio:4/3;object-position:50% 60%"></figure>
@@ -739,7 +761,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head dark"><div class="wrap head-grid">
   <div>
     <h1 class="post-title">KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham</h1>
-    <p class="caps date">February 2025</p>
+    <p class="caps date">Workplace Wellbeing · February 2025</p>
     <p class="lede">KM Pamper Parties recently collaborated with Microlise to host a Corporate Wellbeing Day at their Nottingham branch in Eastwood, offering onsite chair massages that were fully booked and enthusiastically received by the staff.</p>
   </div>
   <figure class="ph"><img src="../img/microlise-massage.jpg" srcset="../img/microlise-massage-sm.jpg 600w, ../img/microlise-massage.jpg 1000w" sizes="(max-width:860px) 100vw, 480px" width="1000" height="1333" loading="lazy" alt="A member of staff leaning into the massage chair with a cream towel across their back, in a bright office" style="aspect-ratio:4/5;object-position:50% 35%"></figure>
@@ -770,49 +792,65 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 
 <!-- ============ CONTACT ============ -->
 <div class="head plain" data-page="contact"><div class="wrap">
-  <h1>Book the team</h1>
-  <p class="lede">A few details and we'll come back with options and a clear price.</p>
+  <h1>Let’s plan your booking</h1>
+  <p class="lede">Tell us a few details about your workplace, event or occasion and we’ll get back to you with suitable options and a tailored quote.</p>
 </div></div>
 
 <!-- ============ SHARED ENQUIRY ============ -->
 <section class="enq" id="enquire" data-page="corporate parties contact blog-hakim-group-conference-2026 blog-hen-party-red-roofs-barn blog-raf-lincolnshire-training-day blog-hakim-group-conference-2024 blog-microlise-eastwood"><div class="wrap enq-grid">
   <div>
     <h2>Tell us about your team or occasion</h2>
+    <p class="intro">Not sure exactly what you need? That’s absolutely fine. Tell us what you’re planning and we’ll help you work out the most suitable options.</p>
     <ul class="contact">
       <li><span class="caps">WhatsApp</span><a href="https://wa.me/447700900123">07700 900123</a><small>Prefer to talk? <a href="tel:+447700900123">Call this number</a>.</small></li>
       <li><span class="caps">Email</span><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li>
-      <li><span class="caps">Areas</span><span class="areas">Leicester, Lincoln, Grantham, Boston, Nottingham, Mansfield, Kettering, Melton Mowbray, Derby, Chesterfield, Worksop, Hinckley, Northampton, Loughborough, Corby</span></li>
     </ul>
   </div>
   <div class="sheet">
     <form id="enqForm" novalidate>
-      <label>This enquiry is for<select id="f-type" name="type" required><option value="">Choose one</option><option value="workplace">A workplace wellbeing day or event</option><option value="programme">A regular workplace programme</option><option value="party">A pamper party</option><option value="individual">An individual treatment</option></select></label>
+      <label>This enquiry is for<select id="f-type" name="type" required><option value="">Choose one</option><option value="workplace">Workplace wellbeing</option><option value="event">Corporate event</option><option value="party">Pamper party</option><option value="other">Other</option></select></label>
       <p class="ferr" id="ferr" hidden role="alert"></p>
+      <label>Name<input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></label>
       <div class="f2">
-        <label>Your name<input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></label>
-        <label>Email or phone<input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="Email or mobile number" required></label>
+        <label>Email address<input id="f-email" name="email" type="email" autocomplete="email" placeholder="jane@example.com"></label>
+        <label>Telephone number<input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="07…"></label>
       </div>
       <div class="f2">
         <label>Organisation or occasion<input id="f-co" name="org" type="text" placeholder="Company or occasion"></label>
-        <label>How many people<input id="f-n" name="people" type="text" inputmode="numeric" placeholder="e.g. 12"></label>
+        <label>Approximate number of people<input id="f-n" name="people" type="text" inputmode="numeric" placeholder="e.g. 12"></label>
       </div>
-      <label>Dates, location, anything else<textarea id="f-msg" name="notes" rows="3" placeholder="Date, place and anything else we should know"></textarea></label>
+      <div class="f2">
+        <label>Preferred date<input id="f-date" name="date" type="text" placeholder="e.g. Saturday 14 June"></label>
+        <label>Location or postcode<input id="f-where" name="location" type="text" autocomplete="postal-code" placeholder="e.g. Matlock, DE4"></label>
+      </div>
+      <label>Anything else you’d like us to know?<textarea id="f-msg" name="notes" rows="3"></textarea></label>
       <div><button class="btn" type="submit">Send enquiry</button></div>
     </form>
     <div class="done" id="enqDone" hidden tabindex="-1">
-      <h3>Thanks, we've got your enquiry.</h3>
-      <p>We'll reply with options and a clear price. Need it sooner? WhatsApp <a href="https://wa.me/447700900123">07700 900123</a>.</p>
+      <h3>Thank you for your enquiry.</h3>
+      <p>We’ll be in touch to discuss your requirements and the most suitable options for your booking. Need it sooner? WhatsApp <a href="https://wa.me/447700900123">07700 900123</a>.</p>
     </div>
+  </div>
+</div></section>
+
+<section class="sec areas-sec" data-page="contact"><div class="wrap">
+  <h2>Areas we cover</h2>
+  <p class="intro">Based in the East Midlands, KMP Pamper Parties provides mobile massage, beauty and wellbeing services across a wide range of locations. Select an area below to find out more.</p>
+  <div class="two" style="margin-top:2rem">
+    <div><span class="caps">Workplace wellbeing</span><ul class="names areas-list"><li><a href="https://kmpamperparties.co.uk/corporate-massage/boston/" target="_blank" rel="noopener">Boston</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/chesterfield/" target="_blank" rel="noopener">Chesterfield</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/corby/" target="_blank" rel="noopener">Corby</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/derby/" target="_blank" rel="noopener">Derby</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/grantham/" target="_blank" rel="noopener">Grantham</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/hinckley/" target="_blank" rel="noopener">Hinckley</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/kettering/" target="_blank" rel="noopener">Kettering</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/leicester/" target="_blank" rel="noopener">Leicester</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/lincoln/" target="_blank" rel="noopener">Lincoln</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/loughborough/" target="_blank" rel="noopener">Loughborough</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/mansfield/" target="_blank" rel="noopener">Mansfield</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/melton-mowbray/" target="_blank" rel="noopener">Melton Mowbray</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/northampton/" target="_blank" rel="noopener">Northampton</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/nottingham/" target="_blank" rel="noopener">Nottingham</a></li><li><a href="https://kmpamperparties.co.uk/corporate-massage/worksop/" target="_blank" rel="noopener">Worksop</a></li></ul></div>
+    <div><span class="caps">Pamper parties</span><ul class="names areas-list"><li><a href="https://kmpamperparties.co.uk/pamper-parties-bakewell/" target="_blank" rel="noopener">Bakewell</a></li><li><a href="https://kmpamperparties.co.uk/pamper-parties-sheffield/" target="_blank" rel="noopener">Sheffield</a></li></ul>
+    <p class="fine">Planning a corporate event or conference outside these areas? Please get in touch to discuss your location and requirements.</p></div>
   </div>
 </div></section>
 
 </main>
 
 <footer class="dark"><div class="wrap foot">
-  <div><b><span>KM Pamper Parties ·</span> <span>Holistic Therapy Team</span></b>Massage, beauty and wellbeing services, brought to you across Nottingham, Derby, Leicester and the East Midlands.</div>
-  <ul><li><a href="#corporate">Workplace wellbeing</a></li><li><a href="#parties">Pamper parties</a></li><li><a href="#about">About</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#blog">Blog</a></li><li><a href="#contact">Contact</a></li></ul>
+  <div><b><span>KMP Pamper Parties ·</span> <span>Holistic Therapy Team ·</span> <span>Wellbeing Services</span></b>Professional massage, beauty and wellbeing services for workplaces, events, pamper parties and private groups across the East Midlands and beyond.</div>
+  <ul><li><a href="#corporate">Workplace wellbeing</a></li><li><a href="#parties">Pamper parties</a></li><li><a href="#about">About</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#blog">Latest from KMP</a></li><li><a href="#contact">Contact</a></li></ul>
   <ul><li><a href="https://wa.me/447700900123">WhatsApp 07700 900123</a></li><li><a href="mailto:hello@kmpamperparties.co.uk">hello@kmpamperparties.co.uk</a></li><li><a href="https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU" target="_blank" rel="noopener">Reviews on Google</a></li></ul>
-  <p class="proto">The “KMP Collection” concept, built from Kathleen's brand sheet. Prototype for review, not the live site. Contact details are placeholders.</p>
+  <p class="proto legal"><span>Privacy Policy</span><span>Cookie Policy</span><span>Terms &amp; Conditions</span></p>
+  <p class="proto" style="border-top:0;padding-top:0">The “KMP Collection” concept, built from Kathleen's brand sheet. Prototype for review, not the live site. Contact details are placeholders and the policy pages are still to come.</p>
 </div></footer>
 
 <div class="mbar dark" role="navigation" aria-label="Quick actions"><a class="btn ghost" href="https://wa.me/447700900123"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8a3 3 0 0 1-1.6-1.6l.8-1-1-2z"/></svg> WhatsApp</a><a class="btn" href="#contact">Enquire</a></div>
@@ -820,17 +858,17 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <script>
 (function(){
   var pages=['home','corporate','parties','treatments','contact','about','blog','blog-hakim-group-conference-2026','blog-hen-party-red-roofs-barn','blog-raf-lincolnshire-training-day','blog-hakim-group-conference-2024','blog-microlise-eastwood'];
-  var titles={'home':'KM Pamper Parties · KMP Collection','corporate':'Workplace wellbeing · Holistic Therapy Team','parties':'Pamper parties · KM Pamper Parties','treatments':'Treatments · KM Pamper Parties','contact':'Book the team · KM Pamper Parties','about':'About Kathleen · KM Pamper Parties','blog':'Blog · KM Pamper Parties','blog-hakim-group-conference-2026':'Hakim Group Conference: Corporate Wellbeing at the East Midlands Conference Centre · KM Pamper Parties','blog-hen-party-red-roofs-barn':'A Relaxing Hen Party Pamper Experience at Red Roofs Barn · KM Pamper Parties','blog-raf-lincolnshire-training-day':'Enhancing Employee Well-being: Onsite Chair Massages at RAF Lincolnshire Training Day · KM Pamper Parties','blog-hakim-group-conference-2024':'Hakim Group’s Annual Conference 2024: A Weekend of Well-being and Professional Growth · KM Pamper Parties','blog-microlise-eastwood':'KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham · KM Pamper Parties'};
+  var titles={'home':'KMP Pamper Parties · KMP Collection','corporate':'Workplace wellbeing · Holistic Therapy Team','parties':'Pamper parties · KMP Pamper Parties','treatments':'Treatments · KMP Pamper Parties','contact':'Let’s plan your booking · KMP Pamper Parties','about':'About Kathleen · KMP Pamper Parties','blog':'Latest from KMP · KMP Pamper Parties','blog-hakim-group-conference-2026':'Hakim Group Conference: Corporate Wellbeing at the East Midlands Conference Centre · KMP Pamper Parties','blog-hen-party-red-roofs-barn':'A Relaxing Hen Party Pamper Experience at Red Roofs Barn · KMP Pamper Parties','blog-raf-lincolnshire-training-day':'Enhancing Employee Well-being: Onsite Chair Massages at RAF Lincolnshire Training Day · KMP Pamper Parties','blog-hakim-group-conference-2024':'Hakim Group’s Annual Conference 2024: A Weekend of Well-being and Professional Growth · KMP Pamper Parties','blog-microlise-eastwood':'KM Pamper Parties Enhances Employee Wellness at Microlise with Onsite Chair Massages in Eastwood, Nottingham · KMP Pamper Parties'};
   var workPosts=['blog-hakim-group-conference-2026','blog-raf-lincolnshire-training-day','blog-hakim-group-conference-2024','blog-microlise-eastwood'],partyPosts=['blog-hen-party-red-roofs-barn'];
   var enq=document.getElementById('enquire'),sel=document.getElementById('f-type');
   var hints={
-    work:['jane@company.co.uk','Company or university','e.g. 40','Monthly from January, Leicester office, around 40 staff'],
-    home:['jane@example.com','Hen party or birthday','e.g. 8','Saturday 14 June, a holiday let near Matlock, eight guests'],
-    any:['Email or mobile number','Company or occasion','e.g. 12','Date, place and anything else we should know']
+    work:['Company, university or venue','e.g. 40','e.g. 12 March','e.g. Leicester, LE1'],
+    home:['Hen party, birthday or baby shower','e.g. 8','e.g. Saturday 14 June','e.g. Matlock, DE4'],
+    any:['Company or occasion','e.g. 12','e.g. Saturday 14 June','e.g. Matlock, DE4']
   };
   function syncHints(){
-    var v=sel.value,h=hints[v==='workplace'||v==='programme'?'work':v==='party'||v==='individual'?'home':'any'];
-    ['f-contact','f-co','f-n','f-msg'].forEach(function(id,i){document.getElementById(id).placeholder=h[i];});
+    var v=sel.value,h=hints[v==='workplace'||v==='event'?'work':v==='party'?'home':'any'];
+    ['f-co','f-n','f-date','f-where'].forEach(function(id,i){document.getElementById(id).placeholder=h[i];});
   }
   function setType(v){sel.value=v;syncHints();}
   sel.addEventListener('change',syncHints);
@@ -887,10 +925,10 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   function bad(el,msg){ferr.textContent=msg;ferr.hidden=false;el.setAttribute('aria-invalid','true');el.setAttribute('aria-describedby','ferr');el.focus({preventScroll:true});ferr.scrollIntoView({block:'center'});el.addEventListener('input',function(){el.removeAttribute('aria-invalid');el.removeAttribute('aria-describedby');ferr.hidden=true;},{once:true});}
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var n=document.getElementById('f-name'),c=document.getElementById('f-contact');
+    var n=document.getElementById('f-name'),c=document.getElementById('f-email'),ph=document.getElementById('f-phone');
     if(!sel.value){bad(sel,'Please choose what the enquiry is for.');return;}
     if(!n.value.trim()){bad(n,'Please add your name so we know who to reply to.');return;}
-    if(!c.value.trim()){bad(c,'Please add an email or phone number so we can reply.');return;}
+    if(!c.value.trim()&&!ph.value.trim()){bad(c,'Please add an email address or telephone number so we can reply.');return;}
     ferr.hidden=true;form.hidden=true;done.hidden=false;done.focus();
   });
   document.querySelectorAll('[data-type]').forEach(function(a){a.addEventListener('click',function(e){

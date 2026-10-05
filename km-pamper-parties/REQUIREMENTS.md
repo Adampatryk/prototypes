@@ -111,6 +111,8 @@ Keep the current URLs listed in BUSINESS.md section 3, or redirect them at launc
 23. The RAF post cites another massage provider's blog (atworkwellbeing.co.uk) as its source for "Studies indicate…". Keep the link, point it at an independent source, or remove it? Answered 4 Oct 2026 (Adam): keep the links.
 24. Three photos from the Microlise post were left out because they are mainly Microlise branding (logo wall, banner, Queen's Award plaque). Add them back once Microlise has agreed to its name and logo being used?
 25. About page: can Kathleen send her own short story (how she started, who she co-founded the business with, what she enjoys about the work) and a portrait she is happy with? Answered 4 Oct 2026: Adam supplied a portrait of Kathleen standing in front of a wall mural, which the prototype now uses after clean-up (see BUSINESS.md section 10). Her own story in her own words is still needed.
+26. Is Lesley Gilchrist (Elite Athlete Centre and Hotel, Loughborough University) happy for her feedback to appear on the site with her name, job title and employer?
+27. Hakim Group 2026 post: add the organiser's feedback when Kathleen receives it. Are the four delegates in the massage photo happy to be pictured? The post says "KMP Pamper Parties" throughout; should posts use that or "KM Pamper Parties"?
 
 ## 8. Decisions log
 

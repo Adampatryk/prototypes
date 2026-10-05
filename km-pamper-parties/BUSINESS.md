@@ -166,6 +166,12 @@ Suggested use: a "Trusted by" strip on the home and workplace pages, with the th
 - **Gaye Tytherley**: "Kathleen is exceptional. Such a talented massage therapist and a genuinely wonderful lady. We use her for our corporate massages and I also personally had a pamper party. The massages are heavenly! She is totally reliable, very well priced and gives a high quality service. 100% recommend"
 - **Jodie Piggin**: "Myself and my Partner booked for a 30 minute each deep tissue massage with Kathleen. Kathleen came to our cabin based at Sherwood Pines, which was booked by Forest Holiday. Kathleen was very polite, well organised and would definitely recommend. We will certainly book again."
 
+### Client feedback sent to Kathleen directly
+
+- **Lesley Gilchrist**, Duty Manager, Elite Athlete Centre and Hotel, Loughborough University (received via Adam, 5 Oct 2026; a message to Kathleen, not a Google review): "Just wanted to say a big thank you for the amazing massages we had last week, the team all really enjoyed them. The scented oils all smelt lovely and the way it left the skin after was so soft. We all really liked the hot stones which got into the bones and left us all feeling really relaxed. The room we had was set up with soft lighting and relaxing music which helped relax us during a busy working week. Thank you again and hopefully we see you soon."
+  - Used on the KMP Collection workplace page, without the closing line. Address on her sign-off: Leicestershire LE11 3TD (not published).
+  - **TBC:** that Lesley and the Elite Athlete Centre are happy to be named and quoted on the website.
+
 ### Other testimonials on the current Testimonials page (not Google, source TBC)
 
 - **Hakim Group** (annual retreat 2024): "A professional, well organised service and run smoothly with great outcome from the weekend conference retreat"
@@ -249,6 +255,7 @@ Kathleen sent a visual brand sheet (`assets/kmp-brand-sheet.png`) and a covering
 
 | Post | Published | Side | Prototype route | Current-site URL to redirect |
 |---|---|---|---|---|
+| Hakim Group Conference: Corporate Wellbeing at the East Midlands Conference Centre | New, sent by Kathleen via Adam 5 Oct 2026; event dated 27 Sep 2026 | Workplace | `#blog-hakim-group-conference-2026` | None, new post |
 | A Relaxing Hen Party Pamper Experience at Red Roofs Barn | New, sent by Kathleen 4 Oct 2026 | Parties | `#blog-hen-party-red-roofs-barn` | None, new post |
 | Enhancing Employee Well-being: Onsite Chair Massages at RAF Lincolnshire Training Day | 26 Mar 2025 | Workplace | `#blog-raf-lincolnshire-training-day` | /employee-well-being-onsite-chair-massages-raf-lincolnshire/ |
 | Hakim Group's Annual Conference 2024: A Weekend of Well-being and Professional Growth | 20 Mar 2025 | Workplace | `#blog-hakim-group-conference-2024` | /hakim-groups-annual-conference-2024-a-weekend-of-well-being-and-professional-growth/ |
@@ -269,6 +276,8 @@ Sources in `assets/`, web sizes in `img/` with `-sm` variants.
 - Microlise, from the current post: `microlise-massage`, `microlise-chair`, `microlise-back`. Not used: Kathleen in front of the Microlise logo wall, a selfie in front of a Microlise banner, the Queen's Award plaque, and the three-photo collage used as the post's featured image (open question 24).
 
 Worth knowing: `hakim-conf-spa` shows that the light-up SPA letters photo used across the concepts as the "pamper party" image (`spa-letters`) was taken at the Hakim Group conference, not at a pamper party. The hen party photos are now the only real party photographs we hold.
+
+**The Hakim Group 2026 post.** Text used as supplied, including Kathleen's "KMP Pamper Parties" wording. Her three chosen photos are original, not AI-generated: `hakim-2026-team` (seven therapists around a blue sofa, the lead image), `hakim-2026-massage` (four therapists with four seated delegates) and `hakim-2026-display` (three therapists at the "I'm a Clinician" display). Organiser feedback has been requested and is to be added to the post when it arrives. Delegates are identifiable in the massage photo.
 
 ### Hidden articles on the current site
 

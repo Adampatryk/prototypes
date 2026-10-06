@@ -135,6 +135,12 @@ Boosts wellbeing and morale · supports a healthier, more productive team · red
 
 Current site adds: rewards and recognises the team; helps staff cope with deadlines; therapists understand staff need to get back to work and leave people "lively and refreshed".
 
+### Large-scale corporate events (Kathleen, 6 Oct 2026)
+
+KMP coordinates large corporate events with teams of 20+ practitioners, sometimes across more than one day, including other service providers when an event calls for them. Background she supplied, **not for the public site**: the 2024 Hakim Group annual conference had 16 massage practitioners on each of two days plus four make-up artists; the 2026 Hakim agreement added floating therapists, make-up and henna, with treatment timings, health-screen checks, booking arrangements and event coordination.
+
+Her clarifications: "A-Team" is not a name for the Holistic Therapy Team and is not to be used as one. Make-up and henna artistry are specific to the Hakim event and are not standard KMP treatments. "Floating therapists" means massage therapists moving around an event giving short treatments, not a separate treatment. "Health screening" means the checks made before hands-on treatment to confirm someone is suitable and safe to treat and to spot contraindications or adaptations.
+
 ### Trust strip (client's own)
 
 Professional & experienced team · established over 22 years · fully insured · on-site service · tailored to your needs.

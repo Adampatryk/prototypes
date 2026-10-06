@@ -135,6 +135,14 @@ Boosts wellbeing and morale · supports a healthier, more productive team · red
 
 Current site adds: rewards and recognises the team; helps staff cope with deadlines; therapists understand staff need to get back to work and leave people "lively and refreshed".
 
+### Hakim Group events by year (Kathleen, 6 Oct 2026)
+
+Keep these separate on the site; they are different events and show repeat bookings.
+- **December 2024**: Hakim Group Annual Conference, Telford International Centre. The March 2025 date on the old post is its publishing date.
+- **2025**: Hakim SPA, East Midlands Conference Centre. The six-therapist photo at the colourful Hakim backdrop (`team-six`) is from this event.
+- **September 2026**: Hakim SPA, East Midlands Conference Centre. The "I'm a Clinician" photos, the four-therapists-with-delegates photo and a fun group photo with hats and accessories (not yet received) are all from this event.
+- **November 2026**: Hakim event to come; photos and details to follow.
+
 ### Large-scale corporate events (Kathleen, 6 Oct 2026)
 
 KMP coordinates large corporate events with teams of 20+ practitioners, sometimes across more than one day, including other service providers when an event calls for them. Background she supplied, **not for the public site**: the 2024 Hakim Group annual conference had 16 massage practitioners on each of two days plus four make-up artists; the 2026 Hakim agreement added floating therapists, make-up and henna, with treatment timings, health-screen checks, booking arrangements and event coordination.

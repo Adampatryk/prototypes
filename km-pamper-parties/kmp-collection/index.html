@@ -152,6 +152,13 @@ header.top.scrolled .logo .kmp{font-size:1.8rem}
 .gline{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.4rem .6rem;margin-top:2.6rem;font-size:.9rem;font-weight:500;color:var(--t);text-decoration:none;border-bottom:1px solid var(--gold);min-height:44px;padding-block:.5rem}
 .gline:hover{color:var(--h)}
 
+/* story strip */
+.story-grid{display:grid;grid-template-columns:220px 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;max-width:58rem;margin:0 auto}
+.story-grid .ph img{aspect-ratio:4/5}
+.story-grid p{margin-top:.9rem;max-width:34rem}
+.story-grid .acts{margin-top:1.3rem}
+@media(max-width:600px){.story-grid{grid-template-columns:120px 1fr;gap:1.2rem}.story-grid .acts .btn{padding:.6rem 1.1rem}}
+
 /* clients */
 .proof-clients{max-width:58rem;margin:clamp(2.6rem,5vw,3.6rem) auto 0;padding-top:clamp(2.2rem,4vw,2.8rem);border-top:1px solid var(--hair)}
 .proof-clients .names{justify-content:center}
@@ -403,7 +410,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <p class="lede">KMP Pamper Parties and our Holistic Therapy Team bring professional massage, beauty and wellbeing services to workplaces, events and celebrations across the East Midlands.</p>
     <div class="acts"><a class="btn work" href="#corporate">Workplace wellbeing</a><a class="btn party" href="#parties">Pamper parties</a></div>
   </div>
-  <figure class="ph"><img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="(max-width:860px) 100vw, 520px" width="1400" height="979" fetchpriority="high" alt="The Holistic Therapy Team, more than twenty therapists in black aprons, together at a conference venue"></figure>
+  <figure class="ph"><img src="../img/team-all.jpg" srcset="../img/team-all-sm.jpg 800w, ../img/team-all.jpg 1400w" sizes="(max-width:860px) 100vw, 520px" width="1400" height="979" fetchpriority="high" alt="The Holistic Therapy Team in black aprons, together on the steps at a conference venue"></figure>
 </div></div>
 
 <div class="trust" data-page="home"><ul class="wrap">
@@ -416,6 +423,15 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <div class="proof-clients">
     <span class="caps">Current and recent workplace clients</span>
     <ul class="names"><li>Loughborough University</li><li>University of Leicester</li><li>Loughborough College</li><li>Hakim Group</li><li>Miniclip</li><li>Mosca</li><li>SDL Surveying</li><li>Rank Interactive</li><li>Homes By Honey</li><li>PR Eden</li></ul>
+  </div>
+</div></section>
+
+<section class="sec story" data-page="home" style="padding-top:0"><div class="wrap story-grid">
+  <figure class="ph"><img src="../img/kathleen-portrait-sm.jpg" srcset="../img/kathleen-portrait-sm.jpg 520w, ../img/kathleen-portrait.jpg 1000w" sizes="(max-width:860px) 40vw, 220px" width="520" height="650" loading="lazy" alt="Kathleen smiling, standing in front of a blue and pink wall mural"></figure>
+  <div>
+    <h2>Meet Kathleen</h2>
+    <p>The holistic therapist and event coordinator behind KMP, with more than 22 years’ experience. KMP has grown through relationships, recommendations and repeat bookings.</p>
+    <div class="acts"><a class="btn ghost" href="#about">Read our story</a></div>
   </div>
 </div></section>
 
@@ -491,14 +507,15 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 </div></section>
 
 <section class="sec" data-page="corporate"><div class="wrap two">
-  <figure class="ph"><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:860px) 100vw, 540px" width="1000" height="1333" loading="lazy" alt="Six KM therapists in black aprons giving a thumbs up at a Hakim Group wellbeing day"><figcaption>Six of the team at a Hakim Group wellbeing day.</figcaption></figure>
+  <figure class="ph"><img src="../img/team-six.jpg" srcset="../img/team-six-sm.jpg 600w, ../img/team-six.jpg 1000w" sizes="(max-width:860px) 100vw, 540px" width="1000" height="1333" loading="lazy" alt="Six KM therapists in black aprons giving a thumbs up in front of the colourful Hakim SPA backdrop"><figcaption>Six of the team at Hakim SPA, East Midlands Conference Centre, 2025.</figcaption></figure>
   <div>
     <h2>Days on site</h2>
     <ul class="rows">
-      <li><span class="k"><a href="#blog-hakim-group-conference-2026">Hakim Group</a></span><p>Conference at the East Midlands Conference Centre, with a team of seven therapists.<em>September 2026</em></p></li>
+      <li><span class="k"><a href="#blog-hakim-group-conference-2026">Hakim SPA 2026</a></span><p>Conference at the East Midlands Conference Centre, with a team of seven therapists.<em>September 2026</em></p></li>
+      <li><span class="k">Hakim SPA 2025</span><p>Conference at the East Midlands Conference Centre, pictured left.<em>2025</em></p></li>
       <li><span class="k"><a href="#blog-raf-lincolnshire-training-day">RAF Lincolnshire</a></span><p>On-site chair massage at a training-day wellbeing session.<em>March 2025</em></p></li>
       <li><span class="k"><a href="#blog-microlise-eastwood">Microlise</a></span><p>Corporate wellbeing day with chair massage, Eastwood, Nottingham.<em>February 2025</em></p></li>
-      <li><span class="k"><a href="#blog-hakim-group-conference-2024">Hakim Group</a></span><p>Annual conference at Telford International Centre, with more than 2,000 optical professionals attending.<em>December 2024</em></p></li>
+      <li><span class="k"><a href="#blog-hakim-group-conference-2024">Hakim Group 2024</a></span><p>Annual conference at Telford International Centre, with more than 2,000 optical professionals attending.<em>December 2024</em></p></li>
     </ul>
     <span class="caps" style="margin-top:2.4rem">Current and recent workplace clients</span>
     <ul class="names"><li>Loughborough University</li><li>University of Leicester</li><li>Loughborough College</li><li>Hakim Group</li><li>Miniclip</li><li>Mosca</li><li>SDL Surveying</li><li>Rank Interactive</li><li>Homes By Honey</li><li>PR Eden</li></ul>
@@ -590,9 +607,9 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
   <figure class="ph"><img src="../img/kathleen-portrait.jpg" srcset="../img/kathleen-portrait-sm.jpg 520w, ../img/kathleen-portrait.jpg 1000w" sizes="(max-width:860px) 90vw, 440px" width="1000" height="1250" loading="lazy" alt="Kathleen smiling, standing in front of a blue and pink wall mural"><p class="badge"><b>22+</b><span>years of<br>experience</span></p></figure>
   <div>
     <h1>Meet Kathleen</h1>
-    <p class="lede">Kathleen is the therapist behind KMP Pamper Parties and the Holistic Therapy Team.</p>
+    <p class="lede">Kathleen is the holistic therapist and event coordinator behind KMP Pamper Parties and the Holistic Therapy Team.</p>
     <p>The business brings massage, beauty and wellbeing treatments to people where they are: at work, at home and in their holiday accommodation across the East Midlands.</p>
-    <p>The team has grown to more than twenty qualified, insured therapists, and Kathleen still gives treatments herself. Every one of our Google reviews mentions her by name.</p>
+    <p>She gives treatments herself, and for larger corporate events she coordinates teams of qualified, insured therapists, scaling to 20+ practitioners when an event needs it. Every one of our Google reviews mentions her by name.</p>
     <figure class="about-quote"><blockquote>“Thank you so much Kathleen, your kind, caring nature made me feel so at ease. Your massages are amazing and have really helped my back. Highly recommend to anyone”</blockquote><figcaption class="who">Steff Ryman<small>Google review</small></figcaption></figure>
     <div class="acts"><a class="btn" href="#contact">Get in touch</a></div>
   </div>
@@ -629,7 +646,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
     <li><a class="post-card" href="#blog-hakim-group-conference-2024">
       <figure class="ph"><img src="../img/hakim-conf-team.jpg" srcset="../img/hakim-conf-team-sm.jpg 800w, ../img/hakim-conf-team.jpg 1400w" sizes="(max-width:860px) 100vw, 560px" width="1400" height="1050" loading="lazy" alt="The team of therapists gathered on the steps at Telford International Centre" style="object-position:50% 60%"></figure>
       <h3>Hakim Group’s Annual Conference 2024: A Weekend of <span class="nw">Well-being</span> and Professional Growth</h3>
-      <span class="caps date">Conferences &amp; Events · March 2025</span>
+      <span class="caps date">Conferences &amp; Events · December 2024</span>
     </a></li>
     <li><a class="post-card" href="#blog-microlise-eastwood">
       <figure class="ph"><img src="../img/microlise-massage.jpg" srcset="../img/microlise-massage-sm.jpg 600w, ../img/microlise-massage.jpg 1000w" sizes="(max-width:860px) 100vw, 560px" width="1000" height="1333" loading="lazy" alt="A member of staff leaning into the massage chair with a cream towel across their back, in a bright office" style="object-position:50% 30%"></figure>
@@ -749,7 +766,7 @@ FINISH: reviewed before handover. DESIGN.md still records the Classic concept on
 <div class="head dark"><div class="wrap head-grid">
   <div>
     <h1 class="post-title">Hakim Group’s Annual Conference 2024: A Weekend of <span class="nw">Well-being</span> and Professional Growth</h1>
-    <p class="caps date">Conferences &amp; Events · March 2025</p>
+    <p class="caps date">Conferences &amp; Events · December 2024</p>
     <p class="lede">The Hakim Group Annual Conference took place in December 2024 at the Telford International Centre, bringing together over 2,000 optical industry professionals for a weekend focused on success and well-being.</p>
   </div>
   <figure class="ph"><img src="../img/hakim-conf-team.jpg" srcset="../img/hakim-conf-team-sm.jpg 800w, ../img/hakim-conf-team.jpg 1400w" sizes="(max-width:860px) 100vw, 480px" width="1400" height="1050" loading="lazy" alt="The team of therapists gathered on the steps at Telford International Centre" style="aspect-ratio:4/3;object-position:50% 60%"></figure>

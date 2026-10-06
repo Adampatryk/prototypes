@@ -140,7 +140,7 @@ Current site adds: rewards and recognises the team; helps staff cope with deadli
 Keep these separate on the site; they are different events and show repeat bookings.
 - **December 2024**: Hakim Group Annual Conference, Telford International Centre. The March 2025 date on the old post is its publishing date.
 - **2025**: Hakim SPA, East Midlands Conference Centre. The six-therapist photo at the colourful Hakim backdrop (`team-six`) is from this event.
-- **September 2026**: Hakim SPA, East Midlands Conference Centre. The "I'm a Clinician" photos, the four-therapists-with-delegates photo and a fun group photo with hats and accessories (not yet received) are all from this event.
+- **September 2026**: Hakim SPA, East Midlands Conference Centre. The "I'm a Clinician" photos, the four-therapists-with-delegates photo and the fun group photo with hats and accessories (`hakim-2026-hats`, received 6 Oct 2026 as a photo-booth print with a Hakim Group border; cropped to the photo so the logo border is not shown) are all from this event.
 - **November 2026**: Hakim event to come; photos and details to follow.
 
 ### Large-scale corporate events (Kathleen, 6 Oct 2026)
@@ -278,6 +278,10 @@ Kathleen sent a visual brand sheet (`assets/kmp-brand-sheet.png`) and a covering
 **Event presentation.** Separate pamper party and corporate wellbeing pull-up banners and backdrops, with soft ambient lighting, galaxy lighting and aromatherapy diffusers where appropriate.
 
 **Imagery.** Everything on the sheet is AI-generated concept imagery, including the team photograph, which is not the real team. None of it goes on the site. The finished website uses Kathleen's original photographs from events, pamper parties, corporate bookings and the therapy team; she will send them when asked.
+
+## 9b. Our Story (Kathleen, 6 Oct 2026)
+
+Supplied in full and used verbatim on the About page of the KMP Collection prototype (the one em dash in her text became a comma). Facts in it that are new to this file: she began by volunteering with a multicultural women's group; early work through Sure Start and mother-and-baby programmes; corporate treatments at Capital One and a BBC Children in Need event; work with the Carers Federation and Haemophilia Society events; Team Leader, management and Projects Manager roles; a Manchester wellbeing booking that grew from three days into about four years of weekly work.
 
 ## 10. Blog
 

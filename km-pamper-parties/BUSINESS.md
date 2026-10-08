@@ -283,6 +283,10 @@ Kathleen sent a visual brand sheet (`assets/kmp-brand-sheet.png`) and a covering
 
 Supplied in full and used verbatim on the About page of the KMP Collection prototype (the one em dash in her text became a comma). Facts in it that are new to this file: she began by volunteering with a multicultural women's group; early work through Sure Start and mother-and-baby programmes; corporate treatments at Capital One and a BBC Children in Need event; work with the Carers Federation and Haemophilia Society events; Team Leader, management and Projects Manager roles; a Manchester wellbeing booking that grew from three days into about four years of weekly work.
 
+## 9c. Booking, Cancellation & Complaints Policy (Kathleen, 8 Oct 2026)
+
+Supplied in full for private bookings and pamper parties and published verbatim on the prototype's terms page. Key terms: 25% deposit to secure; balance due 7 days before; cancellation charges of deposit only (14+ days), 50% (7 to 14 days), 100% (within 7 days); reductions may count as partial cancellation; set-up time is outside the booked treatment period; late or missed treatments may be shortened or lost without refund; therapists may adapt, postpone or decline for suitability; travel charges agreed at quotation; complaints in writing within 14 days. Workplace and corporate bookings are not covered by it.
+
 ## 10. Blog
 
 ### Posts in the new site (KMP Collection prototype)

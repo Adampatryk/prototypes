@@ -37,7 +37,11 @@ Individual mobile appointments are also offered (implicit on current site; revie
 | Twitter/X | Not found in this audit | Brief says @kmpamperparties exists | Confirm whether still active; drop if not |
 
 **Google Business place ID:** ChIJPbNj01L5gS4R5uGWW4tK2kU
-- Profile: https://www.google.com/maps/place/?q=place_id:ChIJPbNj01L5gS4R5uGWW4tK2kU
+- Listing name on Google: "KM Pamper Parties" (checked 19 Oct 2026, ID still valid). Numeric CID 5033417495937475046.
+- Reviews (read): https://search.google.com/local/reviews?placeid=ChIJPbNj01L5gS4R5uGWW4tK2kU (the link used on the site since 19 Oct 2026)
+- Write a review: https://search.google.com/local/writereview?placeid=ChIJPbNj01L5gS4R5uGWW4tK2kU
+- Maps place page: https://www.google.com/maps/search/?api=1&query=KM%20Pamper%20Parties&query_place_id=ChIJPbNj01L5gS4R5uGWW4tK2kU
+- Avoid the old `maps/place/?q=place_id:` form: it opened Maps with "No results found" for Adam on 19 Oct 2026 even though the ID is valid.
 - Write a review: https://search.google.com/local/writereview?placeid=ChIJPbNj01L5gS4R5uGWW4tK2kU
 
 ## 3. Current website
@@ -73,6 +77,8 @@ Individual mobile appointments are also offered (implicit on current site; revie
 
 From the client's brief: aromatherapy / full body massage · back massage · seated chair massage (workplace) · hot stone massage · Indian head massage · facials · reflexology · pregnancy massage · Hammam experience.
 
+**Foot Ritual (added 19 Oct 2026, Kathleen's wording via Adam):** a foot soak, a gentle exfoliating scrub and a foot massage with warm, nourishing oil. Her text: "Take a moment to slow down and give your feet the care they deserve. Enjoy a soothing foot soak, a gentle exfoliating scrub, and a relaxing foot massage using warm, nourishing oil. A simple yet beautiful ritual to ease tension, restore comfort, and leave your feet feeling refreshed and cared for. After all, your feet look after you every day, now it's time to look after them." On the site as a condensed row under Reflexology on the treatments page. Slot length and setting not given: shown as "Ask us" and Parties until she confirms.
+
 Also on the current site, **TBC** whether to keep:
 - Deep tissue massage (with warming oils)
 - Back to Life Hammam therapy (shower paste, body scrub, mud mask, hot steam, hot oil back/neck/shoulder massage). Minimum 60 minutes.
@@ -102,6 +108,18 @@ Minimum booking: 2 hours of treatment time per therapist.
 - Bookings already confirmed at previously agreed prices stay at the price originally quoted.
 - Still to come before launch: the cancellation policy and booking terms; deposit, payment and balance arrangements; any other pricing or booking information agreed at the final review.
 - The table below is the old pricing from the current site, kept for reference. The live site still charges these until launch.
+
+### Children's pamper party pricing (from Kathleen, revised 9 Nov 2026)
+
+| Option | Time | Price per child |
+|---|---|---|
+| One mini treatment | 15 minutes | £13.50 |
+| Two mini treatments | around 30 minutes | £22 |
+| Mini nail treatment and simple hairstyling or braiding | around 35 minutes | £23.50 to £25, depending on hair length and styling requirements |
+| Glitter tattoos (optional extra) | | around £3 to £4, depending on design |
+| Party bags (optional extra) | | to be confirmed |
+
+Minimum booking: two hours per party (per booking, not per therapist). Ages around 5 to 13. Usually up to 10 children, no fixed maximum. Her first message (8 Nov 2026) gave £13.50 per child as the starting price; she called the revised prices "a starting point for now", to review as the offering develops. Hairstyling, braiding and party bags must be requested in advance.
 
 ### Old pamper party pricing (per person, per treatment)
 
